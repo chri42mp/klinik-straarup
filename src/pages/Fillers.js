@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 
-export default function Treatments() {
+export default function Fillers() {
   return (
     <>
       <Navigation />
-      <h1>Behandlinger</h1>
+      <h1>Fillers</h1>
     </>
   );
 }

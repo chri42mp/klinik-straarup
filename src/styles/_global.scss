@@ -26,9 +26,23 @@ $blue300: #245fb2;
 $blue400: #00408d;
 $blue500: #00236a;
 
-//Secondary red colors:
+//Secondary red colors
 $red100: #fcf0f2;
 $red200: #ff969f;
 $red300: #fd7782;
 $red400: #da5966;
 $red500: #b83a4b;
+
+//fonts
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../assets/JosefinSans-Regular.woff2") format("woff2");
+}
+
+$fontRoboto: "Roboto", sans-serif;
+$fontJosefinSans: "Josefin Sans", sans-serif;

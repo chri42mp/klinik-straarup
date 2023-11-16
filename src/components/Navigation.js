@@ -34,11 +34,20 @@ export default function Navigation() {
           onMouseOver={handleTreatmentsMouseOver}
           onMouseOut={handleTreatmentsMouseOut}
         >
-          <Link to="/treatments">Behandlinger </Link>
+          Behandlinger
           {isSubmenuVisible && (
             <ul className="submenu">
               <li>
-                <Link to="/treatment1">Behandling 1</Link>
+                <Link to="/fillers">Fillers</Link>
+              </li>
+              <li>
+                <Link to="/botox">Botox</Link>
+              </li>
+              <li>
+                <Link to="/sklerosering">Sklerosering</Link>
+              </li>
+              <li>
+                <Link to="/laser">Laser</Link>
               </li>
             </ul>
           )}
