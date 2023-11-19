@@ -1,0 +1,45 @@
+@import "../styles/global";
+
+.btn-primary {
+  background-color: $green500;
+  color: $light100;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.hovered {
+    background-color: $green400;
+  }
+
+  &.pressed {
+    background-color: $green300;
+    color: $dark500;
+  }
+  &:disabled {
+    background-color: $dark100;
+    color: $dark300;
+    cursor: not-allowed;
+  }
+}
+
+.btn-secondary {
+  background-color: $light200;
+  color: $dark500;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &.hovered {
+    background-color: $light300;
+  }
+
+  &.pressed {
+    background-color: $light500;
+    color: $light100;
+  }
+  &:disabled {
+    background-color: $dark100;
+    color: $dark300;
+  }
+}
