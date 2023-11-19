@@ -1,0 +1,82 @@
+@import "../styles/global.scss";
+
+nav {
+  margin-block: 48px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+  }
+
+  li {
+    list-style: none;
+    margin-inline: 16px;
+    position: relative;
+    font-size: 18px;
+    font-family: $fontJosefinSans;
+    color: $dark500;
+
+    a {
+      text-decoration: none;
+      color: $dark500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .submenu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 100%;
+      z-index: 1;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
+      a {
+        padding-block: 8px;
+      }
+
+      .subsubmenu {
+        display: none;
+        flex-direction: column;
+      }
+    }
+
+    &.active {
+      .submenu {
+        display: flex;
+      }
+    }
+  }
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.ks-logo-gold {
+  padding-inline: 96px;
+}
+
+.arrow-down-icon,
+.arrow-up-icon {
+  width: 30px;
+  height: 30px;
+  padding-inline: 8px;
+}
+
+.treatments {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
