@@ -46,3 +46,24 @@ $red500: #b83a4b;
 
 $fontRoboto: "Roboto", sans-serif;
 $fontJosefinSans: "Josefin Sans", sans-serif;
+
+//BREAKPOINTS//
+$mobileScreenSize: 390px;
+$ipadScreenSize: 834px;
+$desktopScreenSize: 1440px;
+
+$breakpoints: (
+  "mobile": $mobileScreenSize,
+  "ipad": $ipadScreenSize,
+  "medium": $desktopScreenSize,
+) !default;
+
+@mixin respond-to-higher-than($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
