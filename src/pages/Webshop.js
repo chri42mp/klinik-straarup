@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
-import { useEffect } from "react";
 import { database } from "../firebase";
 
 export default function Webshop() {
   const [products, setProducts] = useState([]);
-
-  function test() {
-    database.collection("products").add({
-      productName: "ko",
-    });
-  }
 
   useEffect(() => {
     database
@@ -19,11 +12,14 @@ export default function Webshop() {
       .then((data) => {
         let productList = [];
         data.docs.forEach((doc) => {
-          productList.push(doc.data());
+          productList.push({
+            id: doc.id,
+            ...doc.data(),
+          });
         });
         setProducts(productList);
       });
-  }, [setProducts]);
+  }, []);
 
   console.log(products);
 
@@ -33,18 +29,20 @@ export default function Webshop() {
       <h1>Webshop</h1>
 
       <ul>
-        {products?.map((product, index) => {
-          return <li key={index}>{product?.productName}</li>;
-        })}
+        {products?.map((product) => (
+          <li key={product.id}>
+            <strong>{product?.productName}</strong>
+            <p>Description: {product?.productDescription}</p>
+            <p>Ingredients: {product?.productIngrediens}</p>
+            <p>Price: {product?.productPrice}</p>
+            <img
+              src={product?.imagePath}
+              alt={product?.productName}
+              style={{ maxWidth: "100px", maxHeight: "100px" }}
+            />
+          </li>
+        ))}
       </ul>
-      <h1>Tilføj produkt</h1>
-      <form>
-        <label htmlFor="name">
-          Produkt Titel
-          <input type="text"></input>
-        </label>
-      </form>
-      <button onClick={() => test()}>Test</button>
     </>
   );
 }
