@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Basket from "./pages/Basket";
 import Sclerosis from "./pages/Sclerosis";
 import Skinbooster from "./pages/Skinbooster";
+import AddProduct from "./pages/addProduct";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/laser" element={<Laser />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/addproduct" element={<AddProduct />} />
       </Routes>
     </BrowserRouter>
   );
