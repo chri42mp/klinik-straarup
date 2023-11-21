@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Buttons.scss";
 
-const BaseButton = ({ text, onClick, className, type }) => {
+const BaseButton = ({ text, onClick, className }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
