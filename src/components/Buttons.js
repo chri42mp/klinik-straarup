@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Buttons.scss";
 
-const BaseButton = ({ text, onClick, className, type }) => {
+const BaseButton = ({ text, onClick, className, icon }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
@@ -18,6 +18,7 @@ const BaseButton = ({ text, onClick, className, type }) => {
       disabled={isPressed}
     >
       {text}
+      {icon}
     </button>
   );
 };
@@ -30,4 +31,13 @@ const SecondaryButton = ({ text, onClick }) => (
   <BaseButton text={text} onClick={onClick} className="btn-secondary" />
 );
 
-export { PrimaryButton, SecondaryButton };
+const TertiaryButtonWithIcon = ({ text, onClick, icon }) => (
+  <BaseButton
+    text={text}
+    icon={icon}
+    onClick={onClick}
+    className="btn-tertiary-icon"
+  />
+);
+
+export { PrimaryButton, SecondaryButton, TertiaryButtonWithIcon };
