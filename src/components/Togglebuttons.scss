@@ -1,0 +1,59 @@
+// Togglebuttons.scss
+@import "../styles/global.scss";
+
+$transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 100px;
+$height: 33px;
+
+@mixin toggleControlStyles {
+  transition: $transition;
+  width: $width;
+  height: $height;
+  display: block;
+  border-radius: 18.5px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  background-color: $light200;
+  position: relative;
+
+  &:after {
+    transition: $transition;
+    content: "";
+    width: 27px;
+    height: 27px;
+    display: block;
+    background-color: $light100;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 2.8px;
+    left: 2.8px;
+  }
+}
+
+.display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle {
+  .toggle-control {
+    @include toggleControlStyles;
+  }
+
+  input {
+    display: none;
+    &:checked + .toggle-control {
+      background-color: $green400;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      &:after {
+        left: calc(#{$width} / 1.43);
+      }
+    }
+  }
+
+  &:disabled {
+    background-color: $dark400;
+  }
+}
