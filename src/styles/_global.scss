@@ -47,6 +47,114 @@ $red500: #b83a4b;
 $fontRoboto: "Roboto", sans-serif;
 $fontJosefinSans: "Josefin Sans", sans-serif;
 
+%josefin64{
+  font-family: $fontJosefinSans; 
+  font-size: 4rem; 
+  line-height:4.5rem; letter-spacing:0.92px;
+}
+
+%josefin56{
+  font-family: $fontJosefinSans; 
+  font-size: 3.5rem; 
+  line-height:3.625rem; 
+  letter-spacing:0.47px;
+}
+
+%josefin48{
+  font-family: $fontJosefinSans; 
+  font-size: 3rem; 
+  line-height:3.5rem; 
+  letter-spacing:0.47px;
+}
+
+%josefin40{
+  font-family: $fontJosefinSans; 
+  font-size: 2.5rem;
+  line-height:2.75rem; 
+  letter-spacing:0.47px;
+}
+
+%josefin32{
+  font-family: $fontJosefinSans; 
+  font-size: 2rem; 
+  line-height:2.375rem; 
+  letter-spacing:0.38px;
+}
+
+%josefin24{
+  font-family: $fontJosefinSans; 
+  font-size: 1.5rem;
+  line-height:1.875rem; 
+  letter-spacing:0.10px;
+}
+
+%josefin20{
+  font-family: $fontJosefinSans; 
+  font-size: 1.25rem;
+  line-height:1.5rem; 
+  letter-spacing:0;
+}
+
+%josefin18{
+  font-family: $fontJosefinSans; 
+  font-size: 1.125rem; 
+  line-height:1.5rem; 
+  letter-spacing:0;
+}
+
+%roboto18{
+  font-family: $fontRoboto; 
+  font-size:1.125rem;
+  line-height:1.875rem;
+}
+
+%roboto16{
+  font-family: $fontRoboto; 
+  font-size:1rem; 
+  line-height:1.5rem;
+}
+
+%roboto14{
+  font-family: $fontRoboto; 
+  font-size:0.875;
+  line-height:1.375rem;
+}
+
+%roboto12{
+  font-family: $fontRoboto; 
+  font-size:0.75rem;
+  line-height:1.125rem;
+}
+
+//Spacing
+$spacing4: 0.25rem;
+$spacing8: 0.5rem;
+$spacing16: 1rem;
+$spacing24: 1.5rem;
+$spacing32: 2rem;
+$spacing48: 3rem;
+$spacing72: 4.5rem;
+$spacing96: 6rem;
+$spacing120: 7.5rem;
+$spacing160: 10rem;
+$spacing240: 15rem;
+
+// Shadows
+%dropShadow{
+  box-shadow:0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+%innerShadow{
+  box-shadow:inset 0 0 4px rgba(0, 0, 0, 0.5
+  );}
+
+//Borderradius
+%borderRadius{border-radius:0.5rem}
+%fullBorderRadius{border-radius:6rem}
+
+// Logo
+%logoSizeWeb{width: 20.551; height:4.375rem}
+
 //BREAKPOINTS//
 $mobileScreenSize: 390px;
 $ipadScreenSize: 834px;
