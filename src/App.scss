@@ -5,5 +5,29 @@ body {
 }
 
 h1 {
-  font-family: "Josefin Sans", sans-serif;
+  @include josefin48;
+}
+
+h2 {
+  @include josefin40;
+}
+
+h3 {
+  @include josefin32;
+}
+
+h4 {
+  @include josefin24;
+}
+
+h5 {
+  @include josefin20;
+}
+
+h6 {
+  @include josefin18;
+}
+
+p {
+  @include roboto18;
 }
