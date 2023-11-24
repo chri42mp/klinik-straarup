@@ -5,6 +5,7 @@ import "./Webshop.scss";
 import { PrimaryButton } from "../components/Buttons";
 import TextboxBanner from "../components/TextboxBanners";
 import LongArrowRightIcon from "../assets/icons/LongArrowRightIcon";
+import { Link } from "react-router-dom";
 
 export default function Webshop() {
   const [products, setProducts] = useState([]);
@@ -63,33 +64,48 @@ export default function Webshop() {
         </div>
       </section>
       <div className="categories">
-        <div className="categories-boxes">
+        <Link
+          to={"/webshopcategory/getting-skin-ready"}
+          className="categories-boxes"
+        >
           <h5>Getting skin ready</h5>
           <img src="/webshop-images/intl-sunscreen-primer.webp" alt="" />
-        </div>
-        <div className="categories-boxes">
+        </Link>
+        <Link
+          to={"/webshopcategory/prevent-+-correct"}
+          className="categories-boxes"
+        >
           <h5>Prevent + Correct</h5>
           <img src="/webshop-images/gbl-brightalive-hero.webp" alt="" />
-        </div>
-        <div className="categories-boxes">
+        </Link>
+        <Link
+          to={"/webshopcategory/hydration-+-calming"}
+          className="categories-boxes"
+        >
           <h5>Hydration + Calming</h5>
           <img src="/webshop-images/intl-smart-tone.webp" alt="" />
-        </div>
-        <div className="categories-boxes">
+        </Link>
+        <Link to={"/webshopcategory/protect"} className="categories-boxes">
           <h5>Protect</h5>
           <img src="/webshop-images/intl-sunscreen-primer.webp" alt="" />
-        </div>
-        <div className="categories-boxes">
+        </Link>
+        <Link
+          to={"/webshopcategory/supplementary"}
+          className="categories-boxes"
+        >
           <h5>Supplementary</h5>
           <img
             src="/webshop-images/gbl-intense-eye-crème-capdownright-hero.webp"
             alt=""
           />
-        </div>
-        <div className="categories-boxes">
+        </Link>
+        <Link
+          to={"/webshopcategory/programs-+-kits"}
+          className="categories-boxes"
+        >
           <h5>Programs + Kits</h5>
           <img src="/webshop-images/2018-kit-skin-normalizing.webp" alt="" />
-        </div>
+        </Link>
       </div>
       <TextboxBanner
         title="Getting skin ready"
@@ -151,22 +167,6 @@ export default function Webshop() {
         onButtonClick={() => console.log("Button clicked!")}
         reverse={false}
       />
-
-      <ul>
-        {products?.map((product) => (
-          <li key={product.id}>
-            <strong>{product?.productName}</strong>
-            <p>Description: {product?.productDescription}</p>
-            <p>Ingredients: {product?.productIngrediens}</p>
-            <p>Price: {product?.productPrice}</p>
-            <img
-              src={product?.imagePath}
-              alt={product?.productName}
-              style={{ maxWidth: "100px", maxHeight: "100px" }}
-            />
-          </li>
-        ))}
-      </ul>
     </>
   );
 }

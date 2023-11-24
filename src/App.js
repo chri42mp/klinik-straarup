@@ -13,6 +13,8 @@ import Basket from "./pages/Basket";
 import Sclerosis from "./pages/Sclerosis";
 import Skinbooster from "./pages/Skinbooster";
 import AddProduct from "./pages/addProduct";
+import WebshopCategory from "./pages/WebshopCategory";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -21,6 +23,11 @@ function App() {
         <Route path="/" element={<Frontpage />} />
         <Route path="/about" element={<About />} />
         <Route path="/webshop" element={<Webshop />} />
+        <Route
+          path="/webshopcategory/:category"
+          element={<WebshopCategory />}
+        />
+        <Route path="/product/:uid" element={<Product />} />
         <Route path="/prices" element={<Prices />} />
         <Route path="/login" element={<Login />} />
         <Route path="/fillers" element={<Fillers />} />
