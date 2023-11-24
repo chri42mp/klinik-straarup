@@ -1,0 +1,54 @@
+@import "../styles/global.scss";
+
+@mixin set-position-and-margin($direction, $overlap) {
+  position: relative;
+  z-index: 1;
+
+  @if $direction == left {
+    margin-left: $overlap;
+  } @else if $direction == right {
+    margin-left: -$overlap;
+  } @else {
+    margin-left: 0;
+  }
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1440px;
+  margin-inline: 198px;
+  padding-block: 70px;
+
+  .banner-box {
+    background-color: $light200;
+    padding: 24px;
+    width: 530px;
+    top: 25%;
+    height: fit-content;
+    border-radius: 4px;
+    order: 1;
+    @include set-position-and-margin(left, 100px);
+  }
+
+  .banner-image {
+    height: 405px;
+    max-width: 612px;
+    display: flex;
+    justify-content: center;
+    order: 2;
+    @include set-position-and-margin(right, 100px);
+  }
+}
+
+.banner.reverse {
+  .banner-box {
+    order: 2;
+    @include set-position-and-margin(right, 100px);
+  }
+
+  .banner-image {
+    order: 1;
+    @include set-position-and-margin(left, 100px);
+  }
+}

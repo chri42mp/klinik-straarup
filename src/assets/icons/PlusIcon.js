@@ -2,6 +2,7 @@ import React from "react";
 
 const PlusIcon = () => (
   <svg
+    className="plus-icon"
     width="50"
     height="50"
     viewBox="0 0 50 50"
