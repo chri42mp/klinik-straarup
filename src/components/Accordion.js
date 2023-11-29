@@ -13,10 +13,10 @@ const Accordion = ({ title, content }) => {
   return (
     <div className="accordion">
       <div className="accordion-header" onClick={toggleAccordion}>
-        <p>{title}</p>
+        <p className="josefin18">{title}</p>
         {isOpen ? <MinusIcon className="" /> : <PlusIcon className="" />}
       </div>
-      {isOpen && <div className="accordion-content">{content}</div>}
+      <div>{isOpen && <p className="accordion-content">{content}</p>}</div>
     </div>
   );
 };
