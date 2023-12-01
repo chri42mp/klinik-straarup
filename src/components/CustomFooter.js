@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CustomFooter.scss';
 import KsLogoGold from '../assets/logos/KsLogoGold';
 import FacebookIcon from '../assets/icons/FacebookIcon';
@@ -11,8 +12,8 @@ import InstagramIcon from '../assets/icons/InstagramIcon';
 
 const CustomFooter = () => {
   return (
-    <footer className='customFooter'>
-      <div className='topDivFooter'>
+    <footer className='custom-footer'>
+      <div className='top-div-footer'>
         <div className='col1'>
           <div
             className='trustpilot-widget'
@@ -22,9 +23,9 @@ const CustomFooter = () => {
             data-style-height='52px'
             data-style-width='100%'
           >
-            <a href='https://dk.trustpilot.com/review/klinikstraarup.dk'>
+            <Link to='https://dk.trustpilot.com/review/klinikstraarup.dk'>
               Trustpilot
-            </a>
+            </Link>
           </div>
         </div>
         <div className='col2'>
@@ -32,35 +33,37 @@ const CustomFooter = () => {
             <h4>Kontakt</h4>
             <h5>E-mail</h5>
 
-            <a href='mailto:info@klinikstraarup.dk'>info@klinikstraarup.dk</a>
+            <Link to='mailto:info@klinikstraarup.dk'>
+              info@klinikstraarup.dk
+            </Link>
             <h5>Telefon nr.</h5>
-            <a href='tel:+4540562064'>+4540562064</a>
+            <Link to='tel:+4540562064'>+4540562064</Link>
             <h5>SoMe</h5>
-            <a href='https://www.instagram.com/klinikstraarup/'>
+            <Link href='https://www.instagram.com/klinikstraarup/'>
               <InstagramIcon />
-            </a>
-            <a href='https://www.facebook.com/klinikstraarup'>
+            </Link>
+            <Link href='https://www.facebook.com/klinikstraarup'>
               <FacebookIcon />
-            </a>
+            </Link>
           </div>
           <div>
             <h5>Adresse</h5>
-            <a href='https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22'>
+            <Link href='https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22'>
               <p>Klinik Straarup</p>
               <p>Brøndbyvestervej 23 st th</p>
               <p>2600 Glostrup </p>
               <p>Denmark</p>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
-      <div className='bottomDivFooter'>
-        <div className='bottomDivLinks'>
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
+      <div className='bottom-div-footer'>
+        <div className='bottom-div-links'>
+          <p>Cookiepolitik</p>
+          <p>Privatlivspolitik</p>
+          <p>Sitemap</p>
         </div>
-        <div className='footerLogo'>
+        <div className='footer-logo'>
           <KsLogoGold className='ks-logo-gold' />
         </div>
       </div>
