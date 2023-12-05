@@ -2,26 +2,42 @@
 
 body {
   background-color: $light100;
+  color: $dark500;
 }
 
 h1 {
-  @include josefin48;
+  @include josefin40;
+  @media (min-width:$ipadScreenSize){
+    @include josefin48;
+  }
 }
 
 h2 {
-  @include josefin40;
+  @include josefin32;
+  @media (min-width:$ipadScreenSize){
+    @include josefin40;
+  }
 }
 
 h3 {
-  @include josefin32;
+  @include josefin24;
+  @media (min-width:$ipadScreenSize){
+    @include josefin32;
+  }
 }
 
 h4 {
-  @include josefin24;
+  @include josefin20;
+  @media (min-width:$ipadScreenSize){
+    @include josefin24;
+  }
 }
 
 h5 {
-  @include josefin20;
+  @include josefin18;
+  @media (min-width:$ipadScreenSize){
+    @include josefin20;
+  }
 }
 
 h6 {
@@ -32,6 +48,8 @@ p {
   @include roboto18;
 }
 
+
 a {
-  @include josefin18;
+  @include robotolink;
 }
+
