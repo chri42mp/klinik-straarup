@@ -9,25 +9,61 @@ bottom: 0;
 display: flex;
 flex-direction: column;
 gap: $spacing32;
-
+color: $light100;
+a{
+    color: $light100;
+}
  
 .top-div-footer{
-  display: flex;
-  flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 .col1{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+
+    .trustpilot-widget{
+        background-color: $light100;
+        padding: $spacing16 $spacing32;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: $spacing16;
+        border-radius: 0.5rem;
+
+        h4, p, a{
+            margin: 0;
+            color: $dark500;
+
+        }
+        .trustpilot-star{
+            display: flex;
+            gap: $spacing4;
+        svg{
+            background-color: $green200;
+            &:last-of-type{
+                background-color: $dark100;
+            }
+        }
+    }
+      
+    }
 }
 
     .col2{
         display: flex;
         flex-direction: row;
         gap: $spacing32;
+
+        div{
+            svg{
+                mix-blend-mode: color-burn;
+            }
+        }
         p{
             max-width: 15ch;
         }
@@ -47,36 +83,59 @@ justify-content: center;
     }
     .footer-logo{
         padding:0;
+        mix-blend-mode: color-burn;
     }
 }
 
-}
-
-@media screen and (min-width: $ipadScreenSize){
+@media screen and (min-width: $ipadScreenSize) {
+    &{
+        padding: $spacing96 $spacing72;
+    
     .top-div-footer{
+        display: flex;
         flex-direction: row;
-        
+        gap: $spacing240;
+
         .col1{
-        
+            align-self: flex-start;
+  
         }
-        
-            .col2{
-             
-                p{
-                    max-width: 65ch;
-                }
+        .col2{
+            gap: $spacing240;
+            
+
+            h4{
+                margin-top: 0;
             }
-         }
-        
-        .bottom-div-footer{
-          
-        
-            .bottom-div-links{
-             
+
+            h5{
+                margin-bottom: $spacing16;
             }
-            .footer-logo{
-             
+            
+            p{
+                max-width: 65ch;
             }
         }
+    }
+
+
+    .bottom-div-footer{
+        flex-direction: row;
+        justify-content: space-between;
+    
+    
+        .bottom-div-links{
+            order: 0;
+        }
+
+        .footer-logo{
+            justify-self: flex-end;
+        }
+    
+    
+    }
+
+}
+}
 }
 
