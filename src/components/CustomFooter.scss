@@ -3,7 +3,7 @@
 .custom-footer{
 max-width: 100%;
 background-color: $green500;
-padding: $spacing32 $spacing24;
+padding: $spacing32 $spacing72;
 position: relative;
 bottom: 0;
 display: flex;
@@ -13,19 +13,17 @@ color: $light100;
 a{
     color: $light100;
 }
+h4, h5, p{
+    margin: 0;
+}
+
  
 .top-div-footer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-.col1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .trustpilot-widget{
+    gap: $spacing32;
+ 
+    .trustpilot{
         background-color: $light100;
         padding: $spacing16 $spacing32;
         display: flex;
@@ -34,11 +32,18 @@ a{
         flex-direction: column;
         gap: $spacing16;
         border-radius: 0.5rem;
+        height: fit-content;
+        
 
-        h4, p, a{
+        p{
             margin: 0;
             color: $dark500;
+        }
 
+        h4{
+            margin: 0;
+            color: $blue500;
+            text-decoration: underline;
         }
         .trustpilot-star{
             display: flex;
@@ -52,23 +57,26 @@ a{
     }
       
     }
-}
 
-    .col2{
+    .footer-contact, .footer-adress{
         display: flex;
-        flex-direction: row;
-        gap: $spacing32;
+        flex-direction: column;
+        gap: $spacing16;
 
-        div{
-            svg{
-                mix-blend-mode: color-burn;
-            }
-        }
+ 
+    }
+
+   .some-icons{
+    display: flex;
+    flex-direction: row;
+   }
+
         p{
             max-width: 15ch;
         }
-    }
+
  }
+
 
 .bottom-div-footer{
     display: flex;
@@ -83,38 +91,22 @@ a{
     }
     .footer-logo{
         padding:0;
-        mix-blend-mode: color-burn;
+
     }
 }
 
 @media screen and (min-width: $ipadScreenSize) {
     &{
         padding: $spacing96 $spacing72;
-    
+      
+       
     .top-div-footer{
         display: flex;
         flex-direction: row;
-        gap: $spacing240;
-
-        .col1{
-            align-self: flex-start;
-  
-        }
-        .col2{
-            gap: $spacing240;
-            
-
-            h4{
-                margin-top: 0;
-            }
-
-            h5{
-                margin-bottom: $spacing16;
-            }
-            
-            p{
-                max-width: 65ch;
-            }
+        justify-content: space-between;
+        
+        p{
+            max-width: 65ch;
         }
     }
 
@@ -129,7 +121,12 @@ a{
         }
 
         .footer-logo{
-            justify-self: flex-end;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            svg{
+                padding: 0;
+            }
         }
     
     
@@ -138,4 +135,3 @@ a{
 }
 }
 }
-
