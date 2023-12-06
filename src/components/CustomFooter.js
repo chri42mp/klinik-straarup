@@ -4,6 +4,7 @@ import './CustomFooter.scss';
 import KsLogoGold from '../assets/logos/KsLogoGold';
 import FacebookIcon from '../assets/icons/FacebookIcon';
 import InstagramIcon from '../assets/icons/InstagramIcon';
+import TrustpilotStar from '../assets/icons/TrustpilotStar';
 
 const CustomFooter = () => {
   return (
@@ -21,50 +22,11 @@ const CustomFooter = () => {
             <h4>Trustpilot</h4>
           </Link>
           <div className='trustpilot-star'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              viewBox='0 -960 960 960'
-              width='40'
-            >
-              <path d='m384-294 96-74 96 74-36-122 90-64H518l-38-124-38 124H330l90 64-36 122ZM233-80l93-304L80-560h304l96-320 96 320h304L634-384l93 304-247-188L233-80Zm247-369Z' />
-            </svg>
-
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              viewBox='0 -960 960 960'
-              width='40'
-            >
-              <path d='m384-294 96-74 96 74-36-122 90-64H518l-38-124-38 124H330l90 64-36 122ZM233-80l93-304L80-560h304l96-320 96 320h304L634-384l93 304-247-188L233-80Zm247-369Z' />
-            </svg>
-
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              viewBox='0 -960 960 960'
-              width='40'
-            >
-              <path d='m384-294 96-74 96 74-36-122 90-64H518l-38-124-38 124H330l90 64-36 122ZM233-80l93-304L80-560h304l96-320 96 320h304L634-384l93 304-247-188L233-80Zm247-369Z' />
-            </svg>
-
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              viewBox='0 -960 960 960'
-              width='40'
-            >
-              <path d='m384-294 96-74 96 74-36-122 90-64H518l-38-124-38 124H330l90 64-36 122ZM233-80l93-304L80-560h304l96-320 96 320h304L634-384l93 304-247-188L233-80Zm247-369Z' />
-            </svg>
-
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              height='40'
-              viewBox='0 -960 960 960'
-              width='40'
-            >
-              <path d='m384-294 96-74 96 74-36-122 90-64H518l-38-124-38 124H330l90 64-36 122ZM233-80l93-304L80-560h304l96-320 96 320h304L634-384l93 304-247-188L233-80Zm247-369Z' />
-            </svg>
+            <TrustpilotStar />
+            <TrustpilotStar />
+            <TrustpilotStar />
+            <TrustpilotStar />
+            <TrustpilotStar />
           </div>
           <p>Rated 4.0/5.0</p>
         </div>
@@ -85,7 +47,7 @@ const CustomFooter = () => {
             </Link>
           </div>
         </div>
-        <div className='footer-adress'>
+        <div className='footer-address'>
           <h4>Adresse</h4>
           <Link href='https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22'>
             <p>Klinik Straarup</p>

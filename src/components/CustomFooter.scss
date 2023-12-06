@@ -17,6 +17,16 @@ a{
 h4, h5, p{
     margin: 0;
 }
+h4{
+    @include josefin24;
+}
+h5{
+    @include josefin20;
+}
+p, a{
+   @extend %roboto16; 
+
+}
  
 .top-div-footer{
     display: flex;
@@ -36,16 +46,16 @@ h4, h5, p{
         
 
         p{
-            margin: 0;
             color: $dark500;
         }
 
         h4{
-            @include josefin24;
-            margin: 0;
-            color: $blue500;
+            color: $dark500;
             :hover{text-decoration: underline;}
         }
+
+       
+
         .trustpilot-star{
             display: flex;
             gap: $spacing4;
@@ -63,18 +73,20 @@ h4, h5, p{
         display: flex;
         flex-direction: column;
         gap: $spacing16;
-
+    }
+    .footer-address{
+        a{
+        text-decoration: none;
+        :hover{text-decoration: underline;}
  
+        }
     }
 
    .some-icons{
         display: flex;
         flex-direction: row;
-   }
-
-
+    }
  }
-
 
 .bottom-div-footer{
     display: flex;
@@ -87,7 +99,11 @@ h4, h5, p{
         flex-direction:row;
         gap: $spacing16;
         order: 2;
+        p{
+        @include roboto12;
+        }
     }
+
     .footer-logo{
         padding:0;
 
@@ -129,7 +145,7 @@ h4, h5, p{
     
     }
 
-}
+    }
 }
 }
 
