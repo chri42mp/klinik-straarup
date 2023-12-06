@@ -52,6 +52,7 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   font-size: 4rem;
   line-height: 4.5rem;
   letter-spacing: 0.92px;
+
 }
 
 @mixin josefin56 {
@@ -109,6 +110,14 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   line-height: 1.875rem;
 }
 
+@mixin robotolink {
+  font-family: $fontRoboto;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: $blue500;
+  text-decoration: underline;
+}
+
 %roboto16 {
   font-family: $fontRoboto;
   font-size: 1rem;
@@ -142,26 +151,71 @@ $spacing160: 10rem;
 $spacing240: 15rem;
 
 // Shadows
-%dropShadow {
+@mixin dropShadow {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-%innerShadow {
+@mixin innerShadow {
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 //Borderradius
-%borderRadius {
+ @mixin borderRadius {
   border-radius: 0.5rem;
 }
-%fullBorderRadius {
+
+@mixin fullBorderRadius {
   border-radius: 6rem;
 }
 
 // Logo
-%logoSizeWeb {
-  width: 20.551;
-  height: 4.375rem;
+@mixin logoSizeWeb {
+  max-width: 20.551;
+}
+
+@mixin logoSizeMobile{
+
+}
+
+@mixin img{
+ 
+  .s{
+    max-width: 21.875rem;
+  }
+  .xs{
+    max-width: 9.875rem;
+  }
+  .xxs{
+    max-width: 4rem;
+  }
+
+
+  @media (min-width: $ipadScreenSize){
+ .xl{
+  max-width: 90rem;
+ } 
+
+ .l{
+  max-width: 51.5rem;
+ }
+
+ .m{
+  max-width: 38.25rem;
+ }
+ .s{
+
+  max-width: 24.875rem;
+ }
+ .xs{
+  max-width: 18.375rem;
+ }
+ .xxs{
+  max-width: 11.75rem;
+ }
+ .xxxs{
+  max-width: 5.125rem;
+ }
+}
 }
 
 //BREAKPOINTS//
