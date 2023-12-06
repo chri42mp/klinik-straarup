@@ -1,0 +1,88 @@
+@import "../styles/global.scss";
+
+.login-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-block: $spacing32;
+  gap: $spacing24;
+  max-width: $mobileScreenSize;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    max-width: 628px;
+    margin-block: $spacing72;
+  }
+
+  h1 {
+    text-align: center;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      @include josefin56;
+    }
+  }
+
+  p {
+    @include josefin18;
+  }
+
+  label {
+    @include josefin18;
+  }
+
+  input {
+    width: 350px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+    border: 1px solid $dark500;
+    background-color: $light100;
+    appearance: none;
+    outline: none;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      width: 610px;
+      height: 30px;
+    }
+  }
+}
+
+.no-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing8;
+  padding-inline: $spacing16;
+  padding-block: $spacing12;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing8;
+  padding: $spacing8;
+}
+.btn-secondary {
+  width: fit-content;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group.error {
+  background-color: $red100;
+
+  input {
+    border: 1px solid $red500;
+  }
+}
+
+.error-message {
+  color: $red500;
+  display: flex;
+  align-items: center;
+  @include roboto12;
+  max-height: 20px;
+}

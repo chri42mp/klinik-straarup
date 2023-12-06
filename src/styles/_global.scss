@@ -54,7 +54,7 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   letter-spacing: 0.92px;
 }
 
-%josefin56 {
+@mixin josefin56 {
   font-family: $fontJosefinSans;
   font-size: 3.5rem;
   line-height: 3.625rem;
@@ -121,7 +121,7 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   line-height: 1.375rem;
 }
 
-%roboto12 {
+@mixin roboto12 {
   font-family: $fontRoboto;
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -130,6 +130,7 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
 //Spacing
 $spacing4: 0.25rem;
 $spacing8: 0.5rem;
+$spacing12: 0.75rem;
 $spacing16: 1rem;
 $spacing24: 1.5rem;
 $spacing32: 2rem;
