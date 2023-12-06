@@ -35,25 +35,25 @@ export default function WebshopCategory() {
   return (
     <>
       <Navigation />
-      <h1 style={{ textTransform: "capitalize" }}>
-        {category.replaceAll("-", " ")}
-      </h1>
-      <ul>
-        {products?.map((product) => (
-          <li key={product.id}>
-            <strong>{product?.productName}</strong>
-            <p>Description: {product?.productDescription}</p>
-            <p>Ingredients: {product?.productIngrediens}</p>
-            <p>Price: {product?.productPrice}</p>
-            <img
-              src={product?.imagePath}
-              alt={product?.productName}
-              style={{ maxWidth: "100px", maxHeight: "100px" }}
-            />
-            <Link to={"/product/" + product.id}>Se her</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="product-category-content">
+        <h1 style={{ textTransform: "capitalize" }}>
+          {category.replaceAll("-", " ")}
+        </h1>
+        <div className="all-category-products">
+          {products?.map((product) => (
+            <div className="product-card" key={product.id}>
+              <img
+                src={product?.imagePath}
+                alt={product?.productName}
+                style={{ maxWidth: "100px", maxHeight: "100px" }}
+              />
+              <p>{product?.productName}</p>
+              <p>Price: {product?.productPrice}</p>
+              <Link to={"/product/" + product.id}>Se her</Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

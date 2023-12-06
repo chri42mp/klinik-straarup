@@ -1,23 +1,8 @@
-import React, { useState } from "react";
 import "./Buttons.scss";
 
-
 const BaseButton = ({ text, onClick, className, icon }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isPressed, setIsPressed] = useState(false);
-
   return (
-    <button
-      onClick={onClick}
-      className={`btn ${className} ${isHovered ? "hovered" : ""} ${
-        isPressed ? "pressed" : ""
-      }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onMouseDown={() => setIsPressed(true)}
-      onMouseUp={() => setIsPressed(false)}
-      disabled={isPressed}
-    >
+    <button onClick={onClick} className={`btn ${className}`}>
       {text}
       {icon}
     </button>

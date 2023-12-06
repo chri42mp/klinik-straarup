@@ -29,19 +29,19 @@ export default function Product() {
     <>
       <Navigation />
       <div className="singleview">
-        <div className="singleview-image">
+        <div className="singleview-img-box">
           <img
+            className="singleview-img"
             src={product?.imagePath}
             alt={product?.productName}
-            style={{ maxWidth: "612px", maxHeight: "523px" }}
           />
         </div>
         <div>
           <h1>{product?.productName}</h1>
-          <p>{product.units}</p>
-          <p>{product.productDescription}</p>
-          <h3 className="flex-end">{product.productPrice} DKK</h3>
-          <div className="flex-end">
+          <p className="roboto12">{product.units}</p>
+          <p className="roboto16">{product.productDescription}</p>
+          <h2 className="price">{product.productPrice} DKK</h2>
+          <div className="counter-container">
             <Counter />
           </div>
           <div className="buttons">
@@ -51,7 +51,7 @@ export default function Product() {
           <Accordion title="Brug" content={<p>{product.usage}</p>} />
           <Accordion
             title="Ingredienser"
-            content={<div>{product.productIngrediens}</div>}
+            content={<p>{product.productIngrediens}</p>}
           />
         </div>
       </div>

@@ -1,29 +1,90 @@
 @import "../styles/global.scss";
 
 .singleview {
-  max-width: 1440px;
-  margin-inline: 96px;
-  margin-block: 72px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
+  padding-block: $spacing32;
+  padding-inline: $spacing24;
 
-.singleview-image {
-  margin: auto;
-}
+  @media screen and (min-width: $ipadScreenSize) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1440px;
+    margin-inline: $spacing96;
+    margin-block: $spacing72;
+    gap: $spacing24;
+  }
 
-.buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 24px;
-}
+  h1 {
+    text-align: center;
+    @include josefin32;
 
-.flex-end {
-  display: flex;
-  justify-content: flex-end;
-}
-.counter {
-  display: flex;
-  justify-content: flex-end;
+    @media screen and (min-width: $ipadScreenSize) {
+      @include josefin40;
+      text-align: start;
+    }
+  }
+
+  .singleview-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .singleview-img {
+    max-width: 350px;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      max-width: 612px;
+      max-height: 523px;
+    }
+  }
+
+  .roboto12 {
+    @include roboto12;
+    text-align: center;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      text-align: start;
+    }
+  }
+
+  .roboto16 {
+    @extend %roboto16;
+    text-align: center;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      text-align: start;
+    }
+  }
+
+  .price {
+    text-align: center;
+    @include josefin32;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .counter-container {
+    display: flex;
+    justify-content: center;
+    max-height: 45px;
+    margin-block: $spacing32;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      justify-content: flex-end;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: $spacing8;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      justify-content: flex-end;
+      gap: $spacing24;
+    }
+  }
 }
