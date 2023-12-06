@@ -115,7 +115,7 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.875rem;
   color: $blue500;
-  text-decoration: underline;
+  :hover{text-decoration: underline;}
 }
 
 %roboto16 {

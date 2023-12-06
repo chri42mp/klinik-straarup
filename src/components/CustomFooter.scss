@@ -3,13 +3,14 @@
 .custom-footer{
 max-width: 100%;
 background-color: $green500;
-padding: $spacing32 $spacing72;
+padding: $spacing32 $spacing24;
 position: relative;
 bottom: 0;
 display: flex;
 flex-direction: column;
 gap: $spacing32;
 color: $light100;
+margin: 0;
 a{
     color: $light100;
 }
@@ -40,15 +41,16 @@ h4, h5, p{
         }
 
         h4{
+            @include josefin24;
             margin: 0;
             color: $blue500;
-            text-decoration: underline;
+            :hover{text-decoration: underline;}
         }
         .trustpilot-star{
             display: flex;
             gap: $spacing4;
         svg{
-            background-color: $green200;
+            background-color: #00B57A;
             &:last-of-type{
                 background-color: $dark100;
             }
@@ -66,13 +68,10 @@ h4, h5, p{
     }
 
    .some-icons{
-    display: flex;
-    flex-direction: row;
+        display: flex;
+        flex-direction: row;
    }
 
-        p{
-            max-width: 15ch;
-        }
 
  }
 
@@ -81,6 +80,7 @@ h4, h5, p{
     display: flex;
     align-items: center;
     flex-flow: column;
+    gap: $spacing32;
 
     .bottom-div-links{
         display: flex;
@@ -94,7 +94,6 @@ h4, h5, p{
     }
 }
 
-
 @media screen and (min-width: $ipadScreenSize) {
     &{
         padding: $spacing96 $spacing72;
@@ -105,9 +104,7 @@ h4, h5, p{
         flex-direction: row;
         justify-content: space-between;
         
-        p{
-            max-width: 65ch;
-        }
+      
     }
 
 
