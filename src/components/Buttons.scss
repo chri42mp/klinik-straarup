@@ -9,14 +9,16 @@
   cursor: pointer;
   @include josefin18;
 
-  &.hovered {
+  &:hover {
     background-color: $green400;
   }
 
+  &:active,
   &.pressed {
     background-color: $green300;
     color: $dark500;
   }
+
   &:disabled {
     background-color: $dark100;
     color: $dark300;
@@ -33,16 +35,19 @@
   cursor: pointer;
   @include josefin18;
 
-  &.hovered {
+  &:hover {
     background-color: $light300;
   }
 
+  &:active,
   &.pressed {
     background-color: $light500;
     color: $light100;
   }
+
   &:disabled {
     background-color: $dark100;
     color: $dark300;
+    cursor: not-allowed;
   }
 }

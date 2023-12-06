@@ -1,0 +1,97 @@
+@import "../styles/global.scss";
+
+.signup-form {
+  //   display: flex;
+  //   flex-direction: column;
+  max-width: $mobileScreenSize;
+  margin: 0 auto;
+  padding-block: $spacing32;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    max-width: 632px;
+  }
+
+  h1 {
+    text-align: center;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      @include josefin56;
+    }
+  }
+
+  p {
+    @include josefin18;
+  }
+
+  .signup-info {
+    text-align: center;
+  }
+
+  input {
+    border-radius: 4px;
+    width: 348px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      width: 608px;
+      height: 28px;
+    }
+  }
+}
+
+.form-group {
+  label {
+    @include josefin18;
+  }
+}
+
+.user-name-group {
+  display: flex;
+
+  input {
+    width: 162px;
+    height: 28px;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      width: 292px;
+      height: 28px;
+    }
+  }
+}
+
+.privacy-policy-group {
+  display: flex;
+  gap: $spacing8;
+  align-items: center;
+  padding-inline: $spacing8;
+}
+
+#privacypolicy {
+  width: 25px;
+  height: 25px;
+  background-color: $light100;
+  border: 1px solid $dark500;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.checked {
+    visibility: visible;
+  }
+}
+
+.already-an-account {
+  display: flex;
+  align-items: center;
+  gap: $spacing8;
+  justify-content: center;
+}
+
+.roboto12 {
+  @include roboto12;
+}
+
+.btn {
+  padding-block: $spacing16;
+}

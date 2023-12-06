@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { database } from "../firebase";
+import { auth, database } from "../firebase";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const [newProduct, setNewProduct] = useState({
@@ -12,6 +14,14 @@ const AddProduct = () => {
     imagePath: "",
     units: "",
   });
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!auth.currentUser.uid === "uFq7ihsSmhPn3tc3NBsl72flECo1") {
+      navigate("/");
+    }
+  }, [navigate]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

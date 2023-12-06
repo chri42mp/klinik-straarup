@@ -39,7 +39,7 @@
   }
 
   .roboto12 {
-    @extend %roboto12;
+    @include roboto12;
     text-align: center;
 
     @media screen and (min-width: $ipadScreenSize) {
