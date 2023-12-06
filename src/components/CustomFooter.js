@@ -39,17 +39,17 @@ const CustomFooter = () => {
           <Link to='tel:+4540562064'>+4540562064</Link>
           <h5>SoMe</h5>
           <div className='some-icons'>
-            <Link href='https://www.instagram.com/klinikstraarup/'>
+            <Link to='https://www.instagram.com/klinikstraarup/'>
               <InstagramIcon />
             </Link>
-            <Link href='https://www.facebook.com/klinikstraarup'>
+            <Link to='https://www.facebook.com/klinikstraarup'>
               <FacebookIcon />
             </Link>
           </div>
         </div>
         <div className='footer-address'>
           <h4>Adresse</h4>
-          <Link href='https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22'>
+          <Link to='https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22'>
             <p>Klinik Straarup</p>
             <p>Brøndbyvestervej 23 st th</p>
             <p>2600 Glostrup </p>
