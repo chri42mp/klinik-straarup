@@ -169,59 +169,53 @@ $spacing240: 15rem;
 
 // Logo
 @mixin logoSizeWeb {
-  width: 20.551;
-  height: 4.375rem;
+  max-width: 20.551;
+}
+
+@mixin logoSizeMobile{
+
 }
 
 @mixin img{
  
-  // .s{
-
-  // }
+  .s{
+    max-width: 21.875rem;
+  }
   .xs{
-    width: 9.875rem;
-    height: 6.625rem;
+    max-width: 9.875rem;
   }
   .xxs{
-    width: 4rem;
-    height: 2.625rem;
+    max-width: 4rem;
   }
 
 
   @media (min-width: $ipadScreenSize){
  .xl{
-  width: 90rem;
-  height: 60rem;
+  max-width: 90rem;
  } 
 
  .l{
-  width: 51.5rem;
-  height: 34.5rem;
+  max-width: 51.5rem;
  }
 
  .m{
-  width: 38.25rem;
-  height: 25.375;
+  max-width: 38.25rem;
  }
-//  .S{
+ .s{
 
-//  }
+  max-width: 24.875rem;
+ }
  .xs{
-  width: 18.375rem;
-  height: 12.25rem;
+  max-width: 18.375rem;
  }
  .xxs{
-  width: 11.75rem;
-  height: 8rem;
+  max-width: 11.75rem;
  }
  .xxxs{
-  width: 5.125rem;
-  height: 3.5rem;
+  max-width: 5.125rem;
  }
 }
-
 }
-
 
 //BREAKPOINTS//
 $mobileScreenSize: 390px;
