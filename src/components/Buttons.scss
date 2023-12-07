@@ -4,10 +4,11 @@
   background-color: $green500;
   color: $light100;
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: $spacing12 $spacing16;
+  @include borderRadius;
   cursor: pointer;
   @include josefin18;
+  @include dropShadow;
 
   &:hover {
     background-color: $green400;
@@ -30,10 +31,11 @@
   background-color: $light200;
   color: $dark500;
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: $spacing12 $spacing16;
+  @include borderRadius;
   cursor: pointer;
   @include josefin18;
+  @include dropShadow;
 
   &:hover {
     background-color: $light300;

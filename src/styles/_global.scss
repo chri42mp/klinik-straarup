@@ -176,47 +176,45 @@ $spacing240: 15rem;
 @mixin logoSizeMobile{
 
 }
-
-@mixin img{
  
-  .s{
-    max-width: 21.875rem;
-  }
-  .xs{
-    max-width: 9.875rem;
-  }
-  .xxs{
-    max-width: 4rem;
-  }
+@mixin imgSMobile{
+  max-width: 21.875rem;
+}
 
+@mixin imgXsMobile{
+  max-width: 9.875rem;
+}
 
-  @media (min-width: $ipadScreenSize){
- .xl{
+ 
+@mixin imgXxsMobile{
+  max-width: 4rem;
+}
+
+@mixin imgXl{
   max-width: 90rem;
  } 
 
- .l{
+ @mixin imgL{
   max-width: 51.5rem;
  }
 
- .m{
+ @mixin imgM{
   max-width: 38.25rem;
  }
- .s{
 
+ @mixin imgS{
   max-width: 24.875rem;
  }
- .xs{
+ @mixin imgXs{
   max-width: 18.375rem;
  }
- .xxs{
+ @mixin imgXxs{
   max-width: 11.75rem;
  }
- .xxxs{
+ 
+ @mixin imgXxxs{
   max-width: 5.125rem;
  }
-}
-}
 
 //BREAKPOINTS//
 $mobileScreenSize: 390px;
