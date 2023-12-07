@@ -1,0 +1,125 @@
+@import "../styles/global.scss";
+
+h1, h2, h3, h4, h5, p{
+    margin:0;
+}
+
+p{
+    max-width: 65ch;
+}
+
+.about-s1{
+display: flex;
+flex-direction: column;
+padding: $spacing16 $spacing24;
+gap: $spacing16; 
+
+@media (min-width:$ipadScreenSize){
+&{
+    gap: $spacing48;
+    padding: $spacing48 $spacing96;
+    .h1{
+        @include josefin56
+    }
+    .p {
+        @include roboto18;
+    }
+}
+}
+}
+
+.about-s2{
+    .s2-img{
+        max-width: 100%;
+    }
+    .s2-text{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;    
+        background-color: $green500;
+        padding: $spacing32 $spacing24;
+        h2{
+            @include josefin40;
+        }
+        h5{
+            @include josefin20;
+        }
+         
+    }
+
+@media (min-width:$ipadScreenSize){
+    &{
+        display: flex;
+        .s2-img{
+            @include imgM;
+        }
+        .s2-text{
+            padding: $spacing120 $spacing96;
+        }
+    }
+}
+}
+
+.about-s3{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing16;
+
+    padding: $spacing24;
+    h1{
+        @include josefin40;
+        text-align: center;
+    }
+    h5{
+        @include josefin20;
+    }
+    p{
+        @include roboto18;
+    }
+    @media (min-width:$ipadScreenSize){
+        &{
+            padding: $spacing72;
+            justify-content: center;
+            align-items: center;
+            gap: $spacing24;
+
+
+            h1{
+                @include josefin48;
+            }
+          
+        }
+    }
+}
+
+.about-s5{
+    .s5-img{
+        max-width: 100%;
+    }
+    .s5-text{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;    
+        background-color: $green500;
+        padding: $spacing32 $spacing24;
+        h2{
+            @include josefin40;
+        }
+        h5{
+            @include josefin20;
+        }
+         
+    }
+
+@media (min-width:$ipadScreenSize){
+    &{
+        display: flex;
+        .s5-img{
+            @include imgM;
+        }
+        .s5-text{
+            padding: $spacing120 $spacing96;
+        }
+    }
+}
+}
