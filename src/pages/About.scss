@@ -1,5 +1,6 @@
 @import "../styles/global.scss";
-
+.about{
+margin: 0 auto;
 h1, h2, h3, h4, h5, p{
     margin:0;
 }
@@ -38,11 +39,17 @@ gap: $spacing16;
         gap: $spacing16;    
         background-color: $green500;
         padding: $spacing32 $spacing24;
+        width: 100%;
         h2{
             @include josefin40;
+            color: $light100;
         }
         h5{
             @include josefin20;
+            color: $light100;
+        }
+        p{
+            color: $light100;
         }
          
     }
@@ -100,8 +107,9 @@ gap: $spacing16;
         display: flex;
         flex-direction: column;
         gap: $spacing16;    
-        background-color: $green500;
+        background-color: $light200;
         padding: $spacing32 $spacing24;
+        width: 100%;
         h2{
             @include josefin40;
         }
@@ -111,7 +119,7 @@ gap: $spacing16;
          
     }
 
-@media (min-width:$ipadScreenSize){
+@media (min-width:$ipadScreenSize){ 
     &{
         display: flex;
         .s5-img{
@@ -121,5 +129,6 @@ gap: $spacing16;
             padding: $spacing120 $spacing96;
         }
     }
+}
 }
 }
