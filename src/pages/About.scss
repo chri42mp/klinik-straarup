@@ -5,8 +5,10 @@ h1, h2, h3, h4, h5, p{
     margin:0;
 }
 
+
 p{
     max-width: 65ch;
+    @include roboto18;
 }
 
 .about-s1{
@@ -22,9 +24,7 @@ gap: $spacing16;
     .h1{
         @include josefin56
     }
-    .p {
-        @include roboto18;
-    }
+
 }
 }
 }
@@ -39,7 +39,7 @@ gap: $spacing16;
         gap: $spacing16;    
         background-color: $green500;
         padding: $spacing32 $spacing24;
-        width: 100%;
+        max-width: 100%;
         h2{
             @include josefin40;
             color: $light100;
@@ -62,6 +62,7 @@ gap: $spacing16;
         }
         .s2-text{
             padding: $spacing120 $spacing96;
+            width: 100%;
         }
     }
 }
@@ -80,16 +81,13 @@ gap: $spacing16;
     h5{
         @include josefin20;
     }
-    p{
-        @include roboto18;
-    }
+
     @media (min-width:$ipadScreenSize){
         &{
             padding: $spacing72;
             justify-content: center;
             align-items: center;
             gap: $spacing24;
-
 
             h1{
                 @include josefin48;
@@ -109,7 +107,7 @@ gap: $spacing16;
         gap: $spacing16;    
         background-color: $light200;
         padding: $spacing32 $spacing24;
-        width: 100%;
+        max-width: 100%;
         h2{
             @include josefin40;
         }
@@ -127,6 +125,7 @@ gap: $spacing16;
         }
         .s5-text{
             padding: $spacing120 $spacing96;
+            width: 100%;
         }
     }
 }
