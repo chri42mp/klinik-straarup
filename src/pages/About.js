@@ -67,6 +67,9 @@ export default function About() {
             reverse={false}
           />
         </section>
+        <section>
+          <h1>Webshop</h1>
+        </section>
         <section className='about-s5'>
           <div className='s5-text'>
             <h2>Patientsikkerhed</h2>
@@ -103,6 +106,7 @@ export default function About() {
           </div>
         </section>
       </div>
+      <section></section>
       <CustomFooter />
     </>
   );
