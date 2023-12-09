@@ -1,0 +1,46 @@
+@import "../styles/global";
+
+h1, p{
+    max-width: 55ch;
+    margin: 0;
+}
+
+.discount-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing96;
+    padding: $spacing32 $spacing24;
+    margin: 0 auto;
+
+    .discount-banner-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing24;
+
+        p{
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: $ipadScreenSize) {
+   &{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $spacing72 $spacing96;
+   
+    .discount-banner-text{
+        align-items: flex-start;
+     
+    p{
+        text-align: left;
+    }
+    }
+
+   }
+   
+   
+    }
+
+}
