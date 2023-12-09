@@ -2,9 +2,26 @@
 
 
 .full-banner {
- 
-    .full-banner-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    h2, h5, p{
+        margin:0;
+    }
+    p{
+        max-width: 65ch;
+        @include roboto18;
+    }
+
+    .full-banner-image{
         order: 1;
+        img{
+            max-width: 100%;
+        } 
+      }
+
+    .full-banner-text {
+        order: 2;
         display: flex;
         flex-direction: column;
         gap: $spacing16;    
@@ -23,20 +40,12 @@
             color: $light100;
         }
       }
-      .full-banner-image{
-        order: 2;
-        img{
-            max-width: 100%;
-        }
-        
-      }
 }
 .full-banner.reverse {
-    .full-banner-box {
-      order: 2;
-    }
-  
     .full-banner-image {
+        order: 2;
+      }
+    .full-banner-text {
       order: 1;
     }
   }
@@ -45,23 +54,22 @@
 
 .full-banner {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
+    .full-banner-image {
+        order: 1;
+      }
   .full-banner-text {
-    order: 1;
+    order: 2;
     padding: $spacing120 $spacing96;
     max-width: 100%;
     h1, h5{
         text-align: left;
     }
   }
-
-  .full-banner-image {
-    order: 2;
-  }
 }
 
 .full-banner.reverse {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr;
 
   .full-banner-text {
     order: 1;
