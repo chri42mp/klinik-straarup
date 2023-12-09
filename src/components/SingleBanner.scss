@@ -19,6 +19,12 @@
         h1, h5{
             text-align: center;
         }
+        h1{
+          @include josefin40
+        }
+        h5{
+          @include josefin18
+        }
 
       }
       .single-banner-image{
@@ -48,7 +54,6 @@
 .single-banner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   padding: $spacing72 $spacing96;
   margin: $spacing96 $spacing120;
   gap: $spacing24;
@@ -57,6 +62,12 @@
     order: 1;
     h1, h5{
         text-align: left;
+    }
+    h1{
+      @include josefin48;
+    }
+    h5{
+      @include josefin20;
     }
   }
 
