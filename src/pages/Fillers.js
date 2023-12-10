@@ -4,7 +4,10 @@ import './Fillers.scss';
 import SingleBanner from '../components/SingleBanner';
 import TextboxBanner from '../components/TextboxBanners';
 import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
+import FullBanner from '../components/FullBanner';
+import BeforeAndAfter from '../components/BeforeAndAfter';
 import CustomFooter from '../components/CustomFooter';
+import DiscountBanner from '../components/DiscountBanner';
 
 export default function Fillers() {
   return (
@@ -21,19 +24,35 @@ export default function Fillers() {
           reverse={false}
         />
       </section>
-      <section></section>
       <section>
-        <h1>Før og efter behandling</h1>
-        <div>
-          <img
-            src='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-            alt='something'
-          />
-          <img
-            src='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-            alt='some'
-          />
-        </div>
+        <FullBanner
+          title='Behandling med filler'
+          subtitle='Hos Klinik Straarup behandler vi disse områder: '
+          text='
+          Tear Though
+          Kindben
+          Midtkind
+          Hage
+          Kæbelinje
+          Nasolabialfolder
+          Læber
+          Næse
+          Behandlingen kan med fordel kombineres med andre skønhedsbehandlinger såsom botox og skinbooster.
+          På behandlingsdagen er det vigtigt at du ikke dyrker sport, går i svømmehal eller sauna og du må ikke opholde dig i solen eller gå solarium
+          '
+          imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+          alt='toner'
+          reverse={true}
+        />
+      </section>
+      <section>
+        <BeforeAndAfter
+          title='Før og efter behandling'
+          imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+          alt1='førbillede'
+          imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+          alt2='efter billede'
+        />
       </section>
       <section>
         <TextboxBanner
@@ -57,6 +76,10 @@ export default function Fillers() {
           reverse={false}
         />
       </section>
+      <section>
+        <DiscountBanner />
+      </section>
+
       <CustomFooter />
     </>
   );
