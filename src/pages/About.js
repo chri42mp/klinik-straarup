@@ -36,6 +36,30 @@ export default function About() {
             alt='toner'
             reverse={false}
           />
+        <section className='about-s2'>
+          <div className='s2-img'>
+            <img
+              className='hero-image'
+              src='/webshop-images/2018-kit-skin-normalizing.webp'
+              alt='normalizing skin kit'
+            />
+          </div>
+          <div className='s2-text'>
+            <h2>Klinik Straarup</h2>
+            <h5>Passion for æstetik</h5>
+            <p>
+              Vi har passion for æstetik, og holder os altid, opdateret på
+              nyeste viden inden for den kosmetiske verden. Vi ønsker at give
+              vores kunder naturlige, og smukke resulater, der får dem til at
+              føle sig, som den bedste udgave ad sig selv. Vi bruger de bedste
+              produkter på markedet, som Restylane og Vistabel. <br />
+              <br /> Vores konsultationer er gratis og uforpligende. Og giver
+              dig som kunde, og din behandler mulighed for at, sammen
+              tilrettelægge en plan, for at opnå dine ønsker. <br />
+              <br /> Vores mål er at udføre behandlinger med naturlige og
+              subtile resultater, som vi kan stå inde for.
+            </p>
+          </div>
         </section>
         <section className='about-s3'>
           <h1>Mød vores behandlere</h1>
