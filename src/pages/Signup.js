@@ -25,7 +25,14 @@ export default function Signup() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!document.getElementById("privacypolicy").checked) {
+    const data = {
+      firstname: e.target.firstname.value,
+      lastname: e.target.lastname.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+    };
+
+    if (!isChecked) {
       return setError("Du skal erklærer dig enig i vores privatslivspolitik");
     }
 
@@ -36,7 +43,7 @@ export default function Signup() {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
+      await signup(emailRef.current.value, passwordRef.current.value, data);
       navigate("/userdashboard");
     } catch {
       setError("failed to create an account");
@@ -56,7 +63,7 @@ export default function Signup() {
         <div className="user-name-group">
           <div className="form-group">
             <label htmlFor="firstname">Navn</label>
-            <input type="text" id="name" required />
+            <input type="text" id="firstname" required />
             {error && (
               <div className="error-message">
                 <ErrorIcon />
