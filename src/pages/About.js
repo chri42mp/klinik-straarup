@@ -36,6 +36,7 @@ export default function About() {
             alt='toner'
             reverse={false}
           />
+        </section>
         <section className='about-s2'>
           <div className='s2-img'>
             <img
@@ -125,8 +126,8 @@ export default function About() {
             />
           </div>
         </section>
+        <section></section>
       </div>
-      <section></section>
       <CustomFooter />
     </>
   );
