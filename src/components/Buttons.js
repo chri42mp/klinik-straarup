@@ -1,28 +1,42 @@
 import "./Buttons.scss";
+import { Link } from "react-router-dom";
 
-const BaseButton = ({ text, onClick, className, icon }) => {
+const BaseButton = ({ text, onClick, className, icon, link }) => {
+  const ButtonComponent = link ? Link : "button";
+
   return (
-    <button onClick={onClick} className={`btn ${className}`}>
+    <ButtonComponent to={link} onClick={onClick} className={`btn ${className}`}>
       {text}
       {icon}
-    </button>
+    </ButtonComponent>
   );
 };
 
-const PrimaryButton = ({ text, onClick }) => (
-  <BaseButton text={text} onClick={onClick} className="btn-primary" />
+const PrimaryButton = ({ text, onClick, link }) => (
+  <BaseButton
+    text={text}
+    onClick={onClick}
+    className="btn-primary"
+    link={link}
+  />
 );
 
-const SecondaryButton = ({ text, onClick }) => (
-  <BaseButton text={text} onClick={onClick} className="btn-secondary" />
+const SecondaryButton = ({ text, onClick, link }) => (
+  <BaseButton
+    text={text}
+    onClick={onClick}
+    className="btn-secondary"
+    link={link}
+  />
 );
 
-const TertiaryButtonWithIcon = ({ text, onClick, icon }) => (
+const TertiaryButtonWithIcon = ({ text, onClick, icon, link }) => (
   <BaseButton
     text={text}
     icon={icon}
     onClick={onClick}
     className="btn-tertiary-icon"
+    link={link}
   />
 );
 
