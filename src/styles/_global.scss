@@ -52,7 +52,6 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   font-size: 4rem;
   line-height: 4.5rem;
   letter-spacing: 0.92px;
-
 }
 
 @mixin josefin56 {
@@ -115,7 +114,10 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.875rem;
   color: $blue500;
-  :hover{text-decoration: underline;}
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
 }
 
 %roboto16 {
@@ -160,7 +162,7 @@ $spacing240: 15rem;
 }
 
 //Borderradius
- @mixin borderRadius {
+@mixin borderRadius {
   border-radius: 0.5rem;
 }
 
@@ -173,48 +175,46 @@ $spacing240: 15rem;
   max-width: 20.551;
 }
 
-@mixin logoSizeMobile{
-
+@mixin logoSizeMobile {
 }
- 
-@mixin imgSMobile{
+
+@mixin imgSMobile {
   max-width: 21.875rem;
 }
 
-@mixin imgXsMobile{
+@mixin imgXsMobile {
   max-width: 9.875rem;
 }
 
- 
-@mixin imgXxsMobile{
+@mixin imgXxsMobile {
   max-width: 4rem;
 }
 
-@mixin imgXl{
+@mixin imgXl {
   max-width: 90rem;
- } 
+}
 
- @mixin imgL{
+@mixin imgL {
   max-width: 51.5rem;
- }
+}
 
- @mixin imgM{
+@mixin imgM {
   max-width: 38.25rem;
- }
+}
 
- @mixin imgS{
+@mixin imgS {
   max-width: 24.875rem;
- }
- @mixin imgXs{
+}
+@mixin imgXs {
   max-width: 18.375rem;
- }
- @mixin imgXxs{
+}
+@mixin imgXxs {
   max-width: 11.75rem;
- }
- 
- @mixin imgXxxs{
+}
+
+@mixin imgXxxs {
   max-width: 5.125rem;
- }
+}
 
 //BREAKPOINTS//
 $mobileScreenSize: 390px;

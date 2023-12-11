@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { database } from "../firebase";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
@@ -7,6 +7,7 @@ import "./Product.scss";
 import Accordion from "../components/Accordion";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import Counter from "../components/Counter";
+import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 
 export default function Product() {
   const { uid } = useParams();
@@ -28,6 +29,15 @@ export default function Product() {
   return (
     <>
       <Navigation />
+      <div className="breadcrumb">
+        <Link className="webshop-crumb" to="/webshop">
+          Webshop <ArrowLeftIcon width="30px" />
+        </Link>
+        <span
+          className="category-crumb"
+          style={{ textTransform: "capitalize" }}
+        ></span>
+      </div>
       <div className="singleview">
         <div className="singleview-img-box">
           <img
