@@ -1,0 +1,67 @@
+@import "../styles/global.scss";
+
+.product-category-content {
+  padding-inline: $spacing96;
+
+  h1 {
+    padding-block: $spacing48;
+    @include josefin56;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: $spacing24;
+  padding-block: $spacing24;
+}
+
+.webshop-crumb {
+  display: flex;
+  align-items: center;
+  @include roboto12;
+  color: $dark500;
+}
+
+.category-crumb {
+  color: $dark300;
+  @include roboto12;
+}
+
+.all-category-products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 310px));
+  gap: $spacing24;
+  padding-block: $spacing48;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  max-height: 470px;
+  width: 294px;
+  @include dropShadow;
+  padding: $spacing8;
+  gap: $spacing8;
+  text-align: center;
+  @include borderRadius;
+
+  .heart-icons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img {
+    object-fit: contain;
+    max-height: 196px;
+  }
+
+  .josefin18 {
+    @include josefin18;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+}
