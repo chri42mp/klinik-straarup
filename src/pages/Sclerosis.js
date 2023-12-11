@@ -1,20 +1,22 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import './Sclerosis.scss';
-import SingleBanner from '../components/SingleBanner';
+import Hero2 from '../components/Hero2';
 import TextboxBanner from '../components/TextboxBanners';
 import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
 import FullBanner from '../components/FullBanner';
 import BeforeAndAfter from '../components/BeforeAndAfter';
 import CustomFooter from '../components/CustomFooter';
 import DiscountBanner from '../components/DiscountBanner';
+import Accordion from '../components/Accordion';
+import FAQimg from '../components/FAQimg';
 
 export default function Sclerosis() {
   return (
     <>
       <Navigation />
       <section>
-        <SingleBanner
+        <Hero2
           title='Sklerosering'
           text='Karspængninger er et udbredt kosmetisk problem, som kan afhjælpes med indsprøjtning af skleroseringsvæske.
           For at opnå et flot resultat, skal du forvente at komme til flere behandlinger.'
@@ -74,6 +76,28 @@ export default function Sclerosis() {
       </section>
       <section>
         <DiscountBanner />
+      </section>
+      <section>
+        <div className='sclerosis-faq'>
+          <FAQimg
+            imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt1='førbillede'
+            imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt2='efter billede'
+          />
+          <div className='sclerosis-faq-text'>
+            <h1>FAQ</h1>
+            <h4>Få svar på dine spørgsmål</h4>
+            <Accordion title='Er botox farligt?' />
+            <Accordion
+              title='Hvor længe holder en behandling med botox? '
+              content='testing'
+            />
+            <Accordion title='Hvornår kan jeg se resultatet af en behandling?' />
+            <Accordion title='Må man bruge makeup samme dag efter behandling?' />
+            <Accordion title='Hvor længe må man ikke lægge ned efter botox?' />
+          </div>
+        </div>
       </section>
 
       <CustomFooter />

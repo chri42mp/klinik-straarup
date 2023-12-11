@@ -1,20 +1,22 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import './Botox.scss';
-import SingleBanner from '../components/SingleBanner';
+import Hero2 from '../components/Hero2';
 import TextboxBanner from '../components/TextboxBanners';
 import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
 import FullBanner from '../components/FullBanner';
 import BeforeAndAfter from '../components/BeforeAndAfter';
 import CustomFooter from '../components/CustomFooter';
 import DiscountBanner from '../components/DiscountBanner';
+import Accordion from '../components/Accordion';
+import FAQimg from '../components/FAQimg';
 
 export default function Botox() {
   return (
     <>
       <Navigation />
       <section>
-        <SingleBanner
+        <Hero2
           title='Botox'
           text='Udover at reducere rynker og give en pænere hud kan botox også hjælpe på medicinske problematikker som migræne, skæren tænder, muskelsmerter i kæber og reducering af sved.'
           imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
@@ -84,7 +86,28 @@ export default function Botox() {
       <section>
         <DiscountBanner />
       </section>
-
+      <section>
+        <div className='botox-faq'>
+          <FAQimg
+            imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt1='førbillede'
+            imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt2='efter billede'
+          />
+          <div className='botox-faq-text'>
+            <h1>FAQ</h1>
+            <h4>Få svar på dine spørgsmål</h4>
+            <Accordion title='Er botox farligt?' />
+            <Accordion
+              title='Hvor længe holder en behandling med botox? '
+              content='testing'
+            />
+            <Accordion title='Hvornår kan jeg se resultatet af en behandling?' />
+            <Accordion title='Må man bruge makeup samme dag efter behandling?' />
+            <Accordion title='Hvor længe må man ikke lægge ned efter botox?' />
+          </div>
+        </div>
+      </section>
       <CustomFooter />
     </>
   );

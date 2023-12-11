@@ -1,65 +1,64 @@
 @import "../styles/global.scss";
 
-.single-banner {
+
+.hero2-banner {
     display: flex;
     flex-direction: column;
     padding: $spacing16 $spacing24;
-    gap: $spacing32;
-    background-color: $light200;
+    gap: $spacing8;
     height: fit-content;
 
-    .single-banner-box {
-        order: 1;
+    .hero2-banner-box {
         display: flex;
         flex-direction: column;
-        gap: $spacing16;
+        align-items: center;
+        gap: $spacing32;
         h1{
             text-align: center;
             @include josefin40
         }
+        p{
+          text-align: center;
+        }
 
       }
-      .single-banner-image{
+      .hero2-banner-image{
         display: flex;
         justify-content: center;
         align-items: center;
-        order: 2;
+
         img{
             @include imgSMobile;
             height: 235px;
         }
       }
 }
-.single-banner.reverse {
-    .single-banner-box {
-      order: 2;
-    }
-  
-    .single-banner-image {
-      order: 1;
-    }
-  }
+
 
 @media screen and (min-width: $ipadScreenSize) {
 
 
-.single-banner {
+.hero2-banner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: $spacing72 $spacing96;
-  margin: $spacing96 $spacing120;
-  gap: $spacing48;
+  padding: $spacing120 $spacing96;
+  gap: $spacing24;
   
-  .single-banner-box {
-    order: 1;
+  .hero2-banner-box {
+    gap: $spacing48;
+    align-items: flex-start;
     h1{
         text-align: left;
         @include josefin56;
     }
+    p{
+      text-align: left;
+      max-width: 65ch;
+    }
 
   }
 
-  .single-banner-image {
+  .hero2-banner-image {
     order: 2;
     img{
         @include imgM;
@@ -68,13 +67,5 @@
   }
 }
 
-.single-banner.reverse {
-  .banner-box {
-    order: 1;
-  }
 
-  .single-banner-image {
-    order:2;    
-  }
-}
 }

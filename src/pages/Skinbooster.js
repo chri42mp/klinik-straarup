@@ -1,20 +1,22 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import './Skinbooster.scss';
-import SingleBanner from '../components/SingleBanner';
+import Hero2 from '../components/Hero2';
 import TextboxBanner from '../components/TextboxBanners';
 import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
 import FullBanner from '../components/FullBanner';
 import BeforeAndAfter from '../components/BeforeAndAfter';
 import CustomFooter from '../components/CustomFooter';
 import DiscountBanner from '../components/DiscountBanner';
+import Accordion from '../components/Accordion';
+import FAQimg from '../components/FAQimg';
 
 export default function Skinbooster() {
   return (
     <>
       <Navigation />
       <section>
-        <SingleBanner
+        <Hero2
           title='Skinbooster'
           text='Din hud vil elske dig for behandlinger med skinbooster. Skinbooster vil opstramme slap hud, reducere rynker, forbedre hudtonen og elasticiteten samt forbedre den generelle hudtilstand, på hals, decollete, hænder og ansigt.'
           imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
@@ -70,6 +72,27 @@ export default function Skinbooster() {
       </section>
       <section>
         <DiscountBanner />
+      </section>
+      <section>
+        <div className='skinbooster-faq'>
+          <FAQimg
+            imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt1='førbillede'
+            imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt2='efter billede'
+          />
+          <div className='skinbooster-faq-text'>
+            <h1>FAQ</h1>
+            <h4>Få svar på dine spørgsmål</h4>
+            <Accordion title='Hvad er forskellen på skinbooster og filler?' />
+            <Accordion
+              title='Hvor ofte skal man have skinbooster? '
+              content='testing'
+            />
+            <Accordion title='Hvordan virker skinbooster?' />
+            <Accordion title='Hvad er der i en skinbooster?' />
+          </div>
+        </div>
       </section>
 
       <CustomFooter />

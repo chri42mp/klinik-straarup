@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SecondaryButton } from './Buttons';
-import './SingleBanner.scss';
+import { PrimaryButton } from './Buttons';
+import './Hero2.scss';
 
-const SingleBanner = ({
+const Hero2 = ({
   title,
   subtitle,
   text,
@@ -15,22 +15,22 @@ const SingleBanner = ({
   reverse,
 }) => {
   return (
-    <div className={`single-banner ${reverse ? 'reverse' : ''}`}>
-      <div className='single-banner-box' style={{ order: reverse ? 2 : 1 }}>
+    <div className='hero2-banner'>
+      <div className='hero2-banner-image'>
+        <img src={imageUrl} alt={alt} />
+      </div>
+      <div className='hero2-banner-box'>
         <h1>{title}</h1>
         <p>{text}</p>
         <div>
-          <SecondaryButton text={buttonText} onClick={onButtonClick} />
+          <PrimaryButton text={buttonText} onClick={onButtonClick} />
         </div>
-      </div>
-      <div className='single-banner-image' style={{ order: reverse ? 1 : 2 }}>
-        <img src={imageUrl} alt={alt} />
       </div>
     </div>
   );
 };
 
-SingleBanner.propTypes = {
+Hero2.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
@@ -42,4 +42,4 @@ SingleBanner.propTypes = {
   reverse: PropTypes.bool,
 };
 
-export default SingleBanner;
+export default Hero2;
