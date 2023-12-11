@@ -1,0 +1,83 @@
+@import "../styles/global.scss";
+
+
+.full-banner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    h2, h5, p{
+        margin:0;
+    }
+    p{
+        max-width: 65ch;
+        @include roboto18;
+    }
+
+    .full-banner-image{
+        order: 1;
+
+        img{
+            max-width: 100%;
+        } 
+      }
+
+    .full-banner-text {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;    
+        background-color: $green500;
+        padding: $spacing32 $spacing24;
+        max-width: 100%;
+        h2{
+            @include josefin40;
+            color: $light100;
+        }
+        h5{
+            @include josefin20;
+            color: $light100;
+        }
+        p{
+            color: $light100;
+        }
+      }
+}
+.full-banner.reverse {
+    .full-banner-image {
+        order: 2;
+      }
+    .full-banner-text {
+      order: 1;
+    }
+  }
+
+@media screen and (min-width: $ipadScreenSize) {
+
+.full-banner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    .full-banner-image {
+        order: 1;
+
+      }
+  .full-banner-text {
+    order: 2;
+    padding: $spacing120 $spacing96;
+    max-width: 100%;
+
+  }
+}
+
+.full-banner.reverse {
+    grid-template-columns: 1.5fr 1fr;
+
+  .full-banner-text {
+    order: 1;
+  }
+
+  .full-banner-image {
+    order:2;    
+  }
+}
+}
+

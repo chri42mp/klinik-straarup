@@ -1,0 +1,80 @@
+@import "../styles/global.scss";
+
+.single-banner {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing16 $spacing24;
+    gap: $spacing32;
+    background-color: $light200;
+    height: fit-content;
+
+    .single-banner-box {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;
+        h1{
+            text-align: center;
+            @include josefin40
+        }
+
+      }
+      .single-banner-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+        img{
+            @include imgSMobile;
+            height: 235px;
+        }
+      }
+}
+.single-banner.reverse {
+    .single-banner-box {
+      order: 2;
+    }
+  
+    .single-banner-image {
+      order: 1;
+    }
+  }
+
+@media screen and (min-width: $ipadScreenSize) {
+
+
+.single-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: $spacing72 $spacing96;
+  margin: $spacing96 $spacing120;
+  gap: $spacing48;
+  
+  .single-banner-box {
+    order: 1;
+    h1{
+        text-align: left;
+        @include josefin56;
+    }
+
+  }
+
+  .single-banner-image {
+    order: 2;
+    img{
+        @include imgM;
+        height: 405px;
+    }
+  }
+}
+
+.single-banner.reverse {
+  .banner-box {
+    order: 1;
+  }
+
+  .single-banner-image {
+    order:2;    
+  }
+}
+}

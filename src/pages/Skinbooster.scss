@@ -1,0 +1,19 @@
+@import "../styles/global.scss";
+
+.skinbooster-faq{
+    display: flex;
+    flex-direction: column;
+    padding: $spacing72 $spacing24;
+    gap: $spacing24;
+
+    @media screen and (min-width: $ipadScreenSize) {
+
+        &{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: $spacing72 $spacing96;
+            gap: $spacing24;
+
+        }
+    }
+}

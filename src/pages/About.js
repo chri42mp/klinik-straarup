@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import TextboxBanner from '../components/TextboxBanners';
 import './About.scss';
 import CustomFooter from '../components/CustomFooter';
+import FullBanner from '../components/FullBanner';
 
 export default function About() {
   return (
@@ -16,6 +17,25 @@ export default function About() {
             Glostrup.
           </p>
         </section>
+        <section>
+          <FullBanner
+            title='Klinik Straarup'
+            subtitle='Passion for æstetik '
+            text=' Vi har passion for æstetik, og holder os altid, opdateret på
+          nyeste viden inden for den kosmetiske verden. Vi ønsker at give
+          vores kunder naturlige, og smukke resulater, der får dem til at
+          føle sig, som den bedste udgave ad sig selv. Vi bruger de bedste
+          produkter på markedet, som Restylane og Vistabel. 
+          Vores konsultationer er gratis og uforpligende. Og giver
+          dig som kunde, og din behandler mulighed for at, sammen
+          tilrettelægge en plan, for at opnå dine ønsker. 
+          Vores mål er at udføre behandlinger med naturlige og
+          subtile resultater, som vi kan stå inde for.
+          '
+            imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            alt='toner'
+            reverse={false}
+          />
         <section className='about-s2'>
           <div className='s2-img'>
             <img
