@@ -30,18 +30,30 @@ export default function Fillers() {
         <FullBanner
           title='Behandling med filler'
           subtitle='Hos Klinik Straarup behandler vi disse områder: '
-          text='
-          Tear Though
-          Kindben
-          Midtkind
-          Hage
-          Kæbelinje
-          Nasolabialfolder
-          Læber
-          Næse
-          Behandlingen kan med fordel kombineres med andre skønhedsbehandlinger såsom botox og skinbooster.
-          På behandlingsdagen er det vigtigt at du ikke dyrker sport, går i svømmehal eller sauna og du må ikke opholde dig i solen eller gå solarium
-          '
+          text={
+            <>
+              <ul>
+                <li>Tear Though</li>
+                <li>Kindben</li>
+                <li>Midtkind</li>
+                <li>Hage</li>
+                <li>Kæbelinje</li>
+                <li>Nasolabialfolder</li>
+                <li>Læber</li>
+                <li>Næse</li>
+              </ul>
+              <p>
+                Behandlingen kan med fordel kombineres med andre
+                skønhedsbehandlinger såsom botox og skinbooster.
+              </p>
+              <br />
+              <p>
+                På behandlingsdagen er det vigtigt at du ikke dyrker sport, går
+                i svømmehal eller sauna og du må ikke opholde dig i solen eller
+                gå solarium.
+              </p>
+            </>
+          }
           imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
           alt='toner'
           reverse={true}

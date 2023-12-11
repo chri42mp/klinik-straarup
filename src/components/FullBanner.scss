@@ -1,5 +1,7 @@
 @import "../styles/global.scss";
-
+li{
+  list-style-type: none;
+}
 
 .full-banner {
     display: flex;
