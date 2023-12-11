@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, json, useParams } from "react-router-dom";
 import { database } from "../firebase";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
@@ -11,8 +11,8 @@ import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 
 export default function Product() {
   const { uid } = useParams();
-  console.log(uid);
-
+  const [count, setCount] = useState(0);
+  const [currentBasket, setCurrentBasket] = useState([]);
   const [product, setproduct] = useState({});
 
   useEffect(() => {
@@ -24,7 +24,22 @@ export default function Product() {
         console.log(product.data());
         setproduct(product.data());
       });
+
+    if (localStorage.getItem("basket")) {
+      console.log(localStorage.getItem("basket"));
+      setCurrentBasket(JSON.parse(localStorage.getItem("basket")));
+    }
   }, [uid]);
+
+  function addToBasket(uid, qauntity) {
+    console.log(uid, qauntity);
+    let data = {
+      product: uid,
+      qauntity: qauntity,
+    };
+    let newBasket = [...currentBasket, data];
+    localStorage.setItem("basket", JSON.stringify(newBasket));
+  }
 
   return (
     <>
@@ -52,10 +67,13 @@ export default function Product() {
           <p className="roboto16">{product.productDescription}</p>
           <h2 className="price">{product.productPrice} DKK</h2>
           <div className="counter-container">
-            <Counter />
+            <Counter count={count} setCount={setCount} />
           </div>
           <div className="buttons">
-            <PrimaryButton text="Køb nu" />
+            <PrimaryButton
+              onClick={(e) => addToBasket(uid, count)}
+              text="Køb nu"
+            />
             <SecondaryButton text="Shop mere" />
           </div>
           <Accordion title="Brug" content={<p>{product.usage}</p>} />

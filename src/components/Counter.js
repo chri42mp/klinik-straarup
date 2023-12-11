@@ -3,8 +3,8 @@ import MinusIcon from "../assets/icons/MinusIcon";
 import PlusIcon from "../assets/icons/PlusIcon";
 import "./Counter.scss";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+const Counter = ({ count, setCount }) => {
+  // const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
     setCount(count + 1);
