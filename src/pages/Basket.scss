@@ -1,0 +1,67 @@
+@import "../styles/global.scss";
+
+.number-of-product {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 25px;
+    height: 30px;
+    border: 1px solid $light100;
+    background-color: $green300;
+    @include borderRadius;
+    color: $light100;
+    padding-block: $spacing8;
+    padding-inline: $spacing16;
+  }
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $green300;
+  margin-bottom: $spacing16;
+  color: $light100;
+  max-width: 612px;
+  max-height: 205px;
+  padding-inline: $spacing24;
+  padding-block: $spacing8;
+  @include borderRadius;
+  gap: $spacing8;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.basket-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-inline: $spacing96;
+  gap: $spacing24;
+}
+
+.total-column {
+  @include dropShadow;
+  @include borderRadius;
+  padding: $spacing24;
+}
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount {
+  display: flex;
+  flex-direction: column;
+}
+.total-price {
+  display: flex;
+  justify-content: space-between;
+}
