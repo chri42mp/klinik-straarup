@@ -31,11 +31,12 @@ export default function Product() {
     }
   }, [uid]);
 
-  function addToBasket(uid, qauntity) {
+  function addToBasket(uid, qauntity, price) {
     console.log(uid, qauntity);
     let data = {
       product: uid,
       qauntity: qauntity,
+      productPrice: price,
     };
     let newBasket = [...currentBasket, data];
     localStorage.setItem("basket", JSON.stringify(newBasket));
@@ -71,7 +72,7 @@ export default function Product() {
           </div>
           <div className="buttons">
             <PrimaryButton
-              onClick={(e) => addToBasket(uid, count)}
+              onClick={(e) => addToBasket(uid, count, product?.productPrice)}
               text="Køb nu"
             />
             <SecondaryButton text="Shop mere" />
