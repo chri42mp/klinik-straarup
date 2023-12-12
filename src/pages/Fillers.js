@@ -8,7 +8,7 @@ import FullBanner from '../components/FullBanner';
 import BeforeAndAfter from '../components/BeforeAndAfter';
 import CustomFooter from '../components/CustomFooter';
 import DiscountBanner from '../components/DiscountBanner';
-import Accordion from '../components/Accordion';
+import Dropdown from '../components/Dropdown';
 import FAQimg from '../components/FAQimg';
 
 export default function Fillers() {
@@ -19,7 +19,7 @@ export default function Fillers() {
         <Hero2
           title='Filler'
           text='Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter.'
-          imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+          imageUrl='/site-images/Filler-s1.webp'
           alt='Calming toner'
           buttonText='Book online'
           onButtonClick={() => console.log('Button clicked!')}
@@ -54,9 +54,9 @@ export default function Fillers() {
               </p>
             </>
           }
-          imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+          imageUrl='/site-images/Filler-s2.webp'
           alt='toner'
-          reverse={true}
+          reverse={false}
         />
       </section>
       <section>
@@ -72,22 +72,22 @@ export default function Fillers() {
         <TextboxBanner
           title='Værd at vide'
           text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
-          imageUrl='/webshop-images/gbl-calming-toner.webp'
+          imageUrl='/site-images/Textboxbanner-1.webp'
           alt='Calming toner'
           buttonText='Kontakt klinikken'
           buttonIcon={<LongArrowRightIcon />}
           onButtonClick={() => console.log('Button clicked!')}
-          reverse={true}
+          reverse={false}
         />
         <TextboxBanner
           title='Prisliste'
           text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
-          imageUrl='/webshop-images/gbl-complexion-clearing-masque-original.webp'
+          imageUrl='/site-images/Textboxbanner-2.webp'
           alt='Clearing mask'
           buttonText='Se priser'
           buttonIcon={<LongArrowRightIcon />}
           onButtonClick={() => console.log('Button clicked!')}
-          reverse={false}
+          reverse={true}
         />
       </section>
       <section>
@@ -96,28 +96,52 @@ export default function Fillers() {
       <section>
         <div className='filler-faq'>
           <FAQimg
-            imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            imageUrl1='/site-images/FAQ-1.webp'
             alt1='førbillede'
-            imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            imageUrl2='/site-images/FAQ-2.webp'
             alt2='efter billede'
           />
           <div className='filler-faq-text'>
             <h1>FAQ</h1>
             <h4>Få svar på dine spørgsmål</h4>
-            <div>
-              <Accordion title='Hvad skal man være opmærksom på efter filler?' />
+            <div className='filler-faq-dropdown'>
+              <Dropdown
+                title='Hvad skal man være opmærksom på efter filler?'
+                content='Du må ikke anvende make-up samme dag, men skal give huden ro og rense den inden du går i seng. 
+                På behandlingsdagen skal du undgå at dyrke sport, gå i sauna eller svømmehallen. 
+                Du bør undgå at gå direkte i solen 1-2 dage efter'
+              />
+              <Dropdown
+                title='Er der noget man ikke må inden behandling?'
+                content='Du må ikke tage blodfortyndende medicin, fiskeolie samt kosttilskud 10 dage før din behandling.
+                du må ikke drikke alkohol eller spise NSAID piller (f.eks. Ibuprofen) dagen før din behandling.
+                Har du tendens til forkølelsessår, anbefaler vi, at du tager forebyggende medicin indtil huden er helet (minimum 3 dages behandling). 
+                Du skal starte med medicinen 24 timer før din filler behandling. Recepten får du via egen læge '
+              />
+              <Dropdown
+                title='Hvornår skal man massere filler?'
+                content='De første 2 døgn efter behandlingen skal du ikke masere eller gnide på det behandlede område (med mindre at anden instruks gives af behandleren).'
+              />
+              <Dropdown
+                title='Kan filler rykke sig?'
+                content='I nogle tilfælde - typisk med læber- kan filleren flytte sig og placere sig i huden (også kaldet for filler migration). 
+                Her ville man, i de fleste tilfælde, anbefale få filleren opløst.'
+              />
+              <Dropdown
+                title='Hvilken type filler holder længst?'
+                content='Juvéderm har en længere holdbarhed en Restylane, selvom de begge har en midlertidig effect.'
+              />
+              <Dropdown
+                title='Hvor lang tid er man hævet efter behandling?'
+                content='Ved læbeforstørrelse kan hævelsen stå på i nogle dage. 
+              Læberne kan også være lidt ujævne i denne periode således,
+              at det endelige resultat ikke ses umiddelbart efter behandlingen'
+              />
+              <Dropdown
+                title='Hvornår må jeg træne efter filler?'
+                content='Du skal undgå træning det første døgn efter behandlingen.'
+              />
             </div>
-
-            <Accordion
-              title='Er der noget man ikke må inden behandling?'
-              content='testing'
-            />
-            <Accordion title='Hvornår må man gå i bad efter filler?' />
-            <Accordion title='Hvornår skal man massere filler?' />
-            <Accordion title='Kan filler rykke sig?' />
-            <Accordion title='Hvilken type filler holder længst?' />
-            <Accordion title='Hvor lang tid er man hævet efter behandling?' />
-            <Accordion title='Hvornår må jeg træne efter filler?' />
           </div>
         </div>
       </section>

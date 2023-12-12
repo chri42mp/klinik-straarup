@@ -6,7 +6,7 @@ const DiscountBanner = () => {
   return (
     <div className='discount-banner'>
       <div className='discount-banner-text'>
-        <h1>10% rabat</h1>
+        <h2>10% rabat</h2>
         <p>
           Som loyalitetskunde hos Klinik Straarup modtager du 10% på hver
           behandling efter den første. Opret en kundeprofil hos os og bestil en

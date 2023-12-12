@@ -15,6 +15,12 @@
             margin-bottom: $spacing24;
         }
     }
+    
+    .filler-faq-dropdown{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;
+    }
 
     @media screen and (min-width: $ipadScreenSize) {
 

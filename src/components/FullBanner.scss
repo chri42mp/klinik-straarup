@@ -26,14 +26,14 @@ li{
     .full-banner-text {
         order: 2;
         display: flex;
-        flex-direction: column;
-        gap: $spacing16;    
+        flex-direction: column;   
         background-color: $green500;
         padding: $spacing32 $spacing24;
         max-width: 100%;
         h2{
             @include josefin40;
             color: $light100;
+            margin-bottom: $spacing16;
         }
         h5{
             @include josefin20;

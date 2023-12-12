@@ -6,6 +6,21 @@
     padding: $spacing72 $spacing24;
     gap: $spacing24;
 
+    .sclerosis-faq-text{
+        h1{
+            margin-bottom: $spacing16;
+        }
+        h4{
+            margin-bottom: $spacing24;
+        }
+    }
+
+    .sclerosis-faq-dropdown{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;
+    }
+
     @media screen and (min-width: $ipadScreenSize) {
 
         &{
@@ -17,3 +32,4 @@
         }
     }
 }
+ 
