@@ -5,7 +5,6 @@ import './SingleBanner.scss';
 
 const SingleBanner = ({
   title,
-  subtitle,
   text,
   imageUrl,
   alt,
@@ -20,7 +19,7 @@ const SingleBanner = ({
         <h1>{title}</h1>
         <p>{text}</p>
         <div>
-          <SecondaryButton text={buttonText} onClick={onButtonClick} />
+          <SecondaryButton text={buttonText} link={'/webshop'} />
         </div>
       </div>
       <div className='single-banner-image' style={{ order: reverse ? 1 : 2 }}>
@@ -31,14 +30,14 @@ const SingleBanner = ({
 };
 
 SingleBanner.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonIcon: PropTypes.element.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  text: PropTypes.string,
+  imageUrl: PropTypes.string,
+  alt: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonIcon: PropTypes.element,
+  onButtonClick: PropTypes.func,
   reverse: PropTypes.bool,
 };
 

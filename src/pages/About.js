@@ -21,46 +21,33 @@ export default function About() {
           <FullBanner
             title='Klinik Straarup'
             subtitle='Passion for æstetik '
-            text=' Vi har passion for æstetik, og holder os altid, opdateret på
-          nyeste viden inden for den kosmetiske verden. Vi ønsker at give
-          vores kunder naturlige, og smukke resulater, der får dem til at
-          føle sig, som den bedste udgave ad sig selv. Vi bruger de bedste
-          produkter på markedet, som Restylane og Vistabel. 
-          Vores konsultationer er gratis og uforpligende. Og giver
-          dig som kunde, og din behandler mulighed for at, sammen
-          tilrettelægge en plan, for at opnå dine ønsker. 
-          Vores mål er at udføre behandlinger med naturlige og
-          subtile resultater, som vi kan stå inde for.
-          '
-            imageUrl='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+            text={
+              <>
+                <br />
+                <p>
+                  Vi har passion for æstetik, og holder os altid, opdateret på
+                  nyeste viden inden for den kosmetiske verden. Vi ønsker at
+                  give vores kunder naturlige, og smukke resulater, der får dem
+                  til at føle sig, som den bedste udgave ad sig selv. Vi bruger
+                  de bedste produkter på markedet, som Restylane og Vistabel.
+                </p>
+                <br />
+                <p>
+                  Vores konsultationer er gratis og uforpligende. Og giver dig
+                  som kunde, og din behandler mulighed for at, sammen
+                  tilrettelægge en plan, for at opnå dine ønsker.
+                </p>
+                <br />
+                <p>
+                  Vores mål er at udføre behandlinger med naturlige og subtile
+                  resultater, som vi kan stå inde for.
+                </p>
+              </>
+            }
+            imageUrl='/site-images/About-s2.webp'
             alt='toner'
             reverse={false}
           />
-        </section>
-        <section className='about-s2'>
-          <div className='s2-img'>
-            <img
-              className='hero-image'
-              src='/webshop-images/2018-kit-skin-normalizing.webp'
-              alt='normalizing skin kit'
-            />
-          </div>
-          <div className='s2-text'>
-            <h2>Klinik Straarup</h2>
-            <h5>Passion for æstetik</h5>
-            <p>
-              Vi har passion for æstetik, og holder os altid, opdateret på
-              nyeste viden inden for den kosmetiske verden. Vi ønsker at give
-              vores kunder naturlige, og smukke resulater, der får dem til at
-              føle sig, som den bedste udgave ad sig selv. Vi bruger de bedste
-              produkter på markedet, som Restylane og Vistabel. <br />
-              <br /> Vores konsultationer er gratis og uforpligende. Og giver
-              dig som kunde, og din behandler mulighed for at, sammen
-              tilrettelægge en plan, for at opnå dine ønsker. <br />
-              <br /> Vores mål er at udføre behandlinger med naturlige og
-              subtile resultater, som vi kan stå inde for.
-            </p>
-          </div>
         </section>
         <section className='about-s3'>
           <h1>Mød vores behandlere</h1>
@@ -75,9 +62,9 @@ export default function About() {
           <TextboxBanner
             title='Maria Straarup'
             text='Maria er ejer af klinikken. Hun er uddannet sygeplejerske og kosmetisk sygeplejerske, og har arbejdet mange år i den kosmetiske branche. Hun er perfektionist til fingerspidserne og går op i at skabe naturlige resultater til hendes kunder.'
-            imageUrl='/webshop-images/gbl-calming-toner.webp'
+            imageUrl='/site-images/About-maria.webp'
             alt='Billede af Maria'
-            reverse={true}
+            reverse={false}
           />
           <TextboxBanner
             title='Jakob Nielsen'
@@ -85,12 +72,10 @@ export default function About() {
           Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. '
             imageUrl='/webshop-images/gbl-complexion-clearing-masque-original.webp'
             alt='Billede af Jakob'
-            reverse={false}
+            reverse={true}
           />
         </section>
-        <section>
-          <h1>Webshop</h1>
-        </section>
+
         <section className='about-s5'>
           <div className='s5-text'>
             <h2>Patientsikkerhed</h2>
@@ -126,7 +111,9 @@ export default function About() {
             />
           </div>
         </section>
-        <section></section>
+        <section>
+          <h1>Webshop</h1>
+        </section>
       </div>
       <CustomFooter />
     </>

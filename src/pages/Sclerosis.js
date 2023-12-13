@@ -23,7 +23,13 @@ export default function Sclerosis() {
           imageUrl='/site-images/sclerosis-s1.webp'
           alt='Calming toner'
           buttonText='Book online'
-          onButtonClick={() => console.log('Button clicked!')}
+          onButtonClick={() =>
+            window.open(
+              'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
+              '_blank',
+              'noreferrer'
+            )
+          }
           reverse={false}
         />
       </section>

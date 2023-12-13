@@ -1,0 +1,58 @@
+@import "../styles/global.scss";
+
+
+.hero-banner {
+    position: relative;
+  
+  .hero-banner-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   flex-direction: column;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   gap: $spacing32;
+
+    h1{
+        @include josefin48;
+        text-align: center
+    }
+    h4{
+        @include josefin24;
+        text-align: center
+    }
+    p{
+        text-align: center
+    }
+
+  }
+    img{
+        max-width: 100%;
+        opacity: 50%;
+        aspect-ratio: 0.6;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width: $ipadScreenSize) {
+  
+.hero-banner-box {
+   
+    h1{
+  
+        @include josefin64;
+    }
+    h4{
+
+    }
+
+  }
+    img{
+       
+    }
+  
+
+
+}

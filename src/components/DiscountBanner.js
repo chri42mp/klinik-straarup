@@ -14,7 +14,7 @@ const DiscountBanner = () => {
         </p>
       </div>
       <div>
-        <SecondaryButton text='Opret kundeprofil' />
+        <SecondaryButton text='Opret kundeprofil' link={'/login'} />
       </div>
     </div>
   );

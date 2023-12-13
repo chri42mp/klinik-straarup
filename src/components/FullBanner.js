@@ -12,18 +12,18 @@ const FullBanner = ({ title, subtitle, text, imageUrl, alt, reverse }) => {
       <div className='full-banner-text' style={{ order: reverse ? 1 : 2 }}>
         <h2>{title}</h2>
         <h5>{subtitle}</h5>
-        <p>{text}</p>
+        <div>{text}</div>
       </div>
     </div>
   );
 };
 
 FullBanner.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  text: PropTypes.object,
+  imageUrl: PropTypes.string,
+  alt: PropTypes.string,
   reverse: PropTypes.bool,
 };
 
