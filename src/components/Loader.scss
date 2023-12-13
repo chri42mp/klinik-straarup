@@ -1,62 +1,53 @@
 @import "../styles/global.scss";
 
-// .loader {
-//     border: 16px solid $light200; /* Light grey */
-//     border-top: 16px solid $green500; /* Blue */
-//     border-radius: 50%;
-//     width: 120px;
-//     height: 120px;
-//     animation: spin 2s linear infinite;
-//   }
-  
-//   @keyframes spin {
-//     0% { transform: rotate(0deg); }
-//     100% { transform: rotate(360deg); }
-//   }
 @keyframes spin {
-	100% {
-		transform: rotate(360deg);
-	}
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .spinner {
-	position: relative  ;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-	&__circle {
-		position: relative;
-		width: 55px;
-		height: 55px;
-		overflow: hidden;
-		background-color: $green500;
-		border-radius: 100%;
-		animation: spin 2s infinite linear;
+  &-circle {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    background-color: $green500;
+    border-radius: 100%;
+    animation: spin 2s infinite linear;
 
-		&-inner,
-		&-gradient {
-			position: absolute;
-			width: 44px;
-			height: 44px;
-			transform: translate(-50%, -50%);
-		}
+    &-inner,
+    &-gradient {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      transform: translate(-50%, -50%);
+    }
 
-		&-inner {
-			top: 50%;
-			left: 50%;
-			background-color: $light100;
-			border-radius: 100%;
-		}
+    &-inner {
+      top: 50%;
+      left: 50%;
+      background-color: $light100;
+      border-radius: 100%;
+    }
 
-		&-gradient {
-			top: -24px;
-			left: 6px;
-			background-color: $green500;
-			background-image:    -moz-linear-gradient(0deg,$green500 0%,$light200 50%);
-			background-image: -webkit-linear-gradient(0deg,$green500 0%,$light200 50%);
-			background-image:         linear-gradient(0deg,$green500 0%,$light200 50%);
-			transform: rotate(-45deg);
-		}
-	}
+    &-gradient {
+      top: -24px;
+      left: 6px;
+      background-color: $green500;
+      background-image: -moz-linear-gradient(0deg, $green500 0%, $light200 50%);
+      background-image: -webkit-linear-gradient(
+        0deg,
+        $green500 0%,
+        $light200 50%
+      );
+      background-image: linear-gradient(0deg, $green500 0%, $light200 50%);
+      transform: rotate(-45deg);
+    }
+  }
 }
