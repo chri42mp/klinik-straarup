@@ -91,7 +91,7 @@ export default function Basket() {
         <Link className="webshop-crumb" to="/webshop">
           Webshop <ArrowLeftIcon width="30px" />
         </Link>
-        <p>Kurv</p>
+        <p className="active-crumb">Kurv</p>
       </div>
       <div className="basket-container">
         <div className="product-column">
@@ -119,15 +119,17 @@ export default function Basket() {
                       />
                     </div>
                     <div>
-                      <TrashIcon
-                        onClick={(e) => removeItem(product.product)}
-                        width="40px"
-                        height="40px"
-                        fill="white"
-                      />
+                      <div className="delete-product">
+                        <TrashIcon
+                          onClick={(e) => removeItem(product.product)}
+                          width="40px"
+                          height="40px"
+                          fill="white"
+                        />
+                      </div>
                       <h4>{productFind?.data().productName}</h4>
                       <h5>
-                        Pris: {parseFloat(productFind?.data().productPrice)} dkk
+                        {parseFloat(productFind?.data().productPrice)} DKK
                       </h5>
                       <div className="number-of-product">
                         <p>Antal: {product.qauntity}</p>
@@ -157,14 +159,14 @@ export default function Basket() {
             <h5> {totalprice + " DKK"}</h5>
           </div>
           <div className="delivery">
-            <p>Levering</p>
-            <p>Beregnes i checkout</p>
+            <h5>Levering</h5>
+            <h5>Beregnes i checkout</h5>
           </div>
           <div className="add-discount">
-            <label className="discount">
-              Rabatkode
+            <div>
+              <label className="discount">Rabatkode</label>
               <input type="text" />
-            </label>
+            </div>
             <SecondaryButton text="Tilføj" />
           </div>
           <div className="delivery">
@@ -172,7 +174,9 @@ export default function Basket() {
             <h3>{totalprice + " DKK"}</h3>
           </div>
           <p>Inkl. moms</p>
-          <PrimaryButton text="Checkout" />
+          <div className="checkout-btn">
+            <PrimaryButton text="Checkout" />
+          </div>
         </div>
       </div>
     </>

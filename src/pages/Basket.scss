@@ -1,67 +1,169 @@
 @import "../styles/global.scss";
 
+.basket-container {
+  @media screen and (min-width: $ipadScreenSize) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: $spacing96;
+    padding-block: $spacing24;
+    gap: $spacing24;
+    max-width: $desktopScreenSize;
+    margin: 0 auto;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.delete-product {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .number-of-product {
   display: flex;
   justify-content: space-between;
+}
+
+.product-container {
+  background-color: $green300;
+  color: $light100;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: $mobileScreenSize;
+  margin-bottom: $spacing16;
+  padding-block: $spacing8;
+  @include borderRadius;
+  @include josefin20;
+
+  h4 {
+    @include josefin20;
+    padding-bottom: $spacing8;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      @include josefin24;
+      padding-bottom: $spacing16;
+    }
+  }
+  h5 {
+    @include josefin18;
+    padding-bottom: $spacing8;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      @include josefin20;
+      padding-bottom: $spacing16;
+    }
+  }
+
+  p {
+    @include roboto16;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      @include josefin18;
+    }
+  }
+
+  @media screen and (min-width: $ipadScreenSize) {
+    max-width: 612px;
+    max-height: 205px;
+    gap: $spacing8;
+    padding-inline: $spacing24;
+    padding-block: $spacing8;
+  }
 
   input {
     width: 25px;
     height: 30px;
     border: 1px solid $light100;
     background-color: $green300;
-    @include borderRadius;
     color: $light100;
     padding-block: $spacing8;
     padding-inline: $spacing16;
   }
 }
 
-.product-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: $green300;
-  margin-bottom: $spacing16;
-  color: $light100;
-  max-width: 612px;
-  max-height: 205px;
-  padding-inline: $spacing24;
-  padding-block: $spacing8;
-  @include borderRadius;
-  gap: $spacing8;
-}
-.image-container {
-  display: flex;
-  justify-content: center;
-}
-
-.basket-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-inline: $spacing96;
-  gap: $spacing24;
-}
-
 .total-column {
   @include dropShadow;
   @include borderRadius;
   padding: $spacing24;
+
+  h2 {
+    @include josefin40;
+    margin-bottom: $spacing24;
+  }
+
+  p {
+    @include roboto12;
+  }
+
+  .total-price {
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      @include josefin20;
+    }
+  }
+
+  .delivery {
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      @include josefin20;
+      margin-top: $spacing8;
+    }
+
+    h3 {
+      @include josefin24;
+
+      @media screen and (min-width: $ipadScreenSize) {
+        @include josefin32;
+      }
+    }
+  }
+
+  .discount {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-discount {
+    display: flex;
+    justify-content: space-between;
+    padding-block: $spacing24;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      padding-block: $spacing48;
+    }
+
+    label {
+      @include josefin18;
+      margin-bottom: $spacing8;
+    }
+
+    input {
+      width: 158px;
+      height: 26px;
+      @include borderRadius;
+      @media screen and (min-width: $ipadScreenSize) {
+        width: 296px;
+      }
+    }
+  }
+
+  .checkout-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
-.delivery {
-  display: flex;
-  justify-content: space-between;
+.breadcrumb {
+  padding-inline: $spacing96;
+  @include roboto18;
 }
-
-.add-discount {
-  display: flex;
-  justify-content: space-between;
-}
-
-.discount {
-  display: flex;
-  flex-direction: column;
-}
-.total-price {
-  display: flex;
-  justify-content: space-between;
+.active-crumb {
+  color: $dark300;
 }

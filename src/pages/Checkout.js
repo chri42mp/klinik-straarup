@@ -117,9 +117,7 @@ export default function Checkout() {
             <PrimaryButton text="Forsæt til levering" />
           </div>
           <div className="terms-links">
-            <Link to="/refundpolicies">Refund policies</Link>
-            <Link to="/shippingpolicies">Shipping policies</Link>
-            <Link to="/termsofservice">Terms of service</Link>
+            <Link to="/tradeconditions">Handelsbetingelser</Link>
           </div>
         </form>
 

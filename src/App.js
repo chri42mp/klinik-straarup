@@ -20,10 +20,8 @@ import Signup from "./pages/Signup";
 import UserDashboard from "./pages/UserDashboard";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import Checkout from "./pages/Checkout";
-import RefundPolicies from "./pages/RefundPolicies";
-import ShippingPolicies from "./pages/ShippingPolicies";
-import TermsOfService from "./pages/TermsOfService";
 import Shipping from "./pages/Shipping";
+import TradeConditions from "./pages/TradeConditions";
 
 function App() {
   return (
@@ -50,9 +48,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/refundpolicies" element={<RefundPolicies />} />
-          <Route path="/shippingpolicies" element={<ShippingPolicies />} />
-          <Route path="/termsofservice" element={<TermsOfService />} />
+          <Route path="/tradeconditions" element={<TradeConditions />} />
 
           <Route
             path="/addproduct"

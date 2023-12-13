@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 
-export default function TermsOfService() {
+export default function TradeConditions() {
   return (
     <>
       <Navigation />
-      <h1>Terms Of Service</h1>
+      <h1>Trade Conditions</h1>
     </>
   );
 }
