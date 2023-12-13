@@ -103,11 +103,7 @@ export default function About() {
             </p>
           </div>
           <div className='s5-img'>
-            <img
-              className='hero-image'
-              src='/webshop-images/2018-kit-skin-normalizing.webp'
-              alt='normalizing skin kit'
-            />
+            <img src='/site-images/FAQ-2.webp' alt='normalizing skin kit' />
           </div>
         </section>
 

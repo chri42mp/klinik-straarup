@@ -121,11 +121,15 @@ gap: $spacing16;
     &{
         display: flex;
         .s5-img{
-            @include imgM;
-        }
+            img{
+                
+            height: 859px;
+            aspect-ratio: 0.6;
+            object-fit: cover;
+        }}
         .s5-text{
             padding: $spacing120 $spacing96;
-            width: 100%;
+            max-width: 100%;
         }
     }
 }
