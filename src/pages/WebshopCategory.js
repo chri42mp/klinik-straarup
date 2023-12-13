@@ -9,6 +9,7 @@ import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import HeartIconFilled from "../assets/icons/HeartIconFilled";
 import { SecondaryButton } from "../components/Buttons";
 import CustomFooter from "../components/CustomFooter";
+import DiscountBanner from "../components/DiscountBanner";
 
 export default function WebshopCategory() {
   const { category } = useParams();
@@ -103,6 +104,7 @@ export default function WebshopCategory() {
           ))}
         </div>
       </div>
+      <DiscountBanner />
       <CustomFooter />
     </>
   );

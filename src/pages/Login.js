@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { SecondaryButton } from "../components/Buttons";
 import "./Login.scss";
 import ErrorIcon from "../assets/icons/ErrorIcon";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Login() {
   const emailRef = useRef();
@@ -70,6 +71,7 @@ export default function Login() {
           <Link to="/signup">Opret bruger</Link>
         </div>
       </form>
+      <CustomFooter />
     </>
   );
 }

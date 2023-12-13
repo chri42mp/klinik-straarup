@@ -7,6 +7,7 @@ import "./Signup.scss";
 import { SecondaryButton } from "../components/Buttons";
 import CheckIcon from "../assets/icons/CheckIcon";
 import ErrorIcon from "../assets/icons/ErrorIcon";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Signup() {
   const [isChecked, setIsChecked] = useState(false);
@@ -151,6 +152,7 @@ export default function Signup() {
           <Link to="/login">Log ind</Link>
         </div>
       </form>
+      <CustomFooter />
     </>
   );
 }

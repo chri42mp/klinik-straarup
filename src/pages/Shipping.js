@@ -5,6 +5,8 @@ import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import { database } from "../firebase";
 import "./Shipping.scss";
+import DiscountBanner from "../components/DiscountBanner";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Shipping() {
   const [finalBasket, setFinalBasket] = useState({});
@@ -180,6 +182,8 @@ export default function Shipping() {
           </div>
         </div>
       </div>
+      <DiscountBanner />
+      <CustomFooter />
     </>
   );
 }

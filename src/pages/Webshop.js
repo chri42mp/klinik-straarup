@@ -6,6 +6,8 @@ import { PrimaryButton } from "../components/Buttons";
 import TextboxBanner from "../components/TextboxBanners";
 import LongArrowRightIcon from "../assets/icons/LongArrowRightIcon";
 import { Link } from "react-router-dom";
+import DiscountBanner from "../components/DiscountBanner";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Webshop() {
   const [products, setProducts] = useState([]);
@@ -167,6 +169,8 @@ export default function Webshop() {
         onButtonClick={() => console.log("Button clicked!")}
         reverse={false}
       />
+      <DiscountBanner />
+      <CustomFooter />
     </>
   );
 }
