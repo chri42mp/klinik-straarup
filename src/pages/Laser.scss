@@ -6,6 +6,20 @@
     padding: $spacing72 $spacing24;
     gap: $spacing24;
 
+    .laser-faq-text{
+        h1{
+            margin-bottom: $spacing16;
+        }
+        h4{
+            margin-bottom: $spacing24;
+        }
+    }
+
+    .laser-faq-dropdown{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;
+    }
     @media screen and (min-width: $ipadScreenSize) {
         &{
             display: grid;
@@ -16,3 +30,4 @@
         }
     }
 }
+ 

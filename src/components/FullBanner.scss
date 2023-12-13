@@ -1,5 +1,7 @@
 @import "../styles/global.scss";
-
+li{
+  list-style-type: none;
+}
 
 .full-banner {
     display: flex;
@@ -24,20 +26,20 @@
     .full-banner-text {
         order: 2;
         display: flex;
-        flex-direction: column;
-        gap: $spacing16;    
+        flex-direction: column;   
         background-color: $green500;
         padding: $spacing32 $spacing24;
         max-width: 100%;
         h2{
             @include josefin40;
             color: $light100;
+            margin-bottom: $spacing16;
         }
         h5{
             @include josefin20;
             color: $light100;
         }
-        p{
+        li, p{
             color: $light100;
         }
       }

@@ -11,7 +11,7 @@ $height: 33px;
   height: $height;
   display: block;
   border-radius: 18.5px;
-  @include innerShadow;
+  @include dropShadow;
   background-color: $light200;
   position: relative;
 
@@ -23,7 +23,7 @@ $height: 33px;
     display: block;
     background-color: $light100;
     border-radius: 50%;
-    @include dropShadow;
+    @include innerShadow;
     position: absolute;
     top: 2.8px;
     left: 2.8px;

@@ -1,9 +1,6 @@
 @import "../styles/global";
 
-h1, p{
-    max-width: 55ch;
-    margin: 0;
-}
+
 
 .discount-banner{
     display: flex;
@@ -12,13 +9,20 @@ h1, p{
     gap: $spacing96;
     padding: $spacing32 $spacing24;
     margin: 0 auto;
+    background-image: url("../../public/site-images/eventbanner.webp");;
+    background-size: cover;
 
     .discount-banner-text{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: $spacing24;
+        gap: $spacing16;
 
+        h2, p{
+            max-width: 55ch;
+            margin: 0;
+            color: $light100;
+        }
         p{
             text-align: center;
         }
@@ -28,7 +32,7 @@ h1, p{
    &{
     flex-direction: row;
     justify-content: space-between;
-    padding: $spacing72 $spacing96;
+    padding: $spacing32 $spacing96;
    
     .discount-banner-text{
         align-items: flex-start;

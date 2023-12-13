@@ -47,7 +47,7 @@ $red500: #b83a4b;
 $fontRoboto: "Roboto", sans-serif;
 $fontJosefinSans: "Josefin Sans", sans-serif;
 
-%josefin64 {
+@mixin josefin64 {
   font-family: $fontJosefinSans;
   font-size: 4rem;
   line-height: 4.5rem;

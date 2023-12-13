@@ -1,10 +1,26 @@
 @import "../styles/global.scss";
 
+
 .filler-faq{
     display: flex;
     flex-direction: column;
     padding: $spacing72 $spacing24;
     gap: $spacing24;
+
+    .filler-faq-text{
+        h1{
+            margin-bottom: $spacing16;
+        }
+        h4{
+            margin-bottom: $spacing24;
+        }
+    }
+    
+    .filler-faq-dropdown{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing16;
+    }
 
     @media screen and (min-width: $ipadScreenSize) {
 

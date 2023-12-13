@@ -5,14 +5,12 @@ import './Hero2.scss';
 
 const Hero2 = ({
   title,
-  subtitle,
   text,
   imageUrl,
   alt,
   buttonText,
   buttonIcon,
   onButtonClick,
-  reverse,
 }) => {
   return (
     <div className='hero2-banner'>
@@ -31,15 +29,13 @@ const Hero2 = ({
 };
 
 Hero2.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonIcon: PropTypes.element.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
-  reverse: PropTypes.bool,
+  title: PropTypes.string,
+  text: PropTypes.string,
+  imageUrl: PropTypes.string,
+  alt: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonIcon: PropTypes.element,
+  onButtonClick: PropTypes.func,
 };
 
 export default Hero2;
