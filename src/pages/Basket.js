@@ -6,6 +6,8 @@ import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import TrashIcon from "../assets/icons/TrashIcon";
 import { Link } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
+import DiscountBanner from "../components/DiscountBanner";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Basket() {
   let [localStorageInfo, setLocalStorageInfo] = useState();
@@ -179,6 +181,8 @@ export default function Basket() {
           </div>
         </div>
       </div>
+      <DiscountBanner />
+      <CustomFooter />
     </>
   );
 }
