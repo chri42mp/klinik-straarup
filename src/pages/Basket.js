@@ -18,9 +18,17 @@ export default function Basket() {
     const newTotalPrice = basket.reduce((total, item) => {
       return total + parseInt(item.qauntity) * parseFloat(item.productPrice);
     }, 0);
-
     setTotalprice(newTotalPrice);
-  }, [basket]);
+
+    let finalBasket = {
+      totalprice: totalprice,
+      basket: basket,
+    };
+
+    localStorage.setItem("finalBasket", JSON.stringify(finalBasket));
+
+    console.log(finalBasket);
+  }, [basket, totalprice]);
 
   useEffect(() => {
     setLocalStorageInfo(localStorage.getItem("basket"));
