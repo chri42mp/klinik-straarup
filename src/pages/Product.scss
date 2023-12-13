@@ -48,7 +48,7 @@
   }
 
   .roboto16 {
-    @extend %roboto16;
+    @include roboto16;
     text-align: center;
 
     @media screen and (min-width: $ipadScreenSize) {
