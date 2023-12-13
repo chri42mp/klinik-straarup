@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import Dropdown from "../components/Dropdown";
 import { TertiaryButtonWithIcon } from "../components/Buttons";
 import LongArrowRightIcon from "../assets/icons/LongArrowRightIcon";
+import CustomFooter from "../components/CustomFooter";
 
 export default function UserDashboard() {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ export default function UserDashboard() {
       <Dropdown title="Mine favoritter" content={<p>jeg er en test</p>} />
       <Dropdown title="Mine oplysninger" content={<p>jeg er en test</p>} />
       <TertiaryButtonWithIcon text="Log ud" icon={<LongArrowRightIcon />} />
+      <CustomFooter />
     </>
   );
 }

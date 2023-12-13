@@ -8,6 +8,8 @@ import Accordion from "../components/Accordion";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import Counter from "../components/Counter";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
+import DiscountBanner from "../components/DiscountBanner";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Product() {
   const { uid } = useParams();
@@ -84,6 +86,8 @@ export default function Product() {
           />
         </div>
       </div>
+      <DiscountBanner />
+      <CustomFooter />
     </>
   );
 }

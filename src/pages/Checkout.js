@@ -5,6 +5,8 @@ import "./Checkout.scss";
 import { Link } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import { auth, database } from "../firebase";
+import DiscountBanner from "../components/DiscountBanner";
+import CustomFooter from "../components/CustomFooter";
 
 export default function Checkout() {
   const [firstName, setFirstname] = useState("");
@@ -164,6 +166,8 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+      <DiscountBanner />
+      <CustomFooter />
     </>
   );
 }
