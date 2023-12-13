@@ -169,7 +169,9 @@ export default function Basket() {
               <label className="discount">Rabatkode</label>
               <input type="text" />
             </div>
-            <SecondaryButton text="Tilføj" />
+            <div className="add-discount-btn">
+              <SecondaryButton text="Tilføj" />
+            </div>
           </div>
           <div className="delivery">
             <h3>Total eksl. levering</h3>

@@ -134,6 +134,7 @@
     display: flex;
     justify-content: space-between;
     padding-block: $spacing24;
+    align-items: end;
 
     @media screen and (min-width: $ipadScreenSize) {
       padding-block: $spacing48;
