@@ -20,7 +20,7 @@ export default function Fillers() {
           title='Filler'
           text='Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter.'
           imageUrl='/site-images/Filler-s1.webp'
-          alt='Calming toner'
+          alt=''
           buttonText='Book online'
           onButtonClick={() =>
             window.open(
@@ -32,7 +32,7 @@ export default function Fillers() {
           reverse={false}
         />
       </section>
-      <section>
+      <section className='filler-s2'>
         <FullBanner
           title='Behandling med filler'
           subtitle='Hos Klinik Straarup behandler vi disse områder: '

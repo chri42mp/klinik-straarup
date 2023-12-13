@@ -6,7 +6,9 @@ li{
 .full-banner {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: $spacing16 auto $spacing16 auto ;
+    width: 390px;
+
     h2, h5, p{
         margin:0;
     }
@@ -17,9 +19,17 @@ li{
 
     .full-banner-image{
         order: 1;
+        order: 1;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        height: 235px;
 
         img{
-            max-width: 100%;
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+          object-position: 0% 44%;
         } 
       }
 
@@ -56,10 +66,17 @@ li{
 @media screen and (min-width: $ipadScreenSize) {
 
 .full-banner {
+  width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     .full-banner-image {
         order: 1;
+        height: 100%;
+        img{
+          @include imgM;
+          height: 100%;
+          object-position: 100% 44%;
+        }
 
       }
   .full-banner-text {
@@ -79,6 +96,7 @@ li{
 
   .full-banner-image {
     order:2;    
+ 
   }
 }
 }
