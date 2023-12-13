@@ -120,6 +120,12 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   }
 }
 
+@mixin roboto16 {
+  font-family: $fontRoboto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 %roboto16 {
   font-family: $fontRoboto;
   font-size: 1rem;
@@ -163,7 +169,7 @@ $spacing240: 15rem;
 
 //Borderradius
 @mixin borderRadius {
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 @mixin fullBorderRadius {

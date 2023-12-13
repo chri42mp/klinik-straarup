@@ -19,6 +19,9 @@ import { AuthProvider } from "./contexts/AuthContext";
 import Signup from "./pages/Signup";
 import UserDashboard from "./pages/UserDashboard";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import Checkout from "./pages/Checkout";
+import Shipping from "./pages/Shipping";
+import TradeConditions from "./pages/TradeConditions";
 
 function App() {
   return (
@@ -43,6 +46,10 @@ function App() {
           <Route path="/laser" element={<Laser />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="/shipping" element={<Shipping />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/tradeconditions" element={<TradeConditions />} />
+
           <Route
             path="/addproduct"
             element={

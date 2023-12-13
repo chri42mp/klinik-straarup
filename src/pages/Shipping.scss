@@ -1,0 +1,85 @@
+@import "../styles/global.scss";
+
+@media screen and (min-width: $ipadScreenSize) {
+  .delivery-options {
+    width: 612px;
+    height: 32px;
+    border: 1px solid $dark300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include borderRadius;
+    gap: $spacing8;
+    margin-block: $spacing8;
+    padding: $spacing8;
+    align-items: center;
+
+    label {
+      @include josefin18;
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      margin-right: 32px;
+      padding: $spacing8;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .delivery-container {
+    padding: $spacing8;
+  }
+
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+  }
+
+  .payment-option {
+    display: flex;
+    width: 612px;
+    height: 42.33px;
+
+    .image-container {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    img {
+      max-height: 42px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      @include josefin18;
+    }
+
+    input {
+      margin-right: $spacing16;
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .safe-payment-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-block: $spacing32;
+  }
+
+  .total-column {
+    h2 {
+      margin-bottom: $spacing24;
+    }
+
+    label {
+      @include josefin18;
+    }
+  }
+}

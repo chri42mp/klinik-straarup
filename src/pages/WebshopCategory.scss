@@ -19,13 +19,13 @@
 .webshop-crumb {
   display: flex;
   align-items: center;
-  @include roboto12;
+  @include roboto18;
   color: $dark500;
 }
 
 .category-crumb {
   color: $dark300;
-  @include roboto12;
+  @include roboto18;
 }
 
 .all-category-products {

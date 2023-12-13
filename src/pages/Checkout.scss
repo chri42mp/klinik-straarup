@@ -1,0 +1,115 @@
+@import "../styles/global.scss";
+
+@media screen and (min-width: $ipadScreenSize) {
+  .grid-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: $spacing72;
+    padding-inline: $spacing96;
+    gap: $spacing24;
+    max-width: $desktopScreenSize;
+    margin: 0 auto;
+
+    h4 {
+      margin-left: $spacing8;
+      padding-bottom: $spacing24;
+    }
+  }
+
+  .breadcrumb {
+    padding-inline: $spacing96;
+  }
+
+  .active-page {
+    @include roboto12;
+    color: $dark300;
+  }
+
+  form {
+    margin: 0 auto;
+  }
+
+  .form-group {
+    padding-bottom: $spacing24;
+
+    input {
+      height: 30px;
+      width: 610px;
+      padding: 0;
+      background-color: $light100;
+      @include borderRadius;
+      border: 1px solid $light500;
+    }
+  }
+
+  .terms-links {
+    display: flex;
+    gap: $spacing16;
+    border-top: 1px solid $dark500;
+    padding: $spacing8;
+    margin-inline: $spacing8;
+  }
+
+  .fullname {
+    display: flex;
+    gap: $spacing8;
+
+    input {
+      width: 294px;
+    }
+  }
+
+  .location {
+    display: flex;
+    gap: $spacing8;
+
+    input {
+      width: 294px;
+    }
+  }
+
+  .checkout-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: $spacing24;
+    margin-right: $spacing8;
+  }
+
+  .basket-products {
+    display: flex;
+    background-color: $green300;
+    color: $light100;
+    align-items: center;
+    margin-bottom: $spacing8;
+    padding: $spacing8;
+    @include borderRadius;
+
+    .image-container {
+      width: 82px;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      height: 42px;
+    }
+  }
+
+  .add-discount {
+    padding-block: $spacing48;
+  }
+  .discount-group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing8;
+
+    input {
+      width: 294px;
+      height: 30px;
+      padding: 0;
+      background-color: $light100;
+      @include borderRadius;
+      border: 1px solid $light500;
+    }
+  }
+}
