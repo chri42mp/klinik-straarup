@@ -69,7 +69,7 @@ export default function About() {
           <TextboxBanner
             title='Jakob Nielsen'
             text='Jakob er virksomhedsansvarlig læge og uddannet på Københavns og Aarhus universitet i hh. 2005 og 2007. 
-          Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. '
+            Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. '
             imageUrl='/webshop-images/gbl-complexion-clearing-masque-original.webp'
             alt='Billede af Jakob'
             reverse={true}

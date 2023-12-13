@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     padding: $spacing16 $spacing24;
-    gap: $spacing8;
+    gap: $spacing24;
     height: fit-content;
 
     .hero2-banner-box {
@@ -28,8 +28,9 @@
         align-items: center;
 
         img{
-            @include imgSMobile;
-            height: 235px;
+            width: 21.875rem;
+            height: 14.688rem;
+            object-fit: cover;
         }
       }
 }
@@ -61,8 +62,8 @@
   .hero2-banner-image {
     order: 2;
     img{
-        @include imgM;
-        height: 405px;
+      width: 38.25rem;
+        height: 25.313rem;
     }
   }
 }

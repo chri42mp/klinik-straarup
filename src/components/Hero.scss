@@ -3,7 +3,8 @@
 
 .hero-banner {
     position: relative;
-  
+    height: fit-content;
+   
   .hero-banner-box {
    display: flex;
    justify-content: center;
@@ -14,6 +15,7 @@
    left: 50%;
    transform: translate(-50%, -50%);
    width: 100%;
+   padding: $spacing32 $spacing24;
    gap: $spacing32;
 
     h1{
@@ -30,12 +32,13 @@
 
   }
     img{
-        max-width: 100%;
-        opacity: 50%;
-        aspect-ratio: 0.6;
+        width: 100%;
+        opacity: $opacity30;
+        aspect-ratio: 0.8;
         object-fit: cover;
+    
     }
-}
+
 @media screen and (min-width: $ipadScreenSize) {
   
 .hero-banner-box {
@@ -50,9 +53,11 @@
 
   }
     img{
+        height: 43.125rem;
        
     }
   
 
 
+}
 }

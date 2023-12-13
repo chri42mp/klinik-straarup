@@ -5,11 +5,13 @@ import TextboxBanner from '../components/TextboxBanners';
 import DiscountBanner from '../components/DiscountBanner';
 import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
 import Hero from '../components/Hero';
+import Loader from '../components/Loader';
 
 export default function Frontpage() {
   return (
     <>
       <Navigation />
+      <Loader />
       <section>
         <Hero
           title='Velkommen til Klinik Straarup'
