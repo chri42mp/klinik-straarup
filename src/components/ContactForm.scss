@@ -1,0 +1,76 @@
+@import "../styles/global";
+
+.contact-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $light200;
+    padding: $spacing32 $spacing24;
+    margin: $spacing32 $spacing24;
+    gap: $spacing32;
+    @include borderRadius;
+  
+       
+    .contact-input{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: $spacing32;
+
+        .contact-heading{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing32;
+            
+        }  
+        div input{
+            height: 28px;
+            width: 100%;
+            @include borderRadius;
+            background-color: $light100;
+            border: 1px solid $light500;
+        }
+        #comment{
+            min-height: 150px;
+        }
+        .send-btn{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+    .contact-info-container{
+        display: flex;
+        flex-direction: column;
+        .contact-info{
+            a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: $spacing32 $spacing24;
+            gap: $spacing8;
+            color: $dark500;
+            }
+
+        }       
+    }
+    @media screen and (min-width: $ipadScreenSize) {
+        &{
+            max-width: 1242px;
+            margin: $spacing96 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding: $spacing24 $spacing96;
+
+            .contact-input{
+                width: 628px;
+
+                .contact-heading{
+                    align-items: flex-start;
+                } 
+        }
+
+    }
+}
+}

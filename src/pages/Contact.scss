@@ -1,0 +1,21 @@
+@import "../styles/global";
+
+.contact-s1{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing16 $spacing24;
+    gap: $spacing16; 
+    
+    @media (min-width:$ipadScreenSize){
+    &{
+        gap: $spacing48;
+        padding: $spacing48 $spacing96;
+        .h1{
+            @include josefin56
+        }
+    
+    }
+    }
+    }

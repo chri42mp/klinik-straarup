@@ -93,8 +93,7 @@ export default function Prices() {
         </div>
         <div className='price-category'>
           <div>
-            <h1>Behandling med laser</h1>
-            <h3>Laser pakker</h3>
+            <h1>Laser pakker</h1>
           </div>
           <div className='price-container'>
             <div className='price'>
@@ -132,7 +131,7 @@ export default function Prices() {
           </div>
         </div>
         <div className='price-category'>
-          <h3>Laser enkelte områder</h3>
+          <h1>Laser enkelte områder</h1>
           <div className='price-container'>
             <div className='price'>
               <p>Hage</p>

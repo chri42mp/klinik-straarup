@@ -18,7 +18,7 @@
         .price{
             display: grid;
             grid-template-columns: 3fr 1fr;
-
+            border-bottom: 1px solid $light300;
             :last-child{
                 text-align: right;
             }
