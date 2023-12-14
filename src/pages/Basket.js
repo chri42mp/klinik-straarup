@@ -4,7 +4,7 @@ import { database } from "../firebase";
 import "./Basket.scss";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import TrashIcon from "../assets/icons/TrashIcon";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
@@ -15,6 +15,11 @@ export default function Basket() {
   const [basket, setBasket] = useState([]);
   const [products, setproducts] = useState([]);
   const [totalprice, setTotalprice] = useState(0);
+  const navigate = useNavigate();
+
+  function handleCheckOut() {
+    navigate("/checkout");
+  }
 
   useEffect(() => {
     const newTotalPrice = basket.reduce((total, item) => {
@@ -69,8 +74,8 @@ export default function Basket() {
     console.log(e.target.value, id);
     const newValue = parseInt(e.target.value);
 
-    setBasket(
-      basket.map((item) => {
+    setBasket((prevBasket) =>
+      prevBasket.map((item) => {
         if (item.product === id) {
           return {
             ...item,
@@ -179,7 +184,11 @@ export default function Basket() {
           </div>
           <p>Inkl. moms</p>
           <div className="checkout-btn">
-            <PrimaryButton text="Checkout" />
+            <PrimaryButton
+              text="Checkout"
+              onClick={handleCheckOut}
+              disabled={empty}
+            />
           </div>
         </div>
       </div>

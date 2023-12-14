@@ -22,6 +22,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import Checkout from "./pages/Checkout";
 import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";
+import Confirmation from "./pages/Confirmation";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/tradeconditions" element={<TradeConditions />} />
 
           <Route
