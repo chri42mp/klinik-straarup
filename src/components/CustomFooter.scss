@@ -32,6 +32,7 @@ p, a{
     display: flex;
     flex-direction: column;
     gap: $spacing32;
+    
  
     .trustpilot{
         background-color: $light100;
@@ -119,7 +120,9 @@ p, a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+        max-width: 1440px;
+        margin: 0 auto;
+        gap: 297px;
       
     }
 
@@ -127,8 +130,7 @@ p, a{
     .bottom-div-footer{
         flex-direction: row;
         justify-content: space-between;
-    
-    
+        
         .bottom-div-links{
             order: 0;
         }

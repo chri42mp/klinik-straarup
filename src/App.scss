@@ -9,8 +9,6 @@ body {
   color: $dark500;
   margin: 0 auto;
   height: 100vh;
-  max-width: 1440px;
-  
 }
 
 h1 {
@@ -60,3 +58,7 @@ a {
   @include robotolink;
 }
 
+.container-width{
+  max-width: 1440px;
+  margin: 0 auto;
+}

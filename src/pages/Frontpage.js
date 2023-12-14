@@ -5,17 +5,16 @@ import TextboxBanner from '../components/TextboxBanners';
 import DiscountBanner from '../components/DiscountBanner';
 import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
 import Hero from '../components/Hero';
-import Loader from '../components/Loader';
 
 export default function Frontpage() {
   return (
     <>
       <Navigation />
-      <Loader />
+
       <section>
         <Hero
           title='Velkommen til Klinik Straarup'
-          subtitle='Vi tilbyder kosmetiske behandlinger med naturlige og subtile resultater'
+          subtitle='Kosmetiske behandlinger med naturlige og subtile resultater'
           text='Vi rådgiver inden vi behandler! Alle behandlinger kræver en konsultation og 48 timers betænkningstid i henhold til Styrelsen for patientsikkerhed.'
           imageUrl='/site-images/Filler-s2.webp'
           alt='Calming toner'

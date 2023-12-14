@@ -60,7 +60,7 @@ const CustomFooter = () => {
       <div className='bottom-div-footer'>
         <div className='bottom-div-links'>
           <p>Cookiepolitik</p>
-          <p>Privatlivspolitik</p>
+          <p>Handelsbetingelser</p>
           <p>Sitemap</p>
         </div>
         <div className='footer-logo'>

@@ -7,6 +7,7 @@
     padding: $spacing16 $spacing24;
     gap: $spacing24;
     height: fit-content;
+    
 
     .hero2-banner-box {
         display: flex;
@@ -17,9 +18,6 @@
             text-align: center;
             @include josefin40
         }
-        p{
-          text-align: center;
-        }
 
       }
       .hero2-banner-image{
@@ -28,9 +26,9 @@
         align-items: center;
 
         img{
-            width: 21.875rem;
-            height: 14.688rem;
-            object-fit: cover;
+          height: 14.688rem;
+          object-fit: cover;
+          width: 100%;
         }
       }
 }

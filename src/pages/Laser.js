@@ -14,68 +14,65 @@ export default function Laser() {
   return (
     <>
       <Navigation />
-      <section>
-        <Hero2
-          title='Permanent hårfjerning'
-          text='Vi laver permanent hårfjerning med en XXP laser hvor lyset fra laseren ledes ned gennem hårsækken og afgiver sin energi til pigmentet i hårroden.
+
+      <Hero2
+        title='Permanent hårfjerning'
+        text='Vi laver permanent hårfjerning med en XXP laser hvor lyset fra laseren ledes ned gennem hårsækken og afgiver sin energi til pigmentet i hårroden.
           Det kræver i gennemsnit 6-8 behandlinger at blive op imod 90 % hårfri.'
-          imageUrl='/site-images/Laser-s1.webp'
-          alt='Calming toner'
-          buttonText='Book online'
-          onButtonClick={() =>
-            window.open(
-              'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
-              '_blank',
-              'noreferrer'
-            )
-          }
-          reverse={false}
-        />
-      </section>
-      <section>
-        <FullBanner
-          title='Behandling med laser'
-          subtitle='Du kan vælge at få laser på enkelte områder eller vælge en af vores pakker:'
-          text={
-            <>
-              <ul>
-                <li>Helt ansigt/nakke</li>
-                <li>Armhuler/brazil</li>
-                <li>Halve ben/armhuler</li>
-                <li>Halve ben/brazil</li>
-                <li>Halve ben /armhuler/brazil</li>
-                <li>Hele ben/armhuler</li>
-                <li>Hele ben/brazil</li>
-                <li> Hele ben/armhuler/brazil</li>
-              </ul>
-              <p>
-                Hvis du er træt af, at fjerne uønskede hår med barbering eller
-                voks. Og vil du gerne slippe for indgroede hår, jordbærben og
-                irriteret hud. Så er permanent hårfjerning noget for dig.
-              </p>
-            </>
-          }
-          imageUrl='/site-images/Laser-s2.webp'
-          alt='toner'
-          reverse={false}
-        />
-      </section>
-      <section>
-        <TextboxBanner
-          title='Prisliste'
-          text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
-          imageUrl='/site-images/Textboxbanner-2.webp'
-          alt='Clearing mask'
-          buttonText='Se priser'
-          buttonIcon={<LongArrowRightIcon />}
-          onButtonClick={() => console.log('Button clicked!')}
-          reverse={true}
-        />
-      </section>
-      <section>
-        <DiscountBanner />
-      </section>
-      <section>
+        imageUrl='/site-images/Laser-s1.webp'
+        alt='Calming toner'
+        buttonText='Book online'
+        onButtonClick={() =>
+          window.open(
+            'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
+            '_blank',
+            'noreferrer'
+          )
+        }
+        reverse={false}
+      />
+
+      <FullBanner
+        title='Behandling med laser'
+        subtitle='Du kan vælge at få laser på enkelte områder eller vælge en af vores pakker:'
+        text={
+          <>
+            <ul>
+              <li>Helt ansigt/nakke</li>
+              <li>Armhuler/brazil</li>
+              <li>Halve ben/armhuler</li>
+              <li>Halve ben/brazil</li>
+              <li>Halve ben /armhuler/brazil</li>
+              <li>Hele ben/armhuler</li>
+              <li>Hele ben/brazil</li>
+              <li> Hele ben/armhuler/brazil</li>
+            </ul>
+            <p>
+              Hvis du er træt af, at fjerne uønskede hår med barbering eller
+              voks. Og vil du gerne slippe for indgroede hår, jordbærben og
+              irriteret hud. Så er permanent hårfjerning noget for dig.
+            </p>
+          </>
+        }
+        imageUrl='/site-images/Laser-s2.webp'
+        alt='toner'
+        reverse={false}
+      />
+
+      <TextboxBanner
+        title='Prisliste'
+        text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
+        imageUrl='/site-images/Textboxbanner-2.webp'
+        alt='Clearing mask'
+        buttonText='Se priser'
+        buttonIcon={<LongArrowRightIcon />}
+        onButtonClick={() => console.log('Button clicked!')}
+        reverse={true}
+      />
+
+      <DiscountBanner />
+
+      <section className='container-width'>
         <div className='laser-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
