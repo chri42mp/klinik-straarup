@@ -1,0 +1,12 @@
+@import "../styles/global.scss";
+
+.delay {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  padding: $spacing96;
+  gap: $spacing48;
+}

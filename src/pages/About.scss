@@ -1,137 +1,137 @@
 @import "../styles/global.scss";
-.about{
-margin: 0 auto;
-h1, h2, h3, h4, h5, p{
-    margin:0;
-}
+.about {
+  margin: 0 auto;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+  }
 
-
-p{
+  p {
     max-width: 65ch;
     @include roboto18;
-}
+  }
 
-.about-s1{
-display: flex;
-flex-direction: column;
-padding: $spacing16 $spacing24;
-gap: $spacing16; 
+  .about-s1 {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing16 $spacing24;
+    gap: $spacing16;
 
-@media (min-width:$ipadScreenSize){
-&{
-    gap: $spacing48;
-    padding: $spacing48 $spacing96;
-    .h1{
-        @include josefin56
+    @media (min-width: $ipadScreenSize) {
+      & {
+        gap: $spacing48;
+        padding: $spacing48 $spacing96;
+        .h1 {
+          @include josefin56;
+        }
+      }
+    }
+  }
+
+  .about-s2 {
+    .s2-img {
+      max-width: 100%;
+    }
+    .s2-text {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing16;
+      background-color: $green500;
+      padding: $spacing32 $spacing24;
+      max-width: 100%;
+      h2 {
+        @include josefin40;
+        color: $light100;
+      }
+      h5 {
+        @include josefin20;
+        color: $light100;
+      }
+      p {
+        color: $light100;
+      }
     }
 
-}
-}
-}
-
-.about-s2{
-    .s2-img{
-        max-width: 100%;
-    }
-    .s2-text{
+    @media (min-width: $ipadScreenSize) {
+      & {
         display: flex;
-        flex-direction: column;
-        gap: $spacing16;    
-        background-color: $green500;
-        padding: $spacing32 $spacing24;
-        max-width: 100%;
-        h2{
-            @include josefin40;
-            color: $light100;
+        .s2-img {
+          @include imgM;
         }
-        h5{
-            @include josefin20;
-            color: $light100;
+        .s2-text {
+          padding: $spacing120 $spacing96;
+          width: 100%;
         }
-        p{
-            color: $light100;
-        }
-         
+      }
     }
+  }
 
-@media (min-width:$ipadScreenSize){
-    &{
-        display: flex;
-        .s2-img{
-            @include imgM;
-        }
-        .s2-text{
-            padding: $spacing120 $spacing96;
-            width: 100%;
-        }
-    }
-}
-}
-
-.about-s3{
+  .about-s3 {
     display: flex;
     flex-direction: column;
     gap: $spacing16;
 
     padding: $spacing24;
-    h1{
+    h1 {
+      @include josefin40;
+      text-align: center;
+    }
+    h5 {
+      @include josefin20;
+    }
+
+    @media (min-width: $ipadScreenSize) {
+      & {
+        padding: $spacing72;
+        justify-content: center;
+        align-items: center;
+        gap: $spacing24;
+
+        h1 {
+          @include josefin48;
+        }
+      }
+    }
+  }
+
+  .about-s5 {
+    .s5-img {
+      max-width: 100%;
+    }
+    .s5-text {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing16;
+      background-color: $light200;
+      padding: $spacing32 $spacing24;
+      max-width: 100%;
+      h2 {
         @include josefin40;
-        text-align: center;
-    }
-    h5{
+      }
+      h5 {
         @include josefin20;
+      }
     }
 
-    @media (min-width:$ipadScreenSize){
-        &{
-            padding: $spacing72;
-            justify-content: center;
-            align-items: center;
-            gap: $spacing24;
-
-            h1{
-                @include josefin48;
-            }
-          
-        }
-    }
-}
-
-.about-s5{
-    .s5-img{
-        max-width: 100%;
-    }
-    .s5-text{
+    @media (min-width: $ipadScreenSize) {
+      & {
         display: flex;
-        flex-direction: column;
-        gap: $spacing16;    
-        background-color: $light200;
-        padding: $spacing32 $spacing24;
-        max-width: 100%;
-        h2{
-            @include josefin40;
-        }
-        h5{
-            @include josefin20;
-        }
-         
-    }
-
-@media (min-width:$ipadScreenSize){ 
-    &{
-        display: flex;
-        .s5-img{
-            img{
-                
+        .s5-img {
+          img {
             height: 859px;
             aspect-ratio: 0.6;
             object-fit: cover;
-        }}
-        .s5-text{
-            padding: $spacing120 $spacing96;
-            max-width: 100%;
+          }
         }
+        .s5-text {
+          padding: $spacing120 $spacing96;
+          max-width: 100%;
+        }
+      }
     }
-}
-}
+  }
 }

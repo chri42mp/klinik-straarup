@@ -1,0 +1,48 @@
+@import "../styles/global.scss";
+
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing24;
+  padding-block: $spacing72;
+  padding-inline: $spacing96;
+  max-width: $desktopScreenSize;
+  margin: 0 auto;
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .user-information-form {
+    width: fit-content;
+  }
+}
+
+.all-favorite-products {
+  display: grid;
+  gap: $spacing24;
+  grid-template-columns: repeat(4, 1fr);
+  padding-block: $spacing48;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  align-items: center;
+  gap: $spacing8;
+  @include dropShadow;
+  @include borderRadius;
+
+  .favorite-card-image {
+    max-height: 196px;
+    width: fit-content;
+  }
+
+  .favorite-heart-icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}

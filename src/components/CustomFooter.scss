@@ -1,122 +1,121 @@
 @import "../styles/global";
 
-.custom-footer{
-max-width: 100%;
-background-color: $green500;
-padding: $spacing32 $spacing24;
-position: relative;
-bottom: 0;
-display: flex;
-flex-direction: column;
-gap: $spacing32;
-color: $light100;
-margin: 0;
-a{
+.custom-footer {
+  max-width: 100%;
+  background-color: $green500;
+  padding: $spacing32 $spacing24;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing32;
+  color: $light100;
+  margin: 0;
+  a {
     color: $light100;
-}
-h4, h5, p{
+  }
+  h4,
+  h5,
+  p {
     margin: 0;
-}
-h4{
+  }
+  h4 {
     @include josefin24;
-}
-h5{
+  }
+  h5 {
     @include josefin20;
-}
-p, a{
-   @extend %roboto16; 
+  }
+  p,
+  a {
+    @extend %roboto16;
+  }
 
-}
- 
-.top-div-footer{
+  .top-div-footer {
     display: flex;
     flex-direction: column;
     gap: $spacing32;
-    
- 
-    .trustpilot{
-        background-color: $light100;
-        padding: $spacing16 $spacing32;
+
+    .trustpilot {
+      background-color: $light100;
+      padding: $spacing16 $spacing32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: $spacing16;
+      border-radius: 0.5rem;
+      height: fit-content;
+
+      p {
+        color: $dark500;
+      }
+
+      h4 {
+        color: $dark500;
+        :hover {
+          text-decoration: underline;
+        }
+      }
+
+      .trustpilot-star {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: $spacing16;
-        border-radius: 0.5rem;
-        height: fit-content;
-        
-
-        p{
-            color: $dark500;
+        gap: $spacing4;
+        svg {
+          background-color: #00b57a;
+          &:last-of-type {
+            background-color: $dark100;
+          }
         }
-
-        h4{
-            color: $dark500;
-            :hover{text-decoration: underline;}
-        }
-
-       
-
-        .trustpilot-star{
-            display: flex;
-            gap: $spacing4;
-        svg{
-            background-color: #00B57A;
-            &:last-of-type{
-                background-color: $dark100;
-            }
-        }
-    }
-      
+      }
     }
 
-    .footer-contact, .footer-adress{
-        display: flex;
-        flex-direction: column;
-        gap: $spacing16;
+    .footer-contact,
+    .footer-address {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing16;
     }
-    .footer-address{
-        a{
+    .footer-address {
+      a {
         text-decoration: none;
-        :hover{text-decoration: underline;}
- 
+        :hover {
+          text-decoration: underline;
         }
+      }
     }
 
-   .some-icons{
-        display: flex;
-        flex-direction: row;
+    .some-icons {
+      display: flex;
+      flex-direction: row;
     }
- }
+  }
 
-.bottom-div-footer{
+  .bottom-div-footer {
     display: flex;
     align-items: center;
     flex-flow: column;
     gap: $spacing32;
 
-    .bottom-div-links{
-        display: flex;
-        flex-direction:row;
-        gap: $spacing16;
-        order: 2;
-        p{
+    .bottom-div-links {
+      display: flex;
+      flex-direction: row;
+      gap: $spacing16;
+      order: 2;
+      p {
         @include roboto12;
-        }
+      }
     }
 
-    .footer-logo{
-        padding:0;
-
+    .footer-logo {
+      padding: 0;
     }
-}
+  }
 
-@media screen and (min-width: $ipadScreenSize) {
-    &{
-        padding: $spacing72 $spacing96;
-      
-       
-    .top-div-footer{
+  @media screen and (min-width: $ipadScreenSize) {
+    & {
+      padding: $spacing72 $spacing96;
+
+      .top-div-footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -126,28 +125,46 @@ p, a{
       
     }
 
+      }
 
-    .bottom-div-footer{
+      .bottom-div-footer {
+        margin: 0 auto;
+        max-width: $desktopScreenSize;
+        gap: 724px;
         flex-direction: row;
         justify-content: space-between;
-        
-        .bottom-div-links{
-            order: 0;
+
+
+        .bottom-div-links {
+          order: 0;
         }
 
-        .footer-logo{
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            svg{
-                padding: 0;
-            }
+        .footer-logo {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          svg {
+            padding: 0;
+          }
         }
-    
-    
+      }
     }
-
-    }
-}
+  }
 }
 
+.mobile-logo {
+  width: 76.03px;
+  height: 90px;
+  @media screen and (min-width: $ipadScreenSize) {
+    display: none;
+  }
+}
+
+.desktop-logo {
+  width: 328.81px;
+  height: 70px;
+
+  @media screen and (max-width: $ipadScreenSize) {
+    display: none;
+  }
+}
