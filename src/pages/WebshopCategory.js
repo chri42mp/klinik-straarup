@@ -10,10 +10,13 @@ import HeartIconFilled from "../assets/icons/HeartIconFilled";
 import { SecondaryButton } from "../components/Buttons";
 import CustomFooter from "../components/CustomFooter";
 import DiscountBanner from "../components/DiscountBanner";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function WebshopCategory() {
   const { category } = useParams();
   console.log(category);
+
+  const { currentUser } = useAuth();
 
   const [products, setProducts] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -40,12 +43,33 @@ export default function WebshopCategory() {
   }, [category, favorites]);
 
   const toggleFavorite = (productId) => {
-    console.log("Clicked on product ID:", productId);
-    setFavorites((prevFavorites) =>
-      prevFavorites.includes(productId)
-        ? prevFavorites.filter((id) => id !== productId)
-        : [...prevFavorites, productId]
-    );
+    if (currentUser) {
+      setFavorites((prevFavorites) =>
+        prevFavorites.includes(productId)
+          ? prevFavorites.filter((id) => id !== productId)
+          : [...prevFavorites, productId]
+      );
+
+      const userDocRef = database.collection("users").doc(currentUser.uid);
+      userDocRef.get().then((doc) => {
+        const userData = doc.data();
+        const userFavorites = userData.favorites || [];
+
+        if (userFavorites.includes(productId)) {
+          userDocRef.update({
+            favorites: userFavorites.filter((id) => id !== productId),
+          });
+        } else {
+          userDocRef.update({
+            favorites: [...userFavorites, productId],
+          });
+        }
+      });
+    } else {
+      console.log(
+        "User is not logged in. Redirect to login or show a message."
+      );
+    }
   };
 
   // Log favorites state
