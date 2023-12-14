@@ -1,0 +1,53 @@
+@import "../styles/global.scss";
+
+.price-category{
+    display: grid;
+    padding: $spacing16 $spacing24;
+    gap: $spacing32;
+
+    h1,h3{
+        text-align: center;
+    }
+    .price-container{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing24;
+
+      
+
+        .price{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            border-bottom: 1px solid $light300;
+            :last-child{
+                text-align: right;
+            }
+
+        }
+    }
+
+    @media screen and (min-width: $ipadScreenSize) {
+    
+        &{
+            padding: $spacing72 $spacing96;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1440px;
+            margin: 0 auto;
+            gap: 0;
+
+            h1,h3{
+                grid-column: 1/2;
+                text-align: left;
+            }
+
+            .price-container{
+                grid-column: 2/3;
+            }
+        }
+
+    
+    
+    }
+
+
+}

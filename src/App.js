@@ -24,6 +24,7 @@ import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";
 import Confirmation from "./pages/Confirmation";
 
+
 function App() {
   return (
     <AuthProvider>

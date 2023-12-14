@@ -15,65 +15,63 @@ export default function Fillers() {
   return (
     <>
       <Navigation />
-      <section>
-        <Hero2
-          title='Filler'
-          text='Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter.'
-          imageUrl='/site-images/Filler-s1.webp'
-          alt=''
-          buttonText='Book online'
-          onButtonClick={() =>
-            window.open(
-              'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
-              '_blank',
-              'noreferrer'
-            )
-          }
-          reverse={false}
-        />
-      </section>
-      <section className='filler-s2'>
-        <FullBanner
-          title='Behandling med filler'
-          subtitle='Hos Klinik Straarup behandler vi disse områder: '
-          text={
-            <>
-              <ul>
-                <li>Tear Though</li>
-                <li>Kindben</li>
-                <li>Midtkind</li>
-                <li>Hage</li>
-                <li>Kæbelinje</li>
-                <li>Nasolabialfolder</li>
-                <li>Læber</li>
-                <li>Næse</li>
-              </ul>
-              <p>
-                Behandlingen kan med fordel kombineres med andre
-                skønhedsbehandlinger såsom botox og skinbooster.
-              </p>
-              <br />
-              <p>
-                På behandlingsdagen er det vigtigt at du ikke dyrker sport, går
-                i svømmehal eller sauna og du må ikke opholde dig i solen eller
-                gå solarium.
-              </p>
-            </>
-          }
-          imageUrl='/site-images/Filler-s2.webp'
-          alt='toner'
-          reverse={false}
-        />
-      </section>
-      <section>
-        <BeforeAndAfter
-          title='Før og efter behandling'
-          imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-          alt1='førbillede'
-          imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-          alt2='efter billede'
-        />
-      </section>
+
+      <Hero2
+        title='Filler'
+        text='Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter.'
+        imageUrl='/site-images/Filler-s1.webp'
+        alt=''
+        buttonText='Book online'
+        onButtonClick={() =>
+          window.open(
+            'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
+            '_blank',
+            'noreferrer'
+          )
+        }
+        reverse={false}
+      />
+
+      <FullBanner
+        title='Behandling med filler'
+        subtitle='Hos Klinik Straarup behandler vi disse områder: '
+        text={
+          <>
+            <ul>
+              <li>Tear Though</li>
+              <li>Kindben</li>
+              <li>Midtkind</li>
+              <li>Hage</li>
+              <li>Kæbelinje</li>
+              <li>Nasolabialfolder</li>
+              <li>Læber</li>
+              <li>Næse</li>
+            </ul>
+            <p>
+              Behandlingen kan med fordel kombineres med andre
+              skønhedsbehandlinger såsom botox og skinbooster.
+            </p>
+            <br />
+            <p>
+              På behandlingsdagen er det vigtigt at du ikke dyrker sport, går i
+              svømmehal eller sauna og du må ikke opholde dig i solen eller gå
+              solarium.
+            </p>
+          </>
+        }
+        imageUrl='/site-images/Filler-s2.webp'
+        alt='toner'
+        reverse={false}
+      />
+
+      <BeforeAndAfter
+        title='Før og efter behandling'
+        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        alt1='førbillede'
+        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        alt2='efter billede'
+      />
+
       <section>
         <TextboxBanner
           title='Værd at vide'
@@ -95,10 +93,10 @@ export default function Fillers() {
           reverse={true}
         />
       </section>
-      <section>
-        <DiscountBanner />
-      </section>
-      <section>
+
+      <DiscountBanner />
+
+      <section className='container-width'>
         <div className='filler-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'

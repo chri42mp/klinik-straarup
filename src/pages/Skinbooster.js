@@ -15,89 +15,85 @@ export default function Skinbooster() {
   return (
     <>
       <Navigation />
-      <section>
-        <Hero2
-          title='Skinbooster'
-          text='Din hud vil elske dig for behandlinger med skinbooster. Skinbooster vil opstramme slap hud, reducere rynker, forbedre hudtonen og elasticiteten samt forbedre den generelle hudtilstand, på hals, decollete, hænder og ansigt.'
-          imageUrl='/site-images/Skinbooster-s1.webp'
-          alt='Calming toner'
-          buttonText='Book online'
-          onButtonClick={() =>
-            window.open(
-              'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
-              '_blank',
-              'noreferrer'
-            )
-          }
-          reverse={false}
-        />
-      </section>
-      <section>
-        <FullBanner
-          title='Behandling med skinbooster'
-          subtitle='Hvad kan du forvente af behandlingen?'
-          text={
-            <>
-              <br />
-              <p>
-                Behandlingen stimulerer produktionen af nyt kollagen og
-                genopretter niveauet af naturlig hyaluronsyre i huden ved at
-                modvirke nedbrydningsprocessen.
-              </p>
-              <br />
-              <p>
-                Ydermere er produktet designet til at omstrukturere og forstærke
-                den ekstracellulære matrix revitaliserende hud, der er
-                dehydreret og beskadiget af aldring og soleksponering.
-              </p>
-              <br />
-              <p>
-                På behandlingsdagen er det vigtigt at du ikke bruger makeup
-                eller creme før tidligst 6 timer efter behandlingen og helst
-                gerne først dagen efter.
-              </p>
-            </>
-          }
-          imageUrl='/site-images/Skinbooster-s2.webp'
-          alt='toner'
-          reverse={false}
-        />
-      </section>
-      <section>
-        <BeforeAndAfter
-          title='Før og efter behandling'
-          imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-          alt1='førbillede'
-          imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-          alt2='efter billede'
-        />
-      </section>
-      <section>
-        <TextboxBanner
-          title='Værd at vide'
-          text='Du vil opleve let rødme på grund af de mange fine stik i huden og eventuelt blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen.'
-          imageUrl='/site-images/Textboxbanner-1.webp'
-          alt='Calming toner'
-          buttonText='Kontakt klinikken'
-          buttonIcon={<LongArrowRightIcon />}
-          onButtonClick={() => console.log('Button clicked!')}
-          reverse={false}
-        />
-        <TextboxBanner
-          title='Prisliste'
-          text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
-          imageUrl='/site-images/Textboxbanner-2.webp'
-          alt='Clearing mask'
-          buttonText='Se priser'
-          buttonIcon={<LongArrowRightIcon />}
-          onButtonClick={() => console.log('Button clicked!')}
-          reverse={true}
-        />
-      </section>
-      <section>
-        <DiscountBanner />
-      </section>
-      <section>
+
+      <Hero2
+        title='Skinbooster'
+        text='Din hud vil elske dig for behandlinger med skinbooster. Skinbooster vil opstramme slap hud, reducere rynker, forbedre hudtonen og elasticiteten samt forbedre den generelle hudtilstand, på hals, decollete, hænder og ansigt.'
+        imageUrl='/site-images/Skinbooster-s1.webp'
+        alt='Calming toner'
+        buttonText='Book online'
+        onButtonClick={() =>
+          window.open(
+            'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
+            '_blank',
+            'noreferrer'
+          )
+        }
+        reverse={false}
+      />
+
+      <FullBanner
+        title='Behandling med skinbooster'
+        subtitle='Hvad kan du forvente af behandlingen?'
+        text={
+          <>
+            <br />
+            <p>
+              Behandlingen stimulerer produktionen af nyt kollagen og
+              genopretter niveauet af naturlig hyaluronsyre i huden ved at
+              modvirke nedbrydningsprocessen.
+            </p>
+            <br />
+            <p>
+              Ydermere er produktet designet til at omstrukturere og forstærke
+              den ekstracellulære matrix revitaliserende hud, der er dehydreret
+              og beskadiget af aldring og soleksponering.
+            </p>
+            <br />
+            <p>
+              På behandlingsdagen er det vigtigt at du ikke bruger makeup eller
+              creme før tidligst 6 timer efter behandlingen og helst gerne først
+              dagen efter.
+            </p>
+          </>
+        }
+        imageUrl='/site-images/Skinbooster-s2.webp'
+        alt='toner'
+        reverse={false}
+      />
+
+      <BeforeAndAfter
+        title='Før og efter behandling'
+        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        alt1='førbillede'
+        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        alt2='efter billede'
+      />
+
+      <TextboxBanner
+        title='Værd at vide'
+        text='Du vil opleve let rødme på grund af de mange fine stik i huden og eventuelt blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen.'
+        imageUrl='/site-images/Textboxbanner-1.webp'
+        alt='Calming toner'
+        buttonText='Kontakt klinikken'
+        buttonIcon={<LongArrowRightIcon />}
+        onButtonClick={() => console.log('Button clicked!')}
+        reverse={false}
+      />
+      <TextboxBanner
+        title='Prisliste'
+        text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
+        imageUrl='/site-images/Textboxbanner-2.webp'
+        alt='Clearing mask'
+        buttonText='Se priser'
+        buttonIcon={<LongArrowRightIcon />}
+        onButtonClick={() => console.log('Button clicked!')}
+        reverse={true}
+      />
+
+      <DiscountBanner />
+
+      <section className='container-width'>
         <div className='skinbooster-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'

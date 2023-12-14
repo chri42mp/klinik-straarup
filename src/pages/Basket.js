@@ -74,6 +74,7 @@ export default function Basket() {
     console.log(e.target.value, id);
     const newValue = parseInt(e.target.value);
 
+
     setBasket((prevBasket) =>
       prevBasket.map((item) => {
         if (item.product === id) {
@@ -177,6 +178,7 @@ export default function Basket() {
             <div className="add-discount-btn">
               <SecondaryButton text="Tilføj" />
             </div>
+
           </div>
           <div className="delivery">
             <h3>Total eksl. levering</h3>

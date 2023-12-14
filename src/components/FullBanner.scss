@@ -69,6 +69,7 @@ li{
   width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    margin: 0 auto;
     .full-banner-image {
         order: 1;
         height: 100%;

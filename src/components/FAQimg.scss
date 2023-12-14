@@ -9,12 +9,14 @@
     grid-template-rows: 1fr 1fr 1fr;
     position: relative;
     width: 17.75rem;
-   
+    height: fit-content;
 
     .faq-img-1,
     .faq-img-2{
         width: 100%;
         height: 106px; 
+        object-fit: cover;
+   
     }
     .faq-img-1{
         grid-column: 1 / 3;

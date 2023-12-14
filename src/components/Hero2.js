@@ -13,18 +13,20 @@ const Hero2 = ({
   onButtonClick,
 }) => {
   return (
-    <div className='hero2-banner'>
-      <div className='hero2-banner-image'>
-        <img src={imageUrl} alt={alt} />
-      </div>
-      <div className='hero2-banner-box'>
-        <h1>{title}</h1>
-        <p>{text}</p>
-        <div>
-          <PrimaryButton text={buttonText} onClick={onButtonClick} />
+    <section className='container-width'>
+      <div className='hero2-banner'>
+        <div className='hero2-banner-image'>
+          <img src={imageUrl} alt={alt} />
+        </div>
+        <div className='hero2-banner-box'>
+          <h1>{title}</h1>
+          <p>{text}</p>
+          <div>
+            <PrimaryButton text={buttonText} onClick={onButtonClick} />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

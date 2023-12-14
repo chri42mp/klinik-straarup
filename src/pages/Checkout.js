@@ -16,7 +16,6 @@ export default function Checkout() {
   const [adress, setAdress] = useState("");
   const [zipcode, setZipcode] = useState("");
   const [city, setCity] = useState("");
-
   const [finalBasket, setFinalBasket] = useState({});
   const [products, setproducts] = useState([]);
   const navigate = useNavigate();

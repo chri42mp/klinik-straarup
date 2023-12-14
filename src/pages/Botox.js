@@ -15,96 +15,92 @@ export default function Botox() {
   return (
     <>
       <Navigation />
-      <section>
-        <Hero2
-          title='Botox'
-          text='Udover at reducere rynker og give en pænere hud kan botox også hjælpe på medicinske problematikker som migræne, skæren tænder, muskelsmerter i kæber og reducering af sved.'
-          imageUrl='/site-images/Botox-s1.webp'
-          alt='Calming toner'
-          buttonText='Book online'
-          onButtonClick={() =>
-            window.open(
-              'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
-              '_blank',
-              'noreferrer'
-            )
-          }
-          reverse={false}
-        />
-      </section>
-      <section>
-        <FullBanner
-          title='Behandling med botox'
-          subtitle='Hos Klinik Straarup behandler vi disse områder: '
-          text={
-            <>
-              <ul>
-                <li>Glabella/Mellem bryn</li>
-                <li>Pande</li>
-                <li>Smilerynker</li>
-                <li>Brynløft</li>
-                <li>Hagekløft</li>
-                <li>Bunnylines</li>
-                <li>Gummysmile</li>
-                <li>Lipflip/Rygerynker</li>
-                <li>Nedadgående mundvige</li>
-                <li>Kæbelinje</li>
-                <li>Masseter/Tyggemuskel</li>
-                <li>Stramme halsbånd</li>
-                <li>Næse</li>
-              </ul>
-              <p>
-                Behandlingen kan med fordel kombineres med andre
-                skønhedsbehandlinger såsom filler og skinbooster.
-              </p>
-              <br />
-              <p>
-                På behandlingsdagen er det vigtigt at du ikke dyrker sport, går
-                i svømmehal eller sauna og du må ikke opholde dig i solen eller
-                gå solarium
-              </p>
-            </>
-          }
-          imageUrl='/site-images/Botox-s2.webp'
-          alt='toner'
-          reverse={false}
-        />
-      </section>
-      <section>
-        <BeforeAndAfter
-          title='Før og efter behandling'
-          imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-          alt1='førbillede'
-          imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-          alt2='efter billede'
-        />
-      </section>
-      <section>
-        <TextboxBanner
-          title='Værd at vide'
-          text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
-          imageUrl='/site-images/Textboxbanner-1.webp'
-          alt='Calming toner'
-          buttonText='Kontakt klinikken'
-          buttonIcon={<LongArrowRightIcon />}
-          onButtonClick={() => console.log('Button clicked!')}
-          reverse={false}
-        />
-        <TextboxBanner
-          title='Prisliste'
-          text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
-          imageUrl='/site-images/Textboxbanner-2.webp'
-          alt='Clearing mask'
-          buttonText='Se priser'
-          buttonIcon={<LongArrowRightIcon />}
-          onButtonClick={() => console.log('Button clicked!')}
-          reverse={true}
-        />
-      </section>
-      <section>
-        <DiscountBanner />
-      </section>
-      <section>
+
+      <Hero2
+        title='Botox'
+        text='Udover at reducere rynker og give en pænere hud kan botox også hjælpe på medicinske problematikker som migræne, skæren tænder, muskelsmerter i kæber og reducering af sved.'
+        imageUrl='/site-images/Botox-s1.webp'
+        alt='Calming toner'
+        buttonText='Book online'
+        onButtonClick={() =>
+          window.open(
+            'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
+            '_blank',
+            'noreferrer'
+          )
+        }
+        reverse={false}
+      />
+
+      <FullBanner
+        title='Behandling med botox'
+        subtitle='Hos Klinik Straarup behandler vi disse områder: '
+        text={
+          <>
+            <ul>
+              <li>Glabella/Mellem bryn</li>
+              <li>Pande</li>
+              <li>Smilerynker</li>
+              <li>Brynløft</li>
+              <li>Hagekløft</li>
+              <li>Bunnylines</li>
+              <li>Gummysmile</li>
+              <li>Lipflip/Rygerynker</li>
+              <li>Nedadgående mundvige</li>
+              <li>Kæbelinje</li>
+              <li>Masseter/Tyggemuskel</li>
+              <li>Stramme halsbånd</li>
+              <li>Næse</li>
+            </ul>
+            <p>
+              Behandlingen kan med fordel kombineres med andre
+              skønhedsbehandlinger såsom filler og skinbooster.
+            </p>
+            <br />
+            <p>
+              På behandlingsdagen er det vigtigt at du ikke dyrker sport, går i
+              svømmehal eller sauna og du må ikke opholde dig i solen eller gå
+              solarium
+            </p>
+          </>
+        }
+        imageUrl='/site-images/Botox-s2.webp'
+        alt='toner'
+        reverse={false}
+      />
+
+      <BeforeAndAfter
+        title='Før og efter behandling'
+        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        alt1='førbillede'
+        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        alt2='efter billede'
+      />
+
+      <TextboxBanner
+        title='Værd at vide'
+        text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
+        imageUrl='/site-images/Textboxbanner-1.webp'
+        alt='Calming toner'
+        buttonText='Kontakt klinikken'
+        buttonIcon={<LongArrowRightIcon />}
+        onButtonClick={() => console.log('Button clicked!')}
+        reverse={false}
+      />
+      <TextboxBanner
+        title='Prisliste'
+        text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
+        imageUrl='/site-images/Textboxbanner-2.webp'
+        alt='Clearing mask'
+        buttonText='Se priser'
+        buttonIcon={<LongArrowRightIcon />}
+        onButtonClick={() => console.log('Button clicked!')}
+        reverse={true}
+      />
+
+      <DiscountBanner />
+
+      <section className='container-width'>
         <div className='botox-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
