@@ -39,10 +39,10 @@ const CustomFooter = () => {
           <h5>SoMe</h5>
           <div className="some-icons">
             <Link to="https://www.instagram.com/klinikstraarup/">
-              <InstagramIcon />
+              <InstagramIcon fill="#fefcf9" />
             </Link>
             <Link to="https://www.facebook.com/klinikstraarup">
-              <FacebookIcon />
+              <FacebookIcon fill="#fefcf9" />
             </Link>
           </div>
         </div>
@@ -54,6 +54,7 @@ const CustomFooter = () => {
             <p>2600 Glostrup </p>
             <p>Denmark</p>
           </Link>
+          <p>CVR: 44240793</p>
         </div>
       </div>
       <div className="bottom-div-footer">
@@ -65,7 +66,16 @@ const CustomFooter = () => {
         <div className="footer-logo"></div>
         <Link to="/">
           <span className="visually-hidden">Gå til startsiden</span>
-          <img src="/KS-logo_gold.png" alt="klinik straarup logo" />
+          <img
+            className="desktop-logo"
+            src="/KS-logo_gold.png"
+            alt="klinik straarup logo"
+          />
+          <img
+            className="mobile-logo"
+            src="/KS-logo-element_gold.png"
+            alt="klinik straarup logo"
+          />
         </Link>
       </div>
     </footer>
