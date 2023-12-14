@@ -1,0 +1,9 @@
+@import "../styles/global.scss";
+
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing24;
+  padding-block: $spacing72;
+}

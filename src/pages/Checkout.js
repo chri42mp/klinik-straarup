@@ -12,6 +12,11 @@ export default function Checkout() {
   const [firstName, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [adress, setAdress] = useState("");
+  const [zipcode, setZipcode] = useState("");
+  const [city, setCity] = useState("");
+
   const [finalBasket, setFinalBasket] = useState({});
   const [products, setproducts] = useState([]);
   const navigate = useNavigate();
@@ -26,6 +31,10 @@ export default function Checkout() {
           setFirstname(data.data().firstname);
           setLastname(data.data().lastname);
           setEmail(auth.currentUser.email);
+          setPhone(data.data().phone);
+          setAdress(data.data().adress);
+          setZipcode(data.data().zipcode);
+          setCity(data.data().city);
         });
     }
     setFinalBasket(JSON.parse(localStorage.getItem("finalBasket")));
@@ -79,7 +88,13 @@ export default function Checkout() {
           </div>
           <div className="form-group">
             <label for="phone">Tlf nr:</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              defaultValue={phone}
+            />
           </div>
           <div className="form-group">
             <label for="email">Email:</label>
@@ -103,16 +118,34 @@ export default function Checkout() {
           </div>
           <div className="form-group">
             <label for="adress">Adresse:</label>
-            <input type="text" id="adress" name="adress" required />
+            <input
+              type="text"
+              id="adress"
+              name="adress"
+              required
+              defaultValue={adress}
+            />
           </div>
           <div className="location">
             <div className="form-group">
               <label for="zipcode">Postnummer:</label>
-              <input type="text" id="zipcode" name="zipcode" required />
+              <input
+                type="text"
+                id="zipcode"
+                name="zipcode"
+                required
+                defaultValue={zipcode}
+              />
             </div>
             <div className="form-group">
               <label for="city">By:</label>
-              <input type="text" id="city" name="city" required />
+              <input
+                type="text"
+                id="city"
+                name="city"
+                required
+                defaultValue={city}
+              />
             </div>
           </div>
 
