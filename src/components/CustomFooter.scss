@@ -122,30 +122,26 @@
         max-width: 1440px;
         margin: 0 auto;
         gap: 297px;
-      
+      }
     }
 
+    .bottom-div-footer {
+      margin: 0 auto;
+      max-width: $desktopScreenSize;
+      gap: 724px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .bottom-div-links {
+        order: 0;
       }
 
-      .bottom-div-footer {
-        margin: 0 auto;
-        max-width: $desktopScreenSize;
-        gap: 724px;
-        flex-direction: row;
-        justify-content: space-between;
-
-
-        .bottom-div-links {
-          order: 0;
-        }
-
-        .footer-logo {
-          display: flex;
-          align-items: flex-end;
-          justify-content: flex-end;
-          svg {
-            padding: 0;
-          }
+      .footer-logo {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        svg {
+          padding: 0;
         }
       }
     }
@@ -161,10 +157,11 @@
 }
 
 .desktop-logo {
-  width: 328.81px;
-  height: 70px;
+  display: none;
 
-  @media screen and (max-width: $ipadScreenSize) {
-    display: none;
+  @media screen and (min-width: $ipadScreenSize) {
+    display: block;
+    width: 328.81px;
+    height: 70px;
   }
 }

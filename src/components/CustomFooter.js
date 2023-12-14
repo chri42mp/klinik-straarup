@@ -63,20 +63,21 @@ const CustomFooter = () => {
           <p>Handelsbetingelser</p>
           <p>Sitemap</p>
         </div>
-        <div className="footer-logo"></div>
-        <Link to="/">
-          <span className="visually-hidden">Gå til startsiden</span>
-          <img
-            className="desktop-logo"
-            src="/KS-logo_gold.png"
-            alt="klinik straarup logo"
-          />
-          <img
-            className="mobile-logo"
-            src="/KS-logo-element_gold.png"
-            alt="klinik straarup logo"
-          />
-        </Link>
+        <div className="footer-logo">
+          <Link to="/">
+            <span className="visually-hidden">Gå til startsiden</span>
+            <img
+              className="desktop-logo"
+              src="/KS-logo_gold.png"
+              alt="klinik straarup logo"
+            />
+            <img
+              className="mobile-logo"
+              src="/KS-logo-element_gold.png"
+              alt="klinik straarup logo"
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   );
