@@ -4,20 +4,72 @@
   width: 76.03px;
   height: 90px;
 }
+
 nav {
   display: flex;
+  padding-inline: $spacing16;
+  padding-block: $spacing8;
+  align-items: center;
 
   li {
     list-style: none;
     text-decoration: none;
   }
+
+  .navigation-elements {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing24;
+  }
 }
+
 .visually-hidden {
   display: none;
 }
 
 .mobile-menu {
   position: absolute;
+  top: 12%;
+  left: 0;
+  background-color: $light100;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-inline: $spacing16;
+  padding-block: $spacing8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.treatments {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.treatments.active .submenu {
+  display: block; // Show the submenu when the "Behandlinger" list item is active
 }
 
 // nav {
@@ -89,10 +141,4 @@ nav {
 //   width: 30px;
 //   height: 30px;
 //   padding-inline: 8px;
-// }
-
-// .treatments {
-//   display: flex;
-//   align-items: center;
-//   cursor: pointer;
 // }
