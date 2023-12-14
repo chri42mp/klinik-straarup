@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { auth, database } from "../firebase";
 import Navigation from "../components/Navigation";
 import Dropdown from "../components/Dropdown";
-import { TertiaryButtonWithIcon } from "../components/Buttons";
+import { SecondaryButton, TertiaryButtonWithIcon } from "../components/Buttons";
 import LongArrowRightIcon from "../assets/icons/LongArrowRightIcon";
 import CustomFooter from "../components/CustomFooter";
 import "./Userdashboard.scss";
+import HeartIconFilled from "../assets/icons/HeartIconFilled";
 
 export default function UserDashboard() {
   const navigate = useNavigate();
@@ -23,6 +24,8 @@ export default function UserDashboard() {
     }),
   });
 
+  const [favoriteProducts, setFavoriteProducts] = useState([]);
+
   useEffect(() => {
     console.log(auth.currentUser.uid);
     if (auth.currentUser.uid === "uFq7ihsSmhPn3tc3NBsl72flECo1") {
@@ -35,9 +38,29 @@ export default function UserDashboard() {
         .get()
         .then((data) => {
           setCurrentUser(data);
+          const userFavorites = data.data()?.favorites || [];
+          fetchFavoriteProducts(userFavorites);
         });
     }
   }, [navigate]);
+
+  const fetchFavoriteProducts = (favoriteIds) => {
+    Promise.all(
+      favoriteIds.map((productId) =>
+        database.collection("products").doc(productId).get()
+      )
+    )
+      .then((productDocs) => {
+        const products = productDocs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setFavoriteProducts(products);
+      })
+      .catch((error) => {
+        console.error("Error fetching favorite products:", error);
+      });
+  };
 
   const updateUserData = (field, value) => {
     setCurrentUser((prevData) => ({
@@ -71,15 +94,51 @@ export default function UserDashboard() {
           {currentUser?.data() &&
             `${currentUser?.data()?.firstname} ${
               currentUser?.data()?.lastname
-            }`}
+            }`}{" "}
+          !
         </h1>
         <Dropdown title="Mine ordre" content={<p>jeg er en test</p>} />
         <Dropdown title="Mine tider" content={<p>jeg er en test</p>} />
-        <Dropdown title="Mine favoritter" content={<p>jeg er en test</p>} />
+        <Dropdown
+          title="Mine favoritter"
+          content={
+            <div>
+              {favoriteProducts.length > 0 ? (
+                <div className="all-favorite-products">
+                  {favoriteProducts.map((product) => (
+                    <div className="favorite-card" key={product.id}>
+                      <div className="favorite-heart-icon">
+                        <HeartIconFilled
+                          width="35px"
+                          height="35px"
+                          fill="#ff969f"
+                        />
+                      </div>
+                      <img
+                        className="favorite-card-image"
+                        src={product?.imagePath}
+                        alt={product?.productName}
+                      />
+                      <p> {product.productName}</p>
+
+                      <p className=""> {product?.productPrice} DKK</p>
+                      <SecondaryButton
+                        text="Se her"
+                        link={`/product/${product.id}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p>Du har ingen favoritter endnu.</p>
+              )}
+            </div>
+          }
+        />
         <Dropdown
           title="Mine oplysninger"
           content={
-            <form>
+            <form className="user-information-form">
               <div className="fullname">
                 <div className="form-group">
                   <label for="firstname">Fornavn:</label>

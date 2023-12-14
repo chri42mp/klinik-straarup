@@ -53,3 +53,12 @@
     cursor: not-allowed;
   }
 }
+
+.btn-tertiary-icon {
+  display: flex;
+  align-items: center;
+  background-color: $light100;
+  border: none;
+  cursor: pointer;
+  padding: $spacing12 $spacing16;
+}
