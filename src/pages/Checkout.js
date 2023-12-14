@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import "./Checkout.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import { auth, database } from "../firebase";
 import DiscountBanner from "../components/DiscountBanner";
@@ -14,6 +14,7 @@ export default function Checkout() {
   const [email, setEmail] = useState("");
   const [finalBasket, setFinalBasket] = useState({});
   const [products, setproducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (auth.currentUser) {
@@ -116,7 +117,10 @@ export default function Checkout() {
           </div>
 
           <div className="checkout-btn">
-            <PrimaryButton text="Forsæt til levering" />
+            <PrimaryButton
+              text="Forsæt til levering"
+              onClick={() => navigate("/shipping")}
+            />
           </div>
           <div className="terms-links">
             <Link to="/tradeconditions">Handelsbetingelser</Link>
@@ -156,7 +160,7 @@ export default function Checkout() {
                 <label for="discount">Rabatkode</label>
                 <input type="text" id="discount" name="discount" />
               </div>
-              <SecondaryButton text="Tilføj" link={"/shipping"} />
+              <SecondaryButton text="Tilføj" />
             </div>
             <div className="delivery">
               <h3>Total eksl. levering</h3>
