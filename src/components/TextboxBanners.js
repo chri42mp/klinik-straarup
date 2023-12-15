@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TertiaryButtonWithIcon } from "./Buttons";
-import "./TextboxBanners.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TertiaryButtonWithIcon } from './Buttons';
+import './TextboxBanners.scss';
 
 const TextboxBanner = ({
   title,
@@ -14,8 +14,11 @@ const TextboxBanner = ({
   reverse,
 }) => {
   return (
-    <div className={`banner ${reverse ? "reverse" : ""}`}>
-      <div className="banner-box" style={{ order: reverse ? 2 : 1 }}>
+    <div className={`banner ${reverse ? 'reverse' : ''}`}>
+      <div className='banner-image' style={{ order: reverse }}>
+        <img src={imageUrl} alt={alt} />
+      </div>
+      <div className='banner-box' style={{ order: reverse }}>
         <h2>{title}</h2>
         <p>{text}</p>
         <TertiaryButtonWithIcon
@@ -24,21 +27,18 @@ const TextboxBanner = ({
           icon={buttonIcon}
         />
       </div>
-      <div className="banner-image" style={{ order: reverse ? 1 : 2 }}>
-        <img src={imageUrl} alt={alt} />
-      </div>
     </div>
   );
 };
 
 TextboxBanner.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonIcon: PropTypes.element.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  text: PropTypes.string,
+  imageUrl: PropTypes.string,
+  alt: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonIcon: PropTypes.element,
+  onButtonClick: PropTypes.func,
   reverse: PropTypes.bool,
 };
 

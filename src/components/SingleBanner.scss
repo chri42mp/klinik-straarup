@@ -5,7 +5,6 @@
     flex-direction: column;
     padding: $spacing16 $spacing24;
     gap: $spacing32;
-    background-color: $light200;
     height: fit-content;
 
     .single-banner-box {
@@ -37,6 +36,8 @@
   
     .single-banner-image {
       order: 1;
+      object-fit: cover;
+      
     }
   }
 
@@ -47,7 +48,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: $spacing72 $spacing96;
-  margin: $spacing96 $spacing120;
+  max-width: 1440px;
+    margin: 0 auto;
   gap: $spacing48;
   
   .single-banner-box {

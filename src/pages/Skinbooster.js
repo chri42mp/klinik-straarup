@@ -78,7 +78,7 @@ export default function Skinbooster() {
         buttonText='Kontakt klinikken'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={false}
+        reverse={true}
       />
       <TextboxBanner
         title='Prisliste'
@@ -88,7 +88,7 @@ export default function Skinbooster() {
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={true}
+        reverse={false}
       />
 
       <DiscountBanner />

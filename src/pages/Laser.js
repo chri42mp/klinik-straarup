@@ -67,7 +67,7 @@ export default function Laser() {
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={true}
+        reverse={false}
       />
 
       <DiscountBanner />

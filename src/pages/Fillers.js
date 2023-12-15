@@ -80,7 +80,7 @@ export default function Fillers() {
           alt='Calming toner'
           buttonText='Kontakt klinikken'
           buttonIcon={<LongArrowRightIcon />}
-          reverse={false}
+          reverse={true}
         />
         <TextboxBanner
           title='Prisliste'
@@ -90,7 +90,7 @@ export default function Fillers() {
           buttonText='Se priser'
           buttonIcon={<LongArrowRightIcon />}
           onButtonClick={() => console.log('Button clicked!')}
-          reverse={true}
+          reverse={false}
         />
       </section>
 
