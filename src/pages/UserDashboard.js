@@ -28,7 +28,7 @@ export default function UserDashboard() {
 
   useEffect(() => {
     console.log(auth.currentUser.uid);
-    if (auth.currentUser.uid === "uFq7ihsSmhPn3tc3NBsl72flECo1") {
+    if (auth.currentUser.uid === "tnExGJyoMPhvCpKrAFnLGrUkFz92") {
       navigate("/addproduct");
     }
     if (auth.currentUser.uid) {
