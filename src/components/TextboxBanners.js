@@ -21,11 +21,13 @@ const TextboxBanner = ({
       <div className='banner-box' style={{ order: reverse }}>
         <h2>{title}</h2>
         <p>{text}</p>
-        <TertiaryButtonWithIcon
-          text={buttonText}
-          onClick={onButtonClick}
-          icon={buttonIcon}
-        />
+        <div>
+          <TertiaryButtonWithIcon
+            text={buttonText}
+            onClick={onButtonClick}
+            icon={buttonIcon}
+          />
+        </div>
       </div>
     </div>
   );

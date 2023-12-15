@@ -62,7 +62,7 @@
       padding-block: 70px;
 
   .banner-box {
-    background-color: $light200;
+    background-color: $light300;
     padding: 24px;
     max-width: 530px;
     top: 22%;
@@ -88,6 +88,7 @@
 
 .banner.reverse {
   .banner-box {
+    background-color: $light200;
     order: 1;
     align-self: flex-start;
     justify-self: flex-end;
