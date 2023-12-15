@@ -38,6 +38,7 @@ export default function Webshop() {
           className="hero-image"
           src="/webshop-images/2018-kit-skin-normalizing.webp"
           alt="normalizing skin kit"
+          loading="lazy"
         />
         <div className="overlay-content">
           <h1>Velkommen til klinik Straarups webshop</h1>
