@@ -1,0 +1,14 @@
+@import "../styles/global.scss";
+
+.section-webshop-banner {
+  padding-block: $spacing48;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    padding-inline: $spacing96;
+  }
+
+  .webshop-banner-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
