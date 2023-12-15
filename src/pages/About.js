@@ -1,16 +1,24 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import TextboxBanner from '../components/TextboxBanners';
-import './About.scss';
-import CustomFooter from '../components/CustomFooter';
-import FullBanner from '../components/FullBanner';
+import React from "react";
+import Navigation from "../components/Navigation";
+import TextboxBanner from "../components/TextboxBanners";
+import "./About.scss";
+import CustomFooter from "../components/CustomFooter";
+import FullBanner from "../components/FullBanner";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <>
-      <div className='about'>
+      <Helmet>
+        <title>Om klinik Straarup</title>
+        <meta
+          name="description"
+          content="Klinik Straarup er en skønhedsklinik, der tilbyder botox, filler etc"
+        />
+      </Helmet>
+      <div className="about">
         <Navigation />
-        <section className='about-s1'>
+        <section className="about-s1">
           <h1>Om klinikken</h1>
           <p>
             Klinik straarup er en kosmetisk og medicinsk klinik, beliggende i
@@ -19,8 +27,8 @@ export default function About() {
         </section>
         <section>
           <FullBanner
-            title='Klinik Straarup'
-            subtitle='Passion for æstetik '
+            title="Klinik Straarup"
+            subtitle="Passion for æstetik "
             text={
               <>
                 <br />
@@ -44,12 +52,12 @@ export default function About() {
                 </p>
               </>
             }
-            imageUrl='/site-images/About-s2.webp'
-            alt='toner'
+            imageUrl="/site-images/About-s2.webp"
+            alt="toner"
             reverse={false}
           />
         </section>
-        <section className='about-s3'>
+        <section className="about-s3">
           <h1>Mød vores behandlere</h1>
           <h5>Hos Klinik Straarup er vi professionelle</h5>
           <p>
@@ -58,25 +66,25 @@ export default function About() {
             en bred vifte af behandinger.
           </p>
         </section>
-        <section className='about-s4'>
+        <section className="about-s4">
           <TextboxBanner
-            title='Maria Straarup'
-            text='Maria er ejer af klinikken. Hun er uddannet sygeplejerske og kosmetisk sygeplejerske, og har arbejdet mange år i den kosmetiske branche. Hun er perfektionist til fingerspidserne og går op i at skabe naturlige resultater til hendes kunder.'
-            imageUrl='/site-images/About-maria.webp'
-            alt='Billede af Maria'
+            title="Maria Straarup"
+            text="Maria er ejer af klinikken. Hun er uddannet sygeplejerske og kosmetisk sygeplejerske, og har arbejdet mange år i den kosmetiske branche. Hun er perfektionist til fingerspidserne og går op i at skabe naturlige resultater til hendes kunder."
+            imageUrl="/site-images/About-maria.webp"
+            alt="Billede af Maria"
             reverse={false}
           />
           <TextboxBanner
-            title='Jakob Nielsen'
-            text='Jakob er virksomhedsansvarlig læge og uddannet på Københavns og Aarhus universitet i hh. 2005 og 2007. 
-            Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. '
-            imageUrl='/webshop-images/gbl-complexion-clearing-masque-original.webp'
-            alt='Billede af Jakob'
+            title="Jakob Nielsen"
+            text="Jakob er virksomhedsansvarlig læge og uddannet på Københavns og Aarhus universitet i hh. 2005 og 2007. 
+            Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. "
+            imageUrl="/webshop-images/gbl-complexion-clearing-masque-original.webp"
+            alt="Billede af Jakob"
             reverse={true}
           />
         </section>
-        <section className='about-s5'>
-          <div className='s5-text'>
+        <section className="about-s5">
+          <div className="s5-text">
             <h2>Patientsikkerhed</h2>
             <h5>
               Klinik Straarup er registreret hos styrelsen for patientsikkerhed
@@ -93,7 +101,7 @@ export default function About() {
               personer der udfører kosmetiske behandlinger, er registeret af
               Styrelsen for Patientsikkerhed, dvs. at det er personer der
               lovmæssigt opfylder kriterierne for at udføre kosmetiske
-              behandlinger. Klinik Straarup er registeret jf. reglerne herom.{' '}
+              behandlinger. Klinik Straarup er registeret jf. reglerne herom.{" "}
               <br />
               <br /> Som registeret klinik modtages der med jævne mellemrum
               anmeldte og uanmeldte besøg fra embedslægerne. Efter hvert besøg
@@ -102,8 +110,8 @@ export default function About() {
               hjemmeside.www.stps.dk
             </p>
           </div>
-          <div className='s5-img'>
-            <img src='/site-images/FAQ-2.webp' alt='normalizing skin kit' />
+          <div className="s5-img">
+            <img src="/site-images/FAQ-2.webp" alt="normalizing skin kit" />
           </div>
         </section>
 
