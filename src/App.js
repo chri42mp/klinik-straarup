@@ -23,7 +23,7 @@ import Checkout from "./pages/Checkout";
 import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";
 import Confirmation from "./pages/Confirmation";
-
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -69,6 +69,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
