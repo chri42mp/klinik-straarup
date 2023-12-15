@@ -5,6 +5,10 @@
   height: 90px;
 }
 
+.logo-web{
+  display: none;
+}
+
 nav {
   display: flex;
   padding-inline: $spacing16;
@@ -42,22 +46,32 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  .align-btn{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .treatments {
-  position: relative;
-  display: flex;
-  align-items: center;
+  // position: relative;
+  // display: flex;
+  // align-items: center;
   cursor: pointer;
+  // width: 100%;
+  // flex-wrap: wrap;
+
+  .align-icon{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .submenu {
   display: none;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
-  top: 100%;
-  left: 0;
   z-index: 1;
   padding: 0;
 
@@ -69,12 +83,44 @@ nav {
 }
 
 .treatments.active .submenu {
-  display: block; // Show the submenu when the "Behandlinger" list item is active
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: $light100; // Show the submenu when the "Behandlinger" list item is active
 }
 
-// nav {
-//   margin-block: 48px;
+@media screen and (min-width: $ipadScreenSize) {
+nav {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 48px 96px 16px 96px;
 
+  .mobile-menu{
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    gap: 1.5rem;
+    top: 0;
+    justify-content: flex-end;
+  }
+
+  .navigation-elements {
+    order:2;
+  }
+
+  .hide-toggle{
+    display: none;
+  }
+
+  .treatments.active .submenu {
+    position: absolute;
+    padding:0;
+  }
+
+  .navigation-elements{
+    width:fit-content;
+  }
 //   ul {
 //     list-style: none;
 //     display: flex;
@@ -132,13 +178,19 @@ nav {
 //   }
 // }
 
-// .ks-logo-gold {
-//   padding-inline: 96px;
-// }
+.logo-web {
+  display: block;
+  width: 328px;
+}
+
+.logo-mobile {
+  display: none;
+}
 
 // .arrow-down-icon,
 // .arrow-up-icon {
 //   width: 30px;
 //   height: 30px;
 //   padding-inline: 8px;
-// }
+}
+}

@@ -2,7 +2,7 @@
 
 @mixin set-position-and-margin($direction, $overlap) {
   position: relative;
-  z-index: 1;
+
 
   @if $direction == left {
     margin-left: $overlap;
@@ -13,42 +13,135 @@
   }
 }
 
-.banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1440px;
-  margin-inline: 198px;
-  padding-block: 70px;
+.banner{
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  margin: 0 auto;
+
+  .banner-box{
+    order: 2;
+    background-color: #f3efe7;
+    border-radius: 4px;
+    z-index: 1;
+    max-width: 228px;
+    padding: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    top: -50px;
+  }
+
+  .banner-image{
+    order: 1;
+    img{
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+}
+ .banner.reverse {
+    .banner-box {
+      order: 2;
+      align-self: flex-end;
+    }
+  
+    .banner-image {
+      order: 1;
+      align-self: flex-start;
+    }
+  }
+
+  @media screen and (min-width: $ipadScreenSize) {
+  .banner {
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1440px;
+      padding-block: 70px;
 
   .banner-box {
-    background-color: $light200;
+    background-color: $light300;
     padding: 24px;
-    width: 530px;
-    top: 25%;
+    max-width: 530px;
+    top: 22%;
     height: fit-content;
     border-radius: 4px;
-    order: 1;
-    @include set-position-and-margin(left, 100px);
+    order: 2;
+    justify-self: flex-start;
+    @include set-position-and-margin(right, 50px);
   }
 
   .banner-image {
-    height: 405px;
-    max-width: 612px;
     display: flex;
-    justify-content: center;
-    order: 2;
-    @include set-position-and-margin(right, 100px);
+    justify-content: flex-end;
+    order: 1;
+    @include set-position-and-margin(left, 146px);
+    img{
+      height: 405px;
+      max-width: 612px;
+    
+    }
   }
 }
 
 .banner.reverse {
   .banner-box {
-    order: 2;
-    @include set-position-and-margin(right, 100px);
+    background-color: $light200;
+    order: 1;
+    align-self: flex-start;
+    justify-self: flex-end;
+    top: 15%;
+    @include set-position-and-margin(left, 146px);
   }
 
   .banner-image {
-    order: 1;
-    @include set-position-and-margin(left, 100px);
+    order: 2;
+    align-self: flex-start;
+    justify-content: flex-start;
+    @include set-position-and-margin(right, 50px);
   }
 }
+  
+}
+
+// .banner {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   max-width: 1440px;
+//   margin-inline: 198px;
+//   padding-block: 70px;
+
+//   .banner-box {
+//     background-color: $light200;
+//     padding: 24px;
+//     width: 530px;
+//     top: 25%;
+//     height: fit-content;
+//     border-radius: 4px;
+//     order: 1;
+//     @include set-position-and-margin(left, 100px);
+//   }
+
+//   .banner-image {
+//     height: 405px;
+//     max-width: 612px;
+//     display: flex;
+//     justify-content: center;
+//     order: 2;
+//     @include set-position-and-margin(right, 100px);
+//   }
+// }
+
+// .banner.reverse {
+//   .banner-box {
+//     order: 2;
+//     @include set-position-and-margin(right, 100px);
+//   }
+
+//   .banner-image {
+//     order: 1;
+//     @include set-position-and-margin(left, 100px);
+//   }
+// }

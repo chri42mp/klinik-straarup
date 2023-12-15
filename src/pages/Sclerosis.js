@@ -82,7 +82,7 @@ export default function Sclerosis() {
         buttonText='Kontakt klinikken'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={false}
+        reverse={true}
       />
       <TextboxBanner
         title='Prisliste'
@@ -92,7 +92,7 @@ export default function Sclerosis() {
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={true}
+        reverse={false}
       />
 
       <DiscountBanner />

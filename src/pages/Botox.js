@@ -71,9 +71,9 @@ export default function Botox() {
 
       <BeforeAndAfter
         title='Før og efter behandling'
-        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        imageUrl1='/site-images/Textboxbanner-1.webp'
         alt1='førbillede'
-        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        imageUrl2='/site-images/Textboxbanner-1.webp'
         alt2='efter billede'
       />
 
@@ -85,7 +85,7 @@ export default function Botox() {
         buttonText='Kontakt klinikken'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={false}
+        reverse={true}
       />
       <TextboxBanner
         title='Prisliste'
@@ -95,7 +95,7 @@ export default function Botox() {
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
-        reverse={true}
+        reverse={false}
       />
 
       <DiscountBanner />
