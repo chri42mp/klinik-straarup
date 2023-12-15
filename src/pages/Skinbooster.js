@@ -20,7 +20,7 @@ export default function Skinbooster() {
         title='Skinbooster'
         text='Din hud vil elske dig for behandlinger med skinbooster. Skinbooster vil opstramme slap hud, reducere rynker, forbedre hudtonen og elasticiteten samt forbedre den generelle hudtilstand, på hals, decollete, hænder og ansigt.'
         imageUrl='/site-images/Skinbooster-s1.webp'
-        alt='Calming toner'
+        alt='Sideprofil af mand med hue under forundersøgelse'
         buttonText='Book online'
         onButtonClick={() =>
           window.open(
@@ -58,7 +58,7 @@ export default function Skinbooster() {
           </>
         }
         imageUrl='/site-images/Skinbooster-s2.webp'
-        alt='toner'
+        alt='Kvinde bliver behandlet med skinbooster'
         reverse={false}
       />
 
@@ -74,7 +74,7 @@ export default function Skinbooster() {
         title='Værd at vide'
         text='Du vil opleve let rødme på grund af de mange fine stik i huden og eventuelt blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen.'
         imageUrl='/site-images/Textboxbanner-1.webp'
-        alt='Calming toner'
+        alt='Billede af kvindehage med behandlingsnål'
         buttonText='Kontakt klinikken'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -84,7 +84,7 @@ export default function Skinbooster() {
         title='Prisliste'
         text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
         imageUrl='/site-images/Textboxbanner-2.webp'
-        alt='Clearing mask'
+        alt='Billede af botox suges op i en sprøjte'
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -97,9 +97,9 @@ export default function Skinbooster() {
         <div className='skinbooster-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
-            alt1='førbillede'
+            alt1='Billede hænder med en sprøjte'
             imageUrl2='/site-images/FAQ-2.webp'
-            alt2='efter billede'
+            alt2='Billede af kvinde under konsultation'
           />
           <div className='skinbooster-faq-text'>
             <h1>FAQ</h1>

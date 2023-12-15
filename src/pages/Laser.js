@@ -20,7 +20,7 @@ export default function Laser() {
         text='Vi laver permanent hårfjerning med en XXP laser hvor lyset fra laseren ledes ned gennem hårsækken og afgiver sin energi til pigmentet i hårroden.
           Det kræver i gennemsnit 6-8 behandlinger at blive op imod 90 % hårfri.'
         imageUrl='/site-images/Laser-s1.webp'
-        alt='Calming toner'
+        alt='Billede af laser behandling af ben'
         buttonText='Book online'
         onButtonClick={() =>
           window.open(
@@ -55,7 +55,7 @@ export default function Laser() {
           </>
         }
         imageUrl='/site-images/Laser-s2.webp'
-        alt='toner'
+        alt='Kvinde i behandlingsstolen under laser behandling'
         reverse={false}
       />
 
@@ -63,7 +63,7 @@ export default function Laser() {
         title='Prisliste'
         text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
         imageUrl='/site-images/Textboxbanner-2.webp'
-        alt='Clearing mask'
+        alt='Billede af botox suges op i en sprøjte'
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -76,9 +76,9 @@ export default function Laser() {
         <div className='laser-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
-            alt1='førbillede'
+            alt1='Billede hænder med en sprøjte'
             imageUrl2='/site-images/FAQ-2.webp'
-            alt2='efter billede'
+            alt2='Billede af kvinde under konsultation'
           />
           <div className='laser-faq-text'>
             <h1>FAQ</h1>

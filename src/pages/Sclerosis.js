@@ -21,7 +21,7 @@ export default function Sclerosis() {
         text='Karspængninger er et udbredt kosmetisk problem, som kan afhjælpes med indsprøjtning af skleroseringsvæske.
           For at opnå et flot resultat, skal du forvente at komme til flere behandlinger.'
         imageUrl='/site-images/sclerosis-s1.webp'
-        alt='Calming toner'
+        alt='Mand med spejl i behandlingsstol'
         buttonText='Book online'
         onButtonClick={() =>
           window.open(
@@ -62,23 +62,23 @@ export default function Sclerosis() {
           </>
         }
         imageUrl='/site-images/sclerosis-s2.webp'
-        alt='toner'
+        alt='Væske trækkes op i sprøjte'
         reverse={false}
       />
 
       <BeforeAndAfter
         title='Før og efter behandling'
         imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-        alt1='førbillede'
+        alt1='Billede hænder med en sprøjte'
         imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-        alt2='efter billede'
+        alt2='Billede af kvinde under konsultation'
       />
 
       <TextboxBanner
         title='Værd at vide'
         text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
         imageUrl='/site-images/Textboxbanner-1.webp'
-        alt='Calming toner'
+        alt='Billede af kvindehage med behandlingsnål'
         buttonText='Kontakt klinikken'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -88,7 +88,7 @@ export default function Sclerosis() {
         title='Prisliste'
         text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
         imageUrl='/site-images/Textboxbanner-2.webp'
-        alt='Clearing mask'
+        alt='Billede af botox suges op i en sprøjte'
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -101,9 +101,9 @@ export default function Sclerosis() {
         <div className='sclerosis-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
-            alt1='førbillede'
+            alt1='Billede hænder med en sprøjte'
             imageUrl2='/site-images/FAQ-2.webp'
-            alt2='efter billede'
+            alt2='Billede af kvinde under konsultation'
           />
           <div className='sclerosis-faq-text'>
             <h1>FAQ</h1>

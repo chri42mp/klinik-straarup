@@ -99,8 +99,17 @@
   }
 
   .about-s5 {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto 1rem auto;
+    width: 390px;
     .s5-img {
       max-width: 100%;
+      img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
     }
     .s5-text {
       display: flex;
@@ -119,7 +128,9 @@
 
     @media (min-width: $ipadScreenSize) {
       & {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        width: 100%;
         .s5-img {
           img {
             height: 859px;

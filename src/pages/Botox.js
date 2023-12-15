@@ -20,7 +20,7 @@ export default function Botox() {
         title='Botox'
         text='Udover at reducere rynker og give en pænere hud kan botox også hjælpe på medicinske problematikker som migræne, skæren tænder, muskelsmerter i kæber og reducering af sved.'
         imageUrl='/site-images/Botox-s1.webp'
-        alt='Calming toner'
+        alt='Mand der bliver behandlet med botox'
         buttonText='Book online'
         onButtonClick={() =>
           window.open(
@@ -65,7 +65,7 @@ export default function Botox() {
           </>
         }
         imageUrl='/site-images/Botox-s2.webp'
-        alt='toner'
+        alt='Billede af mand i behandlingsstolen'
         reverse={false}
       />
 
@@ -81,7 +81,7 @@ export default function Botox() {
         title='Værd at vide'
         text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
         imageUrl='/site-images/Textboxbanner-1.webp'
-        alt='Calming toner'
+        alt='Billede af kvindehage med behandlingsnål'
         buttonText='Kontakt klinikken'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -91,7 +91,7 @@ export default function Botox() {
         title='Prisliste'
         text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
         imageUrl='/site-images/Textboxbanner-2.webp'
-        alt='Clearing mask'
+        alt='Billede af botox suges op i en sprøjte'
         buttonText='Se priser'
         buttonIcon={<LongArrowRightIcon />}
         onButtonClick={() => console.log('Button clicked!')}
@@ -104,9 +104,9 @@ export default function Botox() {
         <div className='botox-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
-            alt1='førbillede'
+            alt1='Billede hænder med en sprøjte'
             imageUrl2='/site-images/FAQ-2.webp'
-            alt2='efter billede'
+            alt2='Billede af kvinde under konsultation'
           />
           <div className='botox-faq-text'>
             <h1>FAQ</h1>

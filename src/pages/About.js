@@ -10,7 +10,7 @@ export default function About() {
     <>
       <div className='about'>
         <Navigation />
-        <section className='about-s1'>
+        <section className='about-s1 container-width'>
           <h1>Om klinikken</h1>
           <p>
             Klinik straarup er en kosmetisk og medicinsk klinik, beliggende i
@@ -20,7 +20,7 @@ export default function About() {
         <section>
           <FullBanner
             title='Klinik Straarup'
-            subtitle='Passion for æstetik '
+            subtitle='Passion for æstetik'
             text={
               <>
                 <br />
@@ -45,7 +45,7 @@ export default function About() {
               </>
             }
             imageUrl='/site-images/About-s2.webp'
-            alt='toner'
+            alt='Billede af kliniken'
             reverse={false}
           />
         </section>
@@ -75,7 +75,7 @@ export default function About() {
             reverse={true}
           />
         </section>
-        <section className='about-s5'>
+        <section className='about-s5 container-width'>
           <div className='s5-text'>
             <h2>Patientsikkerhed</h2>
             <h5>
@@ -103,7 +103,10 @@ export default function About() {
             </p>
           </div>
           <div className='s5-img'>
-            <img src='/site-images/FAQ-2.webp' alt='normalizing skin kit' />
+            <img
+              src='/site-images/FAQ-2.webp'
+              alt='Billede af kvinde under konsultation'
+            />
           </div>
         </section>
 
