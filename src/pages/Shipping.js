@@ -15,6 +15,15 @@ export default function Shipping() {
   const [deliveryCost, setDeliveryCost] = useState(0);
   const [selectedPayment, setSelectedPayment] = useState(null);
 
+  const userFields = [
+    "firstname",
+    "lastname",
+    "phone",
+    "adress",
+    "zipcode",
+    "city",
+  ];
+
   const handleDeliveryOptionChange = (option) => {
     setSelectedDeliveryOption(option);
   };
@@ -54,6 +63,12 @@ export default function Shipping() {
   }, [deliveryCost]);
 
   console.log(finalBasket.basket);
+
+  const formData = {};
+  userFields.forEach((field) => {
+    formData[field] = sessionStorage.getItem(`shipping_${field}`);
+  });
+  console.log(formData);
 
   return (
     <>

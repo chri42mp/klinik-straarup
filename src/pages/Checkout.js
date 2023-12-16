@@ -9,16 +9,28 @@ import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
 
 export default function Checkout() {
-  const [firstName, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [adress, setAdress] = useState("");
-  const [zipcode, setZipcode] = useState("");
-  const [city, setCity] = useState("");
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    country: "Danmark",
+    adress: "",
+    zipcode: "",
+    city: "",
+  });
   const [finalBasket, setFinalBasket] = useState({});
-  const [products, setproducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+
+  const userFields = [
+    "firstname",
+    "lastname",
+    "phone",
+    "adress",
+    "zipcode",
+    "city",
+  ];
 
   useEffect(() => {
     if (auth.currentUser) {
@@ -27,26 +39,46 @@ export default function Checkout() {
         .doc(auth.currentUser.uid)
         .get()
         .then((data) => {
-          setFirstname(data.data().firstname);
-          setLastname(data.data().lastname);
-          setEmail(auth.currentUser.email);
-          setPhone(data.data().phone);
-          setAdress(data.data().adress);
-          setZipcode(data.data().zipcode);
-          setCity(data.data().city);
+          setFormData((prevData) => ({
+            ...prevData,
+            firstname: data.data().firstname,
+            lastname: data.data().lastname,
+            email: auth.currentUser.email,
+            phone: data.data().phone,
+            adress: data.data().adress,
+            zipcode: data.data().zipcode,
+            city: data.data().city,
+          }));
+
+          userFields.forEach((field) =>
+            handleInputChange(field, data.data()[field])
+          );
         });
     }
+
     setFinalBasket(JSON.parse(localStorage.getItem("finalBasket")));
 
     database
       .collection("products")
       .get()
       .then((data) => {
-        setproducts(data.docs);
+        setProducts(data.docs);
       });
   }, []);
 
-  console.log(finalBasket);
+  const handleInputChange = (field, value) => {
+    if (value !== formData[field]) {
+      setFormData((prevData) => ({ ...prevData, [field]: value }));
+      sessionStorage.setItem(`checkout_${field}`, value);
+    }
+  };
+
+  const handleContinueToShipping = () => {
+    userFields.forEach((field) =>
+      sessionStorage.setItem(`shipping_${field}`, formData[field])
+    );
+    navigate("/shipping");
+  };
 
   return (
     <>
@@ -61,113 +93,52 @@ export default function Checkout() {
         <p className="active-page">Checkout</p>
       </div>
       <div className="grid-1-1">
-        <form>
-          <h4>Indtast dine oplysninger</h4>
-          <div className="fullname">
-            <div className="form-group">
-              <label for="firstname">Fornavn:</label>
-              <input
-                defaultValue={firstName}
-                type="text"
-                id="firstname"
-                name="firstname"
-                required
+        <div>
+          <form className="checkout-form">
+            <h4>Indtast dine oplysninger</h4>
+            <div>
+              {userFields.map((field) => (
+                <div className={`form-group ${field}`} key={field}>
+                  <label htmlFor={field}>
+                    {field === "firstname" && "Fornavn"}
+                    {field === "lastname" && "Efternavn"}
+                    {field === "phone" && "Tlf nr"}
+                    {field === "adress" && "Adresse"}
+                    {field === "zipcode" && "Postnummer"}
+                    {field === "city" && "By"}
+                  </label>
+                  <input
+                    defaultValue={formData[field]}
+                    type="text"
+                    id={field}
+                    name={field}
+                    required
+                    onChange={(e) => handleInputChange(field, e.target.value)}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="checkout-btn">
+              <PrimaryButton
+                text="Forsæt til levering"
+                onClick={handleContinueToShipping}
               />
             </div>
-            <div className="form-group">
-              <label for="lastname">Efternavn:</label>
-              <input
-                defaultValue={lastname}
-                type="text"
-                id="lastname"
-                name="lastname"
-                required
-              />
+            <div className="terms-links">
+              <Link to="/tradeconditions">Handelsbetingelser</Link>
             </div>
-          </div>
-          <div className="form-group">
-            <label for="phone">Tlf nr:</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              defaultValue={phone}
-            />
-          </div>
-          <div className="form-group">
-            <label for="email">Email:</label>
-            <input
-              defaultValue={email}
-              type="email"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label for="country">Land:</label>
-            <input
-              defaultValue={"Danmark"}
-              type="text"
-              id="country"
-              name="country"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label for="adress">Adresse:</label>
-            <input
-              type="text"
-              id="adress"
-              name="adress"
-              required
-              defaultValue={adress}
-            />
-          </div>
-          <div className="location">
-            <div className="form-group">
-              <label for="zipcode">Postnummer:</label>
-              <input
-                type="text"
-                id="zipcode"
-                name="zipcode"
-                required
-                defaultValue={zipcode}
-              />
-            </div>
-            <div className="form-group">
-              <label for="city">By:</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                required
-                defaultValue={city}
-              />
-            </div>
-          </div>
-
-          <div className="checkout-btn">
-            <PrimaryButton
-              text="Forsæt til levering"
-              onClick={() => navigate("/shipping")}
-            />
-          </div>
-          <div className="terms-links">
-            <Link to="/tradeconditions">Handelsbetingelser</Link>
-          </div>
-        </form>
+          </form>
+        </div>
 
         <div className="column">
-          <div>
+          <div className="basket-products">
             {finalBasket?.basket?.map((item) => {
               const product = products
                 ?.find((e) => e.id === item.product)
                 ?.data();
               console.log(product);
               return (
-                <div className="basket-products">
+                <div key={item.product}>
                   <div className="image-container">
                     <img alt={product?.productName} src={product?.imagePath} />
                   </div>
@@ -189,7 +160,7 @@ export default function Checkout() {
             </div>
             <div className="add-discount">
               <div className="discount-group">
-                <label for="discount">Rabatkode</label>
+                <label htmlFor="discount">Rabatkode</label>
                 <input type="text" id="discount" name="discount" />
               </div>
               <SecondaryButton text="Tilføj" />
