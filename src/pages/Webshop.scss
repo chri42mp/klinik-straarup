@@ -41,8 +41,8 @@
       }
     }
 
-    h4 {
-      @include josefin18;
+    h2 {
+      @include josefin20;
       @media screen and (min-width: $ipadScreenSize) {
         @include josefin24;
       }
@@ -102,10 +102,12 @@
     }
   }
 
-  h5 {
+  h2 {
     text-align: center;
+    @include josefin18;
     @media screen and (min-width: $ipadScreenSize) {
       text-align: left;
+      @include josefin20;
     }
   }
 

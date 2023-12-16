@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { PrimaryButton } from './Buttons';
-import './Hero.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { PrimaryButton } from "./Buttons";
+import "./Hero.scss";
 
 const Hero = ({
   title,
@@ -14,11 +14,11 @@ const Hero = ({
   onButtonClick,
 }) => {
   return (
-    <div className='hero-banner'>
+    <div className="hero-banner">
       <img src={imageUrl} alt={alt} />
-      <div className='hero-banner-box'>
+      <div className="hero-banner-box">
         <h1>{title}</h1>
-        <h4>{subtitle}</h4>
+        <h2>{subtitle}</h2>
         <p>{text}</p>
         <div>
           <PrimaryButton text={buttonText} onClick={onButtonClick} />

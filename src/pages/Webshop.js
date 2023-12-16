@@ -42,7 +42,7 @@ export default function Webshop() {
         />
         <div className="webshop-overlay-content">
           <h1>Webshop</h1>
-          <h4>Velkommen til vores webshop</h4>
+          <h2>Velkommen til vores webshop</h2>
           <p className="display-none">
             På webshoppen kan du shoppe alle de skønne produkter fra ZO Skin
             Health som vi bruger i klinikken.
@@ -60,7 +60,7 @@ export default function Webshop() {
       <section className="zo-approach">
         <div className="zo-approach-text-box">
           <h1>Zo Skin Health Approach</h1>
-          <h5>Til dig der ønsker en mere afbalanceret hud</h5>
+          <h2>Til dig der ønsker en mere afbalanceret hud</h2>
           <p>
             Hos ZO Skin Health tror vi på, at den ideelle måde at opnå og
             vedligeholde sund hud på er gennem kraften fra videnskaben.
@@ -85,14 +85,22 @@ export default function Webshop() {
             className="categories-boxes"
           >
             <h5>Getting skin ready</h5>
-            <img src="/webshop-images/intl-sunscreen-primer.webp" alt="" />
+            <img
+              src="/webshop-images/intl-sunscreen-primer.webp"
+              alt="getting skin ready webshop kategori"
+              loading="lazy"
+            />
           </Link>
           <Link
             to={"/webshopcategory/prevent-+-correct"}
             className="categories-boxes"
           >
             <h5>Prevent + Correct</h5>
-            <img src="/webshop-images/gbl-brightalive-hero.webp" alt="" />
+            <img
+              src="/webshop-images/gbl-brightalive-hero.webp"
+              alt="Prevent + correct webshop kategori billede"
+              loading="lazy"
+            />
           </Link>
         </div>
         <div className="flexing-categories">
@@ -101,11 +109,19 @@ export default function Webshop() {
             className="categories-boxes"
           >
             <h5>Hydration + Calming</h5>
-            <img src="/webshop-images/intl-smart-tone.webp" alt="" />
+            <img
+              loading="lazy"
+              src="/webshop-images/intl-smart-tone.webp"
+              alt="Hydration + calming webshop kategori billede"
+            />
           </Link>
           <Link to={"/webshopcategory/protect"} className="categories-boxes">
             <h5>Protect</h5>
-            <img src="/webshop-images/intl-sunscreen-primer.webp" alt="" />
+            <img
+              loading="lazy"
+              src="/webshop-images/intl-sunscreen-primer.webp"
+              alt="protect webshop kategori billede"
+            />
           </Link>
         </div>
         <div className="flexing-categories">
@@ -116,7 +132,8 @@ export default function Webshop() {
             <h5>Supplementary</h5>
             <img
               src="/webshop-images/gbl-intense-eye-crème-capdownright-hero.webp"
-              alt=""
+              alt="supplementary webshop kategori billede"
+              loading="lazy"
             />
           </Link>
           <Link
@@ -124,7 +141,11 @@ export default function Webshop() {
             className="categories-boxes"
           >
             <h5>Programs + Kits</h5>
-            <img src="/webshop-images/2018-kit-skin-normalizing.webp" alt="" />
+            <img
+              src="/webshop-images/2018-kit-skin-normalizing.webp"
+              alt="program + kits webshop kategori billede"
+              loading="lazy"
+            />
           </Link>
         </div>
       </div>
