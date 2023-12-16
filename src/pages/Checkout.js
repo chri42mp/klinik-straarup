@@ -74,10 +74,17 @@ export default function Checkout() {
   };
 
   const handleContinueToShipping = () => {
-    userFields.forEach((field) =>
-      sessionStorage.setItem(`shipping_${field}`, formData[field])
+    const isFormValid = userFields.every(
+      (field) => formData[field].trim() !== ""
     );
-    navigate("/shipping");
+    if (isFormValid) {
+      userFields.forEach((field) =>
+        sessionStorage.setItem(`shipping_${field}`, formData[field])
+      );
+      navigate("/shipping");
+    } else {
+      alert("Du skal udfylde alle felter, før du kan fortsætte til levering");
+    }
   };
 
   return (
