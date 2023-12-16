@@ -1,6 +1,14 @@
 @import "styles/global";
 
-h1,h2,h3,h4,h5,h6,p,a, li{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
   margin: 0;
 }
 
@@ -13,52 +21,49 @@ body {
 
 h1 {
   @include josefin40;
-  @media (min-width:$ipadScreenSize){
+  @media (min-width: $ipadScreenSize) {
     @include josefin48;
   }
 }
 
 h2 {
   @include josefin32;
-  @media (min-width:$ipadScreenSize){
+  @media (min-width: $ipadScreenSize) {
     @include josefin40;
   }
 }
 
 h3 {
   @include josefin24;
-  @media (min-width:$ipadScreenSize){
+  @media (min-width: $ipadScreenSize) {
     @include josefin32;
   }
 }
 
 h4 {
   @include josefin20;
-  @media (min-width:$ipadScreenSize){
+  @media (min-width: $ipadScreenSize) {
     @include josefin24;
   }
 }
 
 h5 {
   @include josefin18;
-  @media (min-width:$ipadScreenSize){
+  @media (min-width: $ipadScreenSize) {
     @include josefin20;
   }
 }
 
-h6, label {
+h6,
+label {
   @include josefin18;
 }
 
-p, li {
+p,
+li {
   @include roboto18;
 }
 
 a {
   @include robotolink;
-}
-
-.container-width{
-  max-width: 1440px;
-  margin: 0 auto;
 }
