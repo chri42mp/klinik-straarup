@@ -18,7 +18,7 @@ const CustomFooter = () => {
           data-style-width="100%"
         >
           <Link to="https://dk.trustpilot.com/review/klinikstraarup.dk">
-            <h4>Trustpilot</h4>
+            <h1>Trustpilot</h1>
           </Link>
           <div className="trustpilot-star">
             <TrustpilotStar />
@@ -38,16 +38,17 @@ const CustomFooter = () => {
           <Link to="tel:+4540562064">+4540562064</Link>
           <h5>SoMe</h5>
           <div className="some-icons">
-            <Link
-              alt="Dette link fører dig til Klinik Straarups Instagram"
-              to="https://www.instagram.com/klinikstraarup/"
-            >
+            <Link to="https://www.instagram.com/klinikstraarup/">
+              <span className="display-none">
+                Link til Klinik Straarups Instagram
+              </span>
               <InstagramIcon fill="#fefcf9" />
             </Link>
-            <Link
-              alt="Dette link fører dig til Klinik Straarups Facebook"
-              to="https://www.facebook.com/klinikstraarup"
-            >
+            <Link to="https://www.facebook.com/klinikstraarup">
+              <span className="display-none">
+                {" "}
+                Link til Klinik Straarups Facebook
+              </span>
               <FacebookIcon fill="#fefcf9" />
             </Link>
           </div>

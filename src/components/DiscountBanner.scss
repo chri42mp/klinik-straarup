@@ -1,53 +1,47 @@
 @import "../styles/global";
 
+.discount-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing240;
+  padding: $spacing32 $spacing24;
+  margin: 0 auto;
+  background-image: url("../../public/site-images/Discount-img.jpg");
+  background-size: cover;
+  background-position: 100% 60%;
 
-
-.discount-banner{
+  .discount-banner-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $spacing240;
-    padding: $spacing32 $spacing24;
-    margin: 0 auto;
-    background-image: url("../../public/site-images/Discount-img.jpg");;
-    background-size: cover;
-    background-position: 100% 60%;
+    gap: $spacing16;
 
-
-    .discount-banner-text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: $spacing16;
-
-        h2, p{
-            max-width: 55ch;
-            margin: 0;
-            color: $light100;
-        }
-        p{
-            text-align: center;
-        }
+    h2,
+    p {
+      max-width: 55ch;
+      margin: 0;
+      color: $light100;
     }
+    p {
+      text-align: center;
+    }
+  }
 
-    @media screen and (min-width: $ipadScreenSize) {
-   &{
-    flex-direction: row;
-    justify-content: space-between;
-    padding: $spacing32 21rem;
-    background-image: url("../../public/site-images/eventbanner.webp");
-   
-    .discount-banner-text{
+  @media screen and (min-width: $ipadScreenSize) {
+    & {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $spacing32 21rem;
+      background-image: url("../../public/site-images/eventbanner.jpg");
+
+      .discount-banner-text {
         align-items: flex-start;
-     
-    p{
-        text-align: left;
-    }
-    }
 
-   }
-   
-   
+        p {
+          text-align: left;
+        }
+      }
     }
-
+  }
 }
