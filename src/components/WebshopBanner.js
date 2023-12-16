@@ -53,7 +53,11 @@ export default function WebshopBanner({ headline }) {
             className="random-product-card"
             onClick={() => handleCardClick(product.id)}
           >
-            <img src={product?.imagePath} alt={product?.productName} />
+            <img
+              src={product?.imagePath}
+              alt={"billede af et produkt der hedder " + product?.productName}
+              loading="lazy"
+            />
             <p className="josefin18">{product?.productName}</p>
             <p>{product?.productPrice} DKK </p>
           </div>
