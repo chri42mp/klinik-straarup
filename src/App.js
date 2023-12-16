@@ -19,6 +19,8 @@ import Signup from "./pages/Signup";
 import Checkout from "./pages/Checkout";
 import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";
+import UserDashboard from "./pages/UserDashboard";
+import AddProduct from "./pages/AddProduct";
 import Confirmation from "./pages/Confirmation";
 import NotFound from "./pages/NotFound";
 
@@ -49,6 +51,8 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/tradeconditions" element={<TradeConditions />} />
+          <Route path="/userdashboard" element={<UserDashboard />} />
+          <Route path="/addproduct" element={<AddProduct />} />
           <Route path="*" element={<NotFound status={404} />} />
         </Routes>
       </BrowserRouter>
