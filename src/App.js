@@ -64,9 +64,9 @@ function App() {
           <Route
             path="/userdashboard"
             element={
-              <ProtectedRoute>
-                <UserDashboard />
-              </ProtectedRoute>
+              // <ProtectedRoute>
+              <UserDashboard />
+              // </ProtectedRoute>
             }
           />
           <Route path="*" element={<NotFound status={404} />} />
