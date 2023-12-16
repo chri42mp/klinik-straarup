@@ -26,6 +26,7 @@ export default function Checkout() {
   const userFields = [
     "firstname",
     "lastname",
+    "email",
     "phone",
     "adress",
     "zipcode",
@@ -109,6 +110,7 @@ export default function Checkout() {
                   <label htmlFor={field}>
                     {field === "firstname" && "Fornavn"}
                     {field === "lastname" && "Efternavn"}
+                    {field === "email" && "Email"}
                     {field === "phone" && "Tlf nr"}
                     {field === "adress" && "Adresse"}
                     {field === "zipcode" && "Postnummer"}
