@@ -1,35 +1,36 @@
 @import "../styles/global.scss";
 
-.sclerosis-faq{
+.sclerosis-faq {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing72 $spacing24;
+  gap: $spacing24;
+
+  .sclerosis-faq-text {
+    h1 {
+      margin-bottom: $spacing16;
+    }
+    h2 {
+      margin-bottom: $spacing24;
+      @include josefin24;
+      @media screen and (min-width: $ipadScreenSize) {
+        @include josefin32;
+      }
+    }
+  }
+
+  .sclerosis-faq-dropdown {
     display: flex;
     flex-direction: column;
-    padding: $spacing72 $spacing24;
-    gap: $spacing24;
+    gap: $spacing16;
+  }
 
-    .sclerosis-faq-text{
-        h1{
-            margin-bottom: $spacing16;
-        }
-        h4{
-            margin-bottom: $spacing24;
-        }
+  @media screen and (min-width: $ipadScreenSize) {
+    & {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: $spacing72 $spacing96;
+      gap: $spacing24;
     }
-
-    .sclerosis-faq-dropdown{
-        display: flex;
-        flex-direction: column;
-        gap: $spacing16;
-    }
-
-    @media screen and (min-width: $ipadScreenSize) {
-
-        &{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: $spacing72 $spacing96;
-            gap: $spacing24;
-
-        }
-    }
+  }
 }
- 
