@@ -7,7 +7,8 @@ li {
   display: flex;
   flex-direction: column;
   margin: $spacing16 auto $spacing16 auto;
-  width: 390px;
+  background-color: $green500;
+  // width: 390px;
 
   h3,
   h5,
@@ -18,6 +19,11 @@ li {
   p {
     max-width: 65ch;
     @include roboto18;
+  }
+
+  ul {
+    // margin: 0;
+    padding: 0;
   }
 
   .full-banner-image {
@@ -68,19 +74,23 @@ li {
 
 @media screen and (min-width: $ipadScreenSize) {
   .full-banner {
-    width: 1440px;
+    // width: 1440px;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing120;
     margin: 0 auto;
+    // padding-inline: $spacing96;
+
     .full-banner-image {
       order: 1;
       height: 100%;
       img {
-        @include imgM;
+        // @include imgM;
         height: 100%;
         object-position: 100% 44%;
       }
     }
+
     .full-banner-text {
       order: 2;
       padding: $spacing120 $spacing96;
