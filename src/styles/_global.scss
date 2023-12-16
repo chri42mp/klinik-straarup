@@ -37,11 +37,13 @@ $red500: #b83a4b;
 @font-face {
   font-family: "Roboto";
   src: url("../assets/Roboto-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Josefin Sans";
   src: url("../assets/JosefinSans-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 $fontRoboto: "Roboto", sans-serif;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import { database } from "../firebase";
@@ -14,6 +14,7 @@ export default function Shipping() {
   const [selectedDeliveryOption, setSelectedDeliveryOption] = useState(null);
   const [deliveryCost, setDeliveryCost] = useState(0);
   const [selectedPayment, setSelectedPayment] = useState(null);
+  const navigate = useNavigate();
 
   const userFields = [
     "firstname",
@@ -54,7 +55,6 @@ export default function Shipping() {
   }, [selectedDeliveryOption]);
 
   useEffect(() => {
-    // Update delivery cost in finalBasket
     setFinalBasket((prevBasket) => ({
       ...prevBasket,
       deliveryCost: deliveryCost,
@@ -69,6 +69,37 @@ export default function Shipping() {
     formData[field] = sessionStorage.getItem(`shipping_${field}`);
   });
   console.log(formData);
+
+  const handleSecurePayment = async () => {
+    const formData = {};
+    userFields.forEach((field) => {
+      formData[field] = sessionStorage.getItem(`shipping_${field}`);
+    });
+
+    const orderData = {
+      items: finalBasket.basket.map((item) => ({
+        productId: item.product,
+        qauntity: item.qauntity,
+      })),
+      deliveryOption: selectedDeliveryOption,
+      paymentMethod: selectedPayment,
+      firstname: formData.firstname,
+      lastname: formData.lastname,
+      phone: formData.phone,
+      adress: formData.adress,
+      zipcode: formData.zipcode,
+      city: formData.city,
+    };
+
+    console.log("orderData:", orderData);
+
+    try {
+      await database.collection("orders").add(orderData);
+      navigate("/confirmation");
+    } catch (error) {
+      console.error("error creating order", error);
+    }
+  };
 
   return (
     <>
@@ -145,7 +176,10 @@ export default function Shipping() {
             </div>
           </form>
           <div className="safe-payment-btn">
-            <PrimaryButton text="Gå til sikker betaling" />
+            <PrimaryButton
+              text="Gå til sikker betaling"
+              onClick={handleSecurePayment}
+            />
           </div>
           <div className="terms-links">
             <Link to="/tradeconditions">Handelsbetingelser</Link>
