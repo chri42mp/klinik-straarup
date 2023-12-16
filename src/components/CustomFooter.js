@@ -18,7 +18,7 @@ const CustomFooter = () => {
           data-style-width="100%"
         >
           <Link to="https://dk.trustpilot.com/review/klinikstraarup.dk">
-            <h1>Trustpilot</h1>
+            <h3>Trustpilot</h3>
           </Link>
           <div className="trustpilot-star">
             <TrustpilotStar />
