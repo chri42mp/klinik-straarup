@@ -50,8 +50,10 @@
         color: $dark500;
       }
 
-      h4 {
+      h1 {
+        @include josefin24;
         color: $dark500;
+
         :hover {
           text-decoration: underline;
         }

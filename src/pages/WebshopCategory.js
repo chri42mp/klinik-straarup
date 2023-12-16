@@ -117,7 +117,7 @@ export default function WebshopCategory() {
               </div>
               <img
                 src={product?.imagePath}
-                alt={"billede af et produkt der hedder" + product?.productName}
+                alt={"billede af et produkt der hedder " + product?.productName}
                 loading="lazy"
               />
               <p className="josefin18">{product?.productName}</p>
