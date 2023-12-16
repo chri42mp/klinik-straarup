@@ -15,9 +15,6 @@ li {
     margin: 0;
   }
 
-  h3 {
-    @include josefin20;
-  }
   p {
     max-width: 65ch;
     @include roboto18;
@@ -50,7 +47,7 @@ li {
       color: $light100;
       margin-bottom: $spacing16;
     }
-    h5 {
+    h3 {
       @include josefin20;
       color: $light100;
     }
