@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './FAQimg.scss';
+import "./FAQimg.scss";
 
 const FAQimg = ({ imageUrl1, alt1, imageUrl2, alt2 }) => {
   return (
-    <div className='faq-img-container'>
-      <div className='faq-img'>
-        <img className='faq-img-1' src={imageUrl1} alt={alt1} />
-        <img className='faq-img-2' src={imageUrl2} alt={alt2} />
+    <div className="faq-img-container">
+      <div className="faq-img">
+        <img className="faq-img-1" src={imageUrl1} alt={alt1} loading="lazy" />
+        <img className="faq-img-2" src={imageUrl2} alt={alt2} loading="lazy" />
       </div>
     </div>
   );

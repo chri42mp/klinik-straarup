@@ -61,7 +61,8 @@ export default function Product() {
           <img
             className="singleview-img"
             src={product?.imagePath}
-            alt={product?.productName}
+            alt={"billede af et produkt der hedder " + product?.productName}
+            loading="lazy"
           />
         </div>
         <div>

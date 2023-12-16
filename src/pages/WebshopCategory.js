@@ -115,7 +115,11 @@ export default function WebshopCategory() {
                   />
                 )}
               </div>
-              <img src={product?.imagePath} alt={product?.productName} />
+              <img
+                src={product?.imagePath}
+                alt={"billede af et produkt der hedder " + product?.productName}
+                loading="lazy"
+              />
               <p className="josefin18">{product?.productName}</p>
               <p className=""> {product?.productPrice} DKK</p>
               <div className="btn">

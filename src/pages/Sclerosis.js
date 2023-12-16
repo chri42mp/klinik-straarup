@@ -1,15 +1,15 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import './Sclerosis.scss';
-import Hero2 from '../components/Hero2';
-import TextboxBanner from '../components/TextboxBanners';
-import LongArrowRightIcon from '../assets/icons/LongArrowRightIcon';
-import FullBanner from '../components/FullBanner';
-import BeforeAndAfter from '../components/BeforeAndAfter';
-import CustomFooter from '../components/CustomFooter';
-import DiscountBanner from '../components/DiscountBanner';
-import Dropdown from '../components/Dropdown';
-import FAQimg from '../components/FAQimg';
+import React from "react";
+import Navigation from "../components/Navigation";
+import "./Sclerosis.scss";
+import Hero2 from "../components/Hero2";
+import TextboxBanner from "../components/TextboxBanners";
+import LongArrowRightIcon from "../assets/icons/LongArrowRightIcon";
+import FullBanner from "../components/FullBanner";
+import BeforeAndAfter from "../components/BeforeAndAfter";
+import CustomFooter from "../components/CustomFooter";
+import DiscountBanner from "../components/DiscountBanner";
+import Dropdown from "../components/Dropdown";
+import FAQimg from "../components/FAQimg";
 
 export default function Sclerosis() {
   return (
@@ -17,25 +17,25 @@ export default function Sclerosis() {
       <Navigation />
 
       <Hero2
-        title='Sklerosering'
-        text='Karspængninger er et udbredt kosmetisk problem, som kan afhjælpes med indsprøjtning af skleroseringsvæske.
-          For at opnå et flot resultat, skal du forvente at komme til flere behandlinger.'
-        imageUrl='/site-images/sclerosis-s1.webp'
-        alt='Calming toner'
-        buttonText='Book online'
+        title="Sklerosering"
+        text="Karspængninger er et udbredt kosmetisk problem, som kan afhjælpes med indsprøjtning af skleroseringsvæske.
+          For at opnå et flot resultat, skal du forvente at komme til flere behandlinger."
+        imageUrl="/site-images/sclerosis-s1.webp"
+        alt="Calming toner"
+        buttonText="Book online"
         onButtonClick={() =>
           window.open(
-            'https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1',
-            '_blank',
-            'noreferrer'
+            "https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1",
+            "_blank",
+            "noreferrer"
           )
         }
         reverse={false}
       />
 
       <FullBanner
-        title='Behandling af sklerosering'
-        subtitle='Hvad kan du forvente af behandlingen?'
+        title="Behandling af sklerosering"
+        subtitle="Hvad kan du forvente af behandlingen?"
         text={
           <>
             <br />
@@ -61,69 +61,69 @@ export default function Sclerosis() {
             </p>
           </>
         }
-        imageUrl='/site-images/sclerosis-s2.webp'
-        alt='toner'
+        imageUrl="/site-images/sclerosis-s2.webp"
+        alt="toner"
         reverse={false}
       />
 
       <BeforeAndAfter
-        title='Før og efter behandling'
-        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-        alt1='førbillede'
-        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
-        alt2='efter billede'
+        title="Før og efter behandling"
+        imageUrl1="/webshop-images/2018-kit-aggressive-anti-aging-program.webp"
+        alt1="førbillede"
+        imageUrl2="/webshop-images/2018-kit-aggressive-anti-aging-program.webp"
+        alt2="efter billede"
       />
 
       <TextboxBanner
-        title='Værd at vide'
-        text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
-        imageUrl='/site-images/Textboxbanner-1.webp'
-        alt='Calming toner'
-        buttonText='Kontakt klinikken'
+        title="Værd at vide"
+        text="Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. "
+        imageUrl="/site-images/Textboxbanner-1.webp"
+        alt="Calming toner"
+        buttonText="Kontakt klinikken"
         buttonIcon={<LongArrowRightIcon />}
-        onButtonClick={() => console.log('Button clicked!')}
+        onButtonClick={() => console.log("Button clicked!")}
         reverse={true}
       />
       <TextboxBanner
-        title='Prisliste'
-        text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
-        imageUrl='/site-images/Textboxbanner-2.webp'
-        alt='Clearing mask'
-        buttonText='Se priser'
+        title="Prisliste"
+        text="Husk at vi tilbyder gratis konsultationer på alle vores behandlinger"
+        imageUrl="/site-images/Textboxbanner-2.webp"
+        alt="Clearing mask"
+        buttonText="Se priser"
         buttonIcon={<LongArrowRightIcon />}
-        onButtonClick={() => console.log('Button clicked!')}
+        onButtonClick={() => console.log("Button clicked!")}
         reverse={false}
       />
 
       <DiscountBanner />
 
-      <section className='container-width'>
-        <div className='sclerosis-faq'>
+      <section className="container-width">
+        <div className="sclerosis-faq">
           <FAQimg
-            imageUrl1='/site-images/FAQ-1.webp'
-            alt1='førbillede'
-            imageUrl2='/site-images/FAQ-2.webp'
-            alt2='efter billede'
+            imageUrl1="/site-images/FAQ-1.webp"
+            alt1="førbillede"
+            imageUrl2="/site-images/FAQ-2.webp"
+            alt2="efter billede"
           />
-          <div className='sclerosis-faq-text'>
+          <div className="sclerosis-faq-text">
             <h1>FAQ</h1>
-            <h4>Få svar på dine spørgsmål</h4>
-            <div className='sclerosis-faq-dropdown'>
+            <h2>Få svar på dine spørgsmål</h2>
+            <div className="sclerosis-faq-dropdown">
               <Dropdown
-                title='Er sklerosering farligt?'
-                content='Nej. De kar man indsprøjter er små vener som er uden betydning for cirkulationen i benene.'
+                title="Er sklerosering farligt?"
+                content="Nej. De kar man indsprøjter er små vener som er uden betydning for cirkulationen i benene."
               />
               <Dropdown
-                title='Hvor længe holder en behandling med sklerosering? '
-                content='Resultatet holder typisk 1-2 år. Behandlingen skal i visse tilfælde gentages flere gange afhængig af udgangspunktet.'
+                title="Hvor længe holder en behandling med sklerosering? "
+                content="Resultatet holder typisk 1-2 år. Behandlingen skal i visse tilfælde gentages flere gange afhængig af udgangspunktet."
               />
               <Dropdown
-                title='Hvornår kan jeg se resultatet af en behandling?'
-                content='du vil se resultater øjeblikkeligt under behandlingen, over 2-4 uger vil karret blive nedbrudt og først her kan man se og stole på det endelige resultat. '
+                title="Hvornår kan jeg se resultatet af en behandling?"
+                content="du vil se resultater øjeblikkeligt under behandlingen, over 2-4 uger vil karret blive nedbrudt og først her kan man se og stole på det endelige resultat. "
               />
               <Dropdown
-                title='Kan karsprængninger gå væk af sig selv'
-                content='Karsprængninger forsvinder desværre ikke af sig selv. De forbliver som de er eller kan forværres med tiden. '
+                title="Kan karsprængninger gå væk af sig selv"
+                content="Karsprængninger forsvinder desværre ikke af sig selv. De forbliver som de er eller kan forværres med tiden. "
               />
             </div>
           </div>

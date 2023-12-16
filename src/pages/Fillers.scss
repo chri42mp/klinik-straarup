@@ -1,35 +1,36 @@
 @import "../styles/global.scss";
 
+.filler-faq {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing72 $spacing24;
+  gap: $spacing24;
 
-.filler-faq{
+  .filler-faq-text {
+    h1 {
+      margin-bottom: $spacing16;
+    }
+    h2 {
+      @include josefin24;
+      margin-bottom: $spacing24;
+      @media screen and (min-width: $ipadScreenSize) {
+        @include josefin32;
+      }
+    }
+  }
+
+  .filler-faq-dropdown {
     display: flex;
     flex-direction: column;
-    padding: $spacing72 $spacing24;
-    gap: $spacing24;
+    gap: $spacing16;
+  }
 
-    .filler-faq-text{
-        h1{
-            margin-bottom: $spacing16;
-        }
-        h4{
-            margin-bottom: $spacing24;
-        }
+  @media screen and (min-width: $ipadScreenSize) {
+    & {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: $spacing72 $spacing96;
+      gap: $spacing24;
     }
-    
-    .filler-faq-dropdown{
-        display: flex;
-        flex-direction: column;
-        gap: $spacing16;
-    }
-
-    @media screen and (min-width: $ipadScreenSize) {
-
-        &{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: $spacing72 $spacing96;
-            gap: $spacing24;
-
-        }
-    }
+  }
 }

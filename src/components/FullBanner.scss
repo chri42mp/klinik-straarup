@@ -1,104 +1,102 @@
 @import "../styles/global.scss";
-li{
+li {
   list-style-type: none;
 }
 
 .full-banner {
+  display: flex;
+  flex-direction: column;
+  margin: $spacing16 auto $spacing16 auto;
+  width: 390px;
+
+  h3,
+  h5,
+  p {
+    margin: 0;
+  }
+
+  p {
+    max-width: 65ch;
+    @include roboto18;
+  }
+
+  .full-banner-image {
+    order: 1;
+    order: 1;
     display: flex;
-    flex-direction: column;
-    margin: $spacing16 auto $spacing16 auto ;
-    width: 390px;
+    justify-content: center;
+    height: 235px;
 
-    h2, h5, p{
-        margin:0;
-    }
-    p{
-        max-width: 65ch;
-        @include roboto18;
-    }
-
-    .full-banner-image{
-        order: 1;
-        order: 1;
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        height: 235px;
-
-        img{
-          width: 100%;
-          object-fit: cover;
-          height: 100%;
-          object-position: 0% 44%;
-        } 
-      }
-
-    .full-banner-text {
-        order: 2;
-        display: flex;
-        flex-direction: column;   
-        background-color: $green500;
-        padding: $spacing32 $spacing24;
-        max-width: 100%;
-        h2{
-            @include josefin40;
-            color: $light100;
-            margin-bottom: $spacing16;
-        }
-        h5{
-            @include josefin20;
-            color: $light100;
-        }
-        li, p{
-            color: $light100;
-        }
-      }
-}
-.full-banner.reverse {
-    .full-banner-image {
-        order: 2;
-      }
-    .full-banner-text {
-      order: 1;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      object-position: 0% 44%;
     }
   }
 
-@media screen and (min-width: $ipadScreenSize) {
+  .full-banner-text {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: $green500;
+    padding: $spacing32 $spacing24;
+    max-width: 100%;
+    h2 {
+      @include josefin40;
+      color: $light100;
+      margin-bottom: $spacing16;
+    }
+    h3 {
+      @include josefin20;
+      color: $light100;
+    }
+    li,
+    p {
+      color: $light100;
+    }
+  }
+}
+.full-banner.reverse {
+  .full-banner-image {
+    order: 2;
+  }
+  .full-banner-text {
+    order: 1;
+  }
+}
 
-.full-banner {
-  width: 1440px;
+@media screen and (min-width: $ipadScreenSize) {
+  .full-banner {
+    width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     margin: 0 auto;
     .full-banner-image {
-        order: 1;
+      order: 1;
+      height: 100%;
+      img {
+        @include imgM;
         height: 100%;
-        img{
-          @include imgM;
-          height: 100%;
-          object-position: 100% 44%;
-        }
-
+        object-position: 100% 44%;
       }
-  .full-banner-text {
-    order: 2;
-    padding: $spacing120 $spacing96;
-    max-width: 100%;
-
+    }
+    .full-banner-text {
+      order: 2;
+      padding: $spacing120 $spacing96;
+      max-width: 100%;
+    }
   }
-}
 
-.full-banner.reverse {
+  .full-banner.reverse {
     grid-template-columns: 1.5fr 1fr;
 
-  .full-banner-text {
-    order: 1;
-  }
+    .full-banner-text {
+      order: 1;
+    }
 
-  .full-banner-image {
-    order:2;    
- 
+    .full-banner-image {
+      order: 2;
+    }
   }
 }
-}
-

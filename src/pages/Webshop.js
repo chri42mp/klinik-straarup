@@ -33,23 +33,34 @@ export default function Webshop() {
   return (
     <>
       <Navigation />
-      <section className="hero-section">
+      <section className="webshop-hero-section">
         <img
-          className="hero-image"
-          src="/webshop-images/2018-kit-skin-normalizing.webp"
-          alt="normalizing skin kit"
+          className="webshop-hero-image"
+          src="/site-images/products-on-disk.webp"
+          alt="zo skin produkter på købsdisk"
           loading="lazy"
         />
-        <div className="overlay-content">
-          <h1>Velkommen til klinik Straarups webshop</h1>
-          <h5>Alle produkter på webshoppen kan også købes i klinikken</h5>
-          <PrimaryButton text="Book tid" />
+        <div className="webshop-overlay-content">
+          <h1>Webshop</h1>
+          <h2>Velkommen til vores webshop</h2>
+          <p className="display-none">
+            På webshoppen kan du shoppe alle de skønne produkter fra ZO Skin
+            Health som vi bruger i klinikken.
+            <br /> Du kan med fordel kombinerer produkterne med vores
+            behandlinger.
+          </p>
+          <div className="webshop-book-btn">
+            <PrimaryButton
+              text="Book gratis konsulation"
+              link="/https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=5c161ba8bb2805e960c007fe75cd49f5&dTpl=1"
+            />
+          </div>
         </div>
       </section>
       <section className="zo-approach">
-        <div>
+        <div className="zo-approach-text-box">
           <h1>Zo Skin Health Approach</h1>
-          <h5>Til dig der ønsker en mere afbalanceret hud</h5>
+          <h2>Til dig der ønsker en mere afbalanceret hud</h2>
           <p>
             Hos ZO Skin Health tror vi på, at den ideelle måde at opnå og
             vedligeholde sund hud på er gennem kraften fra videnskaben.
@@ -58,57 +69,85 @@ export default function Webshop() {
             sit sundeste - uanset alder, etnicitet, hudtilstand eller hudtype.
           </p>
         </div>
-        <div>
+        <div className="zo-approach-img-box">
           <img
-            src="/webshop-images/recovery-renewal-hydrating-swatch-trio.webp"
-            alt=""
-            width={"600px"}
+            className="zo-approach-img"
+            src="/site-images/zo-skin-sale.webp"
+            alt="Kvinde der rækker en mand en pose med produkter"
+            loading="lazy"
           />
         </div>
       </section>
       <div className="categories">
-        <Link
-          to={"/webshopcategory/getting-skin-ready"}
-          className="categories-boxes"
-        >
-          <h5>Getting skin ready</h5>
-          <img src="/webshop-images/intl-sunscreen-primer.webp" alt="" />
-        </Link>
-        <Link
-          to={"/webshopcategory/prevent-+-correct"}
-          className="categories-boxes"
-        >
-          <h5>Prevent + Correct</h5>
-          <img src="/webshop-images/gbl-brightalive-hero.webp" alt="" />
-        </Link>
-        <Link
-          to={"/webshopcategory/hydration-+-calming"}
-          className="categories-boxes"
-        >
-          <h5>Hydration + Calming</h5>
-          <img src="/webshop-images/intl-smart-tone.webp" alt="" />
-        </Link>
-        <Link to={"/webshopcategory/protect"} className="categories-boxes">
-          <h5>Protect</h5>
-          <img src="/webshop-images/intl-sunscreen-primer.webp" alt="" />
-        </Link>
-        <Link
-          to={"/webshopcategory/supplementary"}
-          className="categories-boxes"
-        >
-          <h5>Supplementary</h5>
-          <img
-            src="/webshop-images/gbl-intense-eye-crème-capdownright-hero.webp"
-            alt=""
-          />
-        </Link>
-        <Link
-          to={"/webshopcategory/programs-+-kits"}
-          className="categories-boxes"
-        >
-          <h5>Programs + Kits</h5>
-          <img src="/webshop-images/2018-kit-skin-normalizing.webp" alt="" />
-        </Link>
+        <div className="flexing-categories">
+          <Link
+            to={"/webshopcategory/getting-skin-ready"}
+            className="categories-boxes"
+          >
+            <h5>Getting skin ready</h5>
+            <img
+              src="/webshop-images/intl-sunscreen-primer.webp"
+              alt="getting skin ready webshop kategori"
+              loading="lazy"
+            />
+          </Link>
+          <Link
+            to={"/webshopcategory/prevent-+-correct"}
+            className="categories-boxes"
+          >
+            <h5>Prevent + Correct</h5>
+            <img
+              src="/webshop-images/gbl-brightalive-hero.webp"
+              alt="Prevent + correct webshop kategori billede"
+              loading="lazy"
+            />
+          </Link>
+        </div>
+        <div className="flexing-categories">
+          <Link
+            to={"/webshopcategory/hydration-+-calming"}
+            className="categories-boxes"
+          >
+            <h5>Hydration + Calming</h5>
+            <img
+              loading="lazy"
+              src="/webshop-images/intl-smart-tone.webp"
+              alt="Hydration + calming webshop kategori billede"
+            />
+          </Link>
+          <Link to={"/webshopcategory/protect"} className="categories-boxes">
+            <h5>Protect</h5>
+            <img
+              loading="lazy"
+              src="/webshop-images/intl-sunscreen-primer.webp"
+              alt="protect webshop kategori billede"
+            />
+          </Link>
+        </div>
+        <div className="flexing-categories">
+          <Link
+            to={"/webshopcategory/supplementary"}
+            className="categories-boxes"
+          >
+            <h5>Supplementary</h5>
+            <img
+              src="/webshop-images/gbl-intense-eye-crème-capdownright-hero.webp"
+              alt="supplementary webshop kategori billede"
+              loading="lazy"
+            />
+          </Link>
+          <Link
+            to={"/webshopcategory/programs-+-kits"}
+            className="categories-boxes"
+          >
+            <h5>Programs + Kits</h5>
+            <img
+              src="/webshop-images/2018-kit-skin-normalizing.webp"
+              alt="program + kits webshop kategori billede"
+              loading="lazy"
+            />
+          </Link>
+        </div>
       </div>
       <TextboxBanner
         title="Getting skin ready"

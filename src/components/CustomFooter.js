@@ -18,7 +18,7 @@ const CustomFooter = () => {
           data-style-width="100%"
         >
           <Link to="https://dk.trustpilot.com/review/klinikstraarup.dk">
-            <h4>Trustpilot</h4>
+            <h3>Trustpilot</h3>
           </Link>
           <div className="trustpilot-star">
             <TrustpilotStar />
@@ -39,9 +39,16 @@ const CustomFooter = () => {
           <h5>SoMe</h5>
           <div className="some-icons">
             <Link to="https://www.instagram.com/klinikstraarup/">
+              <span className="display-none">
+                Link til Klinik Straarups Instagram
+              </span>
               <InstagramIcon fill="#fefcf9" />
             </Link>
             <Link to="https://www.facebook.com/klinikstraarup">
+              <span className="display-none">
+                {" "}
+                Link til Klinik Straarups Facebook
+              </span>
               <FacebookIcon fill="#fefcf9" />
             </Link>
           </div>
