@@ -18,7 +18,7 @@ import Product from "./pages/Product";
 import { AuthProvider } from "./contexts/AuthContext";
 import Signup from "./pages/Signup";
 import UserDashboard from "./pages/UserDashboard";
-import { ProtectedRoute } from "./components/ProtectedRoute";
+// import { ProtectedRoute } from "./components/ProtectedRoute";
 import Checkout from "./pages/Checkout";
 import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";

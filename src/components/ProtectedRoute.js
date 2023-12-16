@@ -1,11 +1,11 @@
-import { Navigate } from "react-router-dom";
-import { auth } from "../firebase";
+// import { Navigate } from "react-router-dom";
+// import { auth } from "../firebase";
 
-export const ProtectedRoute = ({ redirectPath = "/", children }) => {
-  if (!auth?.currentUser) {
-    return <Navigate to={redirectPath} replace />;
-  }
+// export const ProtectedRoute = ({ redirectPath = "/", children }) => {
+//   if (!auth?.currentUser) {
+//     return <Navigate to={redirectPath} replace />;
+//   }
 
-  console.log(children);
-  return children;
-};
+//   console.log(children);
+//   return children;
+// };
