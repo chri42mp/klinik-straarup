@@ -12,15 +12,16 @@ import Contact from "./pages/Contact";
 import Basket from "./pages/Basket";
 import Sclerosis from "./pages/Sclerosis";
 import Skinbooster from "./pages/Skinbooster";
+import AddProduct from "./pages/AddProduct";
 import WebshopCategory from "./pages/WebshopCategory";
 import Product from "./pages/Product";
 import { AuthProvider } from "./contexts/AuthContext";
 import Signup from "./pages/Signup";
+import UserDashboard from "./pages/UserDashboard";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 import Checkout from "./pages/Checkout";
 import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";
-import UserDashboard from "./pages/UserDashboard";
-import AddProduct from "./pages/AddProduct";
 import Confirmation from "./pages/Confirmation";
 import NotFound from "./pages/NotFound";
 
@@ -51,8 +52,23 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/tradeconditions" element={<TradeConditions />} />
-          <Route path="/userdashboard" element={<UserDashboard />} />
-          <Route path="/addproduct" element={<AddProduct />} />
+
+          <Route
+            path="/addproduct"
+            element={
+              <ProtectedRoute>
+                <AddProduct />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/userdashboard"
+            element={
+              <ProtectedRoute>
+                <UserDashboard />
+              </ProtectedRoute>
+            }
+          />
           <Route path="*" element={<NotFound status={404} />} />
         </Routes>
       </BrowserRouter>
