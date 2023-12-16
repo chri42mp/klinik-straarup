@@ -1,47 +1,147 @@
 @import "../styles/global.scss";
 
-.hero-section {
+.webshop-hero-section {
   position: relative;
   text-align: center;
-  width: 1440px;
-  height: 690px;
   margin: 0 auto;
-}
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: $opacity30;
-}
+  @media screen and (min-width: $ipadScreenSize) {
+    max-height: 690px;
+  }
 
-.overlay-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  .webshop-hero-image {
+    width: 100%;
+    max-height: 268px;
+    object-fit: cover;
+    opacity: $opacity30;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      max-height: 690px;
+    }
+  }
+
+  .webshop-overlay-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    gap: $spacing32;
+    transform: translate(-50%, -50%);
+    @media screen and (min-width: $ipadScreenSize) {
+      gap: $spacing32;
+      max-width: 1036px;
+    }
+
+    h1 {
+      @include josefin48;
+      @media screen and (min-width: $ipadScreenSize) {
+        @include josefin64;
+      }
+    }
+
+    h4 {
+      @include josefin18;
+      @media screen and (min-width: $ipadScreenSize) {
+        @include josefin24;
+      }
+    }
+
+    .display-none {
+      display: none;
+
+      @media screen and (min-width: $ipadScreenSize) {
+        display: block;
+      }
+    }
+    .webshop-book-btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
 .zo-approach {
-  width: 1440px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  margin-block: 72px;
+  padding-inline: $spacing24;
+  margin-block: $spacing16;
+  display: grid;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    max-width: $desktopScreenSize;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing24;
+    margin-block: $spacing72;
+    padding-inline: $spacing96;
+  }
+
+  .zo-approach-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing16;
+    order: 2;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      gap: $spacing24;
+      order: 1;
+    }
+  }
+
+  .zo-approach-img-box {
+    order: 1;
+    @media screen and (min-width: $ipadScreenSize) {
+      order: 2;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    @media screen and (min-width: $ipadScreenSize) {
+      text-align: left;
+    }
+  }
+
+  h5 {
+    text-align: center;
+    @media screen and (min-width: $ipadScreenSize) {
+      text-align: left;
+    }
+  }
+
+  .zo-approach-img {
+    max-width: 350px;
+    height: auto;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      max-width: 612px;
+    }
+  }
 }
 
 .categories {
-  display: flex;
-  gap: 24px;
-  width: 1440px;
   margin: 0 auto;
-  margin-block: 32px;
+  margin-block: $spacing32;
+  padding-inline: $spacing24;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    max-width: $desktopScreenSize;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .flexing-categories {
+    display: flex;
+    gap: $spacing24;
+    padding-bottom: $spacing24;
+  }
 }
 
 .categories-boxes {
   position: relative;
-  max-width: 188px;
-  max-height: 127px;
+  width: 158px;
+  height: 133px;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid $dark500;
@@ -49,10 +149,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: $ipadScreenSize) {
+    width: 188px;
+    height: 127px;
+  }
 
   img {
-    height: 100%;
+    max-height: 118px;
+    width: auto;
     opacity: $opacity30;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      max-height: 127px;
+    }
   }
 
   h5 {
