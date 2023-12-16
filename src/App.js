@@ -56,9 +56,9 @@ function App() {
           <Route
             path="/addproduct"
             element={
-              <ProtectedRoute>
-                <AddProduct />
-              </ProtectedRoute>
+              // <ProtectedRoute>
+              <AddProduct />
+              // </ProtectedRoute>
             }
           />
           <Route
