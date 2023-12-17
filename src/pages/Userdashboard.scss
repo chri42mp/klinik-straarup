@@ -54,3 +54,74 @@
     width: 100%;
   }
 }
+
+.order-info {
+  margin-block: $spacing24;
+  padding: $spacing8;
+  background-color: $light200;
+  display: flex;
+  justify-content: space-between;
+  @include borderRadius;
+}
+
+.user-all-orders {
+  display: grid;
+  gap: $spacing24;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 158px));
+
+  @media screen and (min-width: $ipadScreenSize) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 310px));
+    padding-inline: $spacing16;
+    padding-block: $spacing48;
+  }
+}
+
+.order-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 158px;
+  align-items: center;
+  gap: $spacing8;
+  @include dropShadow;
+  @include borderRadius;
+  padding-block: $spacing24;
+  gap: $spacing8;
+  position: relative;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    width: 262px;
+    padding-inline: $spacing16;
+  }
+
+  img {
+    max-height: 106px;
+    width: auto;
+    width: fit-content;
+    display: flex;
+    padding-block: $spacing8;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      max-height: 180px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-top: 10px solid $blue500;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}

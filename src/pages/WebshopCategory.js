@@ -35,13 +35,21 @@ export default function WebshopCategory() {
             isFavorite: favorites.includes(doc.id),
           });
         });
-        setProducts(productList.filter((e) => e.category === category.replaceAll("-", " ")));
+        setProducts(
+          productList.filter(
+            (e) => e.category === category.replaceAll("-", " ")
+          )
+        );
       });
   }, [category, favorites]);
 
   const toggleFavorite = (productId) => {
     if (currentUser) {
-      setFavorites((prevFavorites) => (prevFavorites.includes(productId) ? prevFavorites.filter((id) => id !== productId) : [...prevFavorites, productId]));
+      setFavorites((prevFavorites) =>
+        prevFavorites.includes(productId)
+          ? prevFavorites.filter((id) => id !== productId)
+          : [...prevFavorites, productId]
+      );
 
       const userDocRef = database.collection("users").doc(currentUser.uid);
       userDocRef.get().then((doc) => {
@@ -59,11 +67,12 @@ export default function WebshopCategory() {
         }
       });
     } else {
-      console.log("User is not logged in. Redirect to login or show a message.");
+      console.log(
+        "User is not logged in. Redirect to login or show a message."
+      );
     }
   };
 
-  // Log favorites state
   useEffect(() => {
     console.log("Favorites:", favorites);
   }, [favorites]);
@@ -72,28 +81,59 @@ export default function WebshopCategory() {
     <>
       <Helmet>
         <title>Oversigt over produkter</title>
-        <meta name="description" content="Denne side viser oversigten over produkterne inden for kategori" />
+        <meta
+          name="description"
+          content="Denne side viser oversigten over produkterne inden for kategori"
+        />
       </Helmet>
       <Navigation />
       <div className="product-category-content">
-        <h1 style={{ textTransform: "capitalize" }}>{category.replaceAll("-", " ")}</h1>
+        <h1 style={{ textTransform: "capitalize" }}>
+          {category.replaceAll("-", " ")}
+        </h1>
         <div className="breadcrumb">
           <Link className="webshop-crumb" to="/webshop">
             Webshop <ArrowLeftIcon width="30px" />
           </Link>
-          <span className="category-crumb" style={{ textTransform: "capitalize" }}>
+          <span
+            className="category-crumb"
+            style={{ textTransform: "capitalize" }}
+          >
             {category.replaceAll("-", " ")}
           </span>
         </div>
         <div className="all-category-products">
           {products?.map((product) => (
             <div className="product-card" key={product.id}>
-              <div className="heart-icons">{product.isFavorite ? <HeartIconFilled width="35px" height="35px" onClick={() => toggleFavorite(product.id)} fill="#ff969f" /> : <HeartIcon width="35px" height="35px" onClick={() => toggleFavorite(product.id)} fill="#161616" />}</div>
-              <img src={product?.imagePath} alt={"billede af et produkt der hedder " + product?.productName} loading="lazy" />
+              <div className="heart-icons">
+                {product.isFavorite ? (
+                  <HeartIconFilled
+                    width="35px"
+                    height="35px"
+                    onClick={() => toggleFavorite(product.id)}
+                    fill="#ff969f"
+                  />
+                ) : (
+                  <HeartIcon
+                    width="35px"
+                    height="35px"
+                    onClick={() => toggleFavorite(product.id)}
+                    fill="#161616"
+                  />
+                )}
+              </div>
+              <img
+                src={product?.imagePath}
+                alt={"billede af et produkt der hedder " + product?.productName}
+                loading="lazy"
+              />
               <p className="josefin18">{product?.productName}</p>
               <p className=""> {product?.productPrice} DKK</p>
               <div className="btn">
-                <SecondaryButton text="Se her" link={`/product/${product.id}`} />
+                <SecondaryButton
+                  text="Se her"
+                  link={`/product/${product.id}`}
+                />
               </div>
             </div>
           ))}
@@ -104,5 +144,3 @@ export default function WebshopCategory() {
     </>
   );
 }
-
-//  <Link to={"/product/" + product.id}>Se her</Link>;

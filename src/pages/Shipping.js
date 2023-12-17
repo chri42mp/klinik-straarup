@@ -3,11 +3,12 @@ import Navigation from "../components/Navigation";
 import { Link, useNavigate } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
-import { database } from "../firebase";
+import { auth, database } from "../firebase";
 import "./Shipping.scss";
 import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
 import { Helmet } from "react-helmet";
+import { createOrderNumber } from "../components/CreateOrderNumber";
 
 export default function Shipping() {
   const [finalBasket, setFinalBasket] = useState({});
@@ -97,7 +98,10 @@ export default function Shipping() {
     console.log("orderData:", orderData);
 
     try {
-      await database.collection("orders").add(orderData);
+      await database
+        .collection("orders")
+        .doc(createOrderNumber() + "#" + auth?.currentUser?.uid || "NoUser")
+        .set(orderData);
       navigate("/confirmation");
     } catch (error) {
       console.error("error creating order", error);
