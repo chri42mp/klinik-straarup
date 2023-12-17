@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TertiaryButtonWithIcon } from "./Buttons";
-import "./TextboxBanners.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TertiaryButtonWithIcon } from './Buttons';
+import './TextboxBanners.scss';
 
 const TextboxBanner = ({
   title,
@@ -14,19 +14,21 @@ const TextboxBanner = ({
   reverse,
 }) => {
   return (
-    <div className={`banner ${reverse ? "reverse" : ""}`}>
-      <div className="banner-image" style={{ order: reverse }}>
-        <img src={imageUrl} alt={alt} />
-      </div>
-      <div className="banner-box" style={{ order: reverse }}>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <div>
-          <TertiaryButtonWithIcon
-            text={buttonText}
-            onClick={onButtonClick}
-            icon={buttonIcon}
-          />
+    <div className='max-content'>
+      <div className={`banner ${reverse ? 'reverse' : ''}`}>
+        <div className='banner-image' style={{ order: reverse }}>
+          <img src={imageUrl} alt={alt} />
+        </div>
+        <div className='banner-box' style={{ order: reverse }}>
+          <h2>{title}</h2>
+          <p>{text}</p>
+          <div>
+            <TertiaryButtonWithIcon
+              text={buttonText}
+              onClick={onButtonClick}
+              icon={buttonIcon}
+            />
+          </div>
         </div>
       </div>
     </div>

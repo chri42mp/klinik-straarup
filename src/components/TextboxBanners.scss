@@ -16,21 +16,21 @@
 .banner{
   display: flex;
   flex-direction: column;
-  max-width: 390px;
-  margin: 0 auto;
+  padding-inline: $spacing24;
+  padding-block: $spacing32;
 
   .banner-box{
     order: 2;
     background-color: #f3efe7;
     border-radius: 4px;
     z-index: 1;
-    max-width: 228px;
+    width: 228px;
     padding: 24px 24px;
     display: flex;
     flex-direction: column;
     gap: 32px;
     position: relative;
-    top: -50px;
+    top: -75px;
   }
 
   .banner-image{
@@ -60,27 +60,28 @@
   .banner {
     display: grid;
       grid-template-columns: 1fr 1fr;
-      max-width: 1440px;
       padding-block: 70px;
+      padding-inline: $spacing96;
+      padding-block: $spacing72;
      
 
   .banner-box {
     background-color: $light300;
     padding: 24px;
-    max-width: 530px;
+    width: 530px;
     top: 22%;
     height: fit-content;
     border-radius: 4px;
     order: 2;
-    justify-self: center;
-    @include set-position-and-margin(right, 200px);
+    // justify-self: center;
+    @include set-position-and-margin(right, 75px);
   }
 
   .banner-image {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     order: 1;
-    @include set-position-and-margin(left, 200px);
+    @include set-position-and-margin(left, 75px);
     img{
       height: 405px;
       max-width: 612px;
@@ -94,58 +95,18 @@
   .banner-box {
     background-color: $light200;
     order: 1;
-    align-self: flex-start;
-    justify-self: center;
+    align-self: auto;
+    // justify-self: center;
     top: 15%;
-    @include set-position-and-margin(left, 200px);
+    @include set-position-and-margin(left, 75px);
   }
 
   .banner-image {
     order: 2;
-    align-self: flex-start;
-    justify-content: center;
-    @include set-position-and-margin(right, 200px);
+    // align-self: flex-start;
+    // justify-content: center;
+    @include set-position-and-margin(right, 75px);
   }
 }
   
 }
-
-// .banner {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   max-width: 1440px;
-//   margin-inline: 198px;
-//   padding-block: 70px;
-
-//   .banner-box {
-//     background-color: $light200;
-//     padding: 24px;
-//     width: 530px;
-//     top: 25%;
-//     height: fit-content;
-//     border-radius: 4px;
-//     order: 1;
-//     @include set-position-and-margin(left, 100px);
-//   }
-
-//   .banner-image {
-//     height: 405px;
-//     max-width: 612px;
-//     display: flex;
-//     justify-content: center;
-//     order: 2;
-//     @include set-position-and-margin(right, 100px);
-//   }
-// }
-
-// .banner.reverse {
-//   .banner-box {
-//     order: 2;
-//     @include set-position-and-margin(right, 100px);
-//   }
-
-//   .banner-image {
-//     order: 1;
-//     @include set-position-and-margin(left, 100px);
-//   }
-// }
