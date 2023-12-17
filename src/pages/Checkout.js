@@ -7,6 +7,7 @@ import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import { auth, database } from "../firebase";
 import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
+import { Helmet } from "react-helmet";
 
 export default function Checkout() {
   const [formData, setFormData] = useState({
@@ -23,15 +24,7 @@ export default function Checkout() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
-  const userFields = [
-    "firstname",
-    "lastname",
-    "email",
-    "phone",
-    "adress",
-    "zipcode",
-    "city",
-  ];
+  const userFields = ["firstname", "lastname", "email", "phone", "adress", "zipcode", "city"];
 
   useEffect(() => {
     if (auth.currentUser) {
@@ -51,9 +44,7 @@ export default function Checkout() {
             city: data.data().city,
           }));
 
-          userFields.forEach((field) =>
-            handleInputChange(field, data.data()[field])
-          );
+          userFields.forEach((field) => handleInputChange(field, data.data()[field]));
         });
     }
 
@@ -75,13 +66,9 @@ export default function Checkout() {
   };
 
   const handleContinueToShipping = () => {
-    const isFormValid = userFields.every(
-      (field) => formData[field].trim() !== ""
-    );
+    const isFormValid = userFields.every((field) => formData[field].trim() !== "");
     if (isFormValid) {
-      userFields.forEach((field) =>
-        sessionStorage.setItem(`shipping_${field}`, formData[field])
-      );
+      userFields.forEach((field) => sessionStorage.setItem(`shipping_${field}`, formData[field]));
       navigate("/shipping");
     } else {
       alert("Du skal udfylde alle felter, før du kan fortsætte til levering");
@@ -90,6 +77,10 @@ export default function Checkout() {
 
   return (
     <>
+      <Helmet>
+        <title>Checkout på webshoppen</title>
+        <meta name="description" content="Denne side bruges til at gennemfører et køb" />
+      </Helmet>
       <Navigation />
       <div className="breadcrumb">
         <Link className="webshop-crumb" to="/webshop">
@@ -116,22 +107,12 @@ export default function Checkout() {
                     {field === "zipcode" && "Postnummer"}
                     {field === "city" && "By"}
                   </label>
-                  <input
-                    defaultValue={formData[field]}
-                    type="text"
-                    id={field}
-                    name={field}
-                    required
-                    onChange={(e) => handleInputChange(field, e.target.value)}
-                  />
+                  <input defaultValue={formData[field]} type="text" id={field} name={field} required onChange={(e) => handleInputChange(field, e.target.value)} />
                 </div>
               ))}
             </div>
             <div className="checkout-btn">
-              <PrimaryButton
-                text="Forsæt til levering"
-                onClick={handleContinueToShipping}
-              />
+              <PrimaryButton text="Forsæt til levering" onClick={handleContinueToShipping} />
             </div>
             <div className="terms-links">
               <Link to="/tradeconditions">Handelsbetingelser</Link>
@@ -142,9 +123,7 @@ export default function Checkout() {
         <div className="column">
           <div className="basket-products">
             {finalBasket?.basket?.map((item) => {
-              const product = products
-                ?.find((e) => e.id === item.product)
-                ?.data();
+              const product = products?.find((e) => e.id === item.product)?.data();
               console.log(product);
               return (
                 <div key={item.product}>

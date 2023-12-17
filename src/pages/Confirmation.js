@@ -5,6 +5,7 @@ import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
 import Loader from "../components/Loader";
 import "./Confirmation.scss";
+import { Helmet } from "react-helmet";
 
 export default function Confirmation() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,11 @@ export default function Confirmation() {
 
   return (
     <>
+      <Helmet>
+        <title>Bekræftelse af køb</title>
+        <meta name="description" content="Denne side bekræfter et køb på webshoppen" />
+      </Helmet>
+
       <Navigation />
       {loading ? (
         <div className="delay">
@@ -31,10 +37,7 @@ export default function Confirmation() {
         <>
           <h1>Tak for din ordre!</h1>
           <h5>Vi glæder os til at sende den!</h5>
-          <p>
-            Vi har sendt dig en bekræftelse på mail og sender ordren afsted
-            hurtigst muligt. Tak fordi du handlede hos os!{" "}
-          </p>
+          <p>Vi har sendt dig en bekræftelse på mail og sender ordren afsted hurtigst muligt. Tak fordi du handlede hos os! </p>
           <p>Har du set at vi også tilbyder skønhedsbehandlinger?</p>
           <SecondaryButton text="Besøg klinikken" />
           <DiscountBanner />
