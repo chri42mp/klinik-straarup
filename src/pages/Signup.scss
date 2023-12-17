@@ -1,21 +1,22 @@
 @import "../styles/global.scss";
 
 .signup-form {
-  //   display: flex;
-  //   flex-direction: column;
   max-width: $mobileScreenSize;
   margin: 0 auto;
   padding-block: $spacing32;
 
   @media screen and (min-width: $ipadScreenSize) {
     max-width: 632px;
+    padding-block: $spacing72;
   }
 
   h1 {
     text-align: center;
+    padding-bottom: $spacing48;
 
     @media screen and (min-width: $ipadScreenSize) {
       @include josefin56;
+      padding-bottom: $spacing32;
     }
   }
 
@@ -39,6 +40,11 @@
       height: 28px;
     }
   }
+  .signup-form-btn {
+    display: flex;
+    justify-content: center;
+    padding-block: $spacing16;
+  }
 }
 
 .form-group {
@@ -49,6 +55,7 @@
 
 .user-name-group {
   display: flex;
+  padding-top: $spacing8;
 
   input {
     width: 162px;
@@ -66,6 +73,14 @@
   gap: $spacing8;
   align-items: center;
   padding-inline: $spacing8;
+
+  label {
+    @include roboto12;
+  }
+
+  .privacypolicy {
+    @include roboto12;
+  }
 }
 
 #privacypolicy {
@@ -91,7 +106,3 @@
 .roboto12 {
   @include roboto12;
 }
-
-// .btn {
-//   padding-block: $spacing16;
-// }

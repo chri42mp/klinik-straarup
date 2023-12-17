@@ -129,11 +129,21 @@ export default function Signup() {
             {isChecked && <CheckIcon />}
           </div>
           <label htmlFor="privacypolicy">
-            Ved at oprette en konto, erklærer du dig enig i vores <Link to="/privacy-policy">privatlivspolitik</Link>.
+            Ved at oprette en konto, erklærer du dig enig i vores{" "}
+            <Link to="/privacy-policy">
+              <span className="privacypolicy">privatlivspolitik</span>
+            </Link>
+            .
           </label>
         </div>
-        <div className="btn">
-          <SecondaryButton disabled={loading} type="submit" text="Opret konto" className="btn-secondary" />
+        <div className="signup-form-btn">
+          <SecondaryButton
+            disabled={loading}
+            type="submit"
+            text="Opret konto"
+            className="btn-secondary"
+          />
+
         </div>
         <div className="already-an-account">
           <p>Har du allerede en konto?</p>
