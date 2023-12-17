@@ -5,17 +5,25 @@
   flex-direction: column;
   align-items: center;
   gap: $spacing24;
-  padding-block: $spacing72;
-  padding-inline: $spacing96;
-  max-width: $desktopScreenSize;
+  padding-inline: $spacing24;
+  padding-block: $spacing32;
+
   margin: 0 auto;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    max-width: $desktopScreenSize;
+    padding-inline: $spacing96;
+    padding-block: $spacing72;
+  }
 
   .dropdown {
     width: 100%;
   }
 
   .user-information-form {
-    width: fit-content;
+    @media screen and (min-width: $ipadScreenSize) {
+      width: fit-content;
+    }
   }
 }
 

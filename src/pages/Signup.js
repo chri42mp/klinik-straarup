@@ -136,10 +136,13 @@ export default function Signup() {
           </div>
           <label htmlFor="privacypolicy">
             Ved at oprette en konto, erklærer du dig enig i vores{" "}
-            <Link to="/privacy-policy">privatlivspolitik</Link>.
+            <Link to="/privacy-policy">
+              <span className="privacypolicy">privatlivspolitik</span>
+            </Link>
+            .
           </label>
         </div>
-        <div className="btn">
+        <div className="signup-form-btn">
           <SecondaryButton
             disabled={loading}
             type="submit"

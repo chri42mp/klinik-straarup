@@ -21,6 +21,8 @@ export default function Checkout() {
   });
   const [finalBasket, setFinalBasket] = useState({});
   const [products, setProducts] = useState([]);
+  const [isFormValid, setIsFormValid] = useState(false);
+
   const navigate = useNavigate();
 
   const userFields = [
@@ -72,6 +74,12 @@ export default function Checkout() {
       setFormData((prevData) => ({ ...prevData, [field]: value }));
       sessionStorage.setItem(`checkout_${field}`, value);
     }
+    validateForm();
+  };
+
+  const validateForm = () => {
+    const isValid = userFields.every((field) => formData[field].trim() !== "");
+    setIsFormValid(isValid);
   };
 
   const handleContinueToShipping = () => {
@@ -131,6 +139,7 @@ export default function Checkout() {
               <PrimaryButton
                 text="Forsæt til levering"
                 onClick={handleContinueToShipping}
+                disabled={!isFormValid}
               />
             </div>
             <div className="terms-links">
@@ -140,19 +149,21 @@ export default function Checkout() {
         </div>
 
         <div className="column">
-          <div className="basket-products">
+          <div className="checkout-basket-products">
             {finalBasket?.basket?.map((item) => {
               const product = products
                 ?.find((e) => e.id === item.product)
                 ?.data();
               console.log(product);
               return (
-                <div key={item.product}>
-                  <div className="image-container">
+                <div className="checkout-basket-item" key={item.product}>
+                  <div className="checkout-product-image-container">
                     <img alt={product?.productName} src={product?.imagePath} />
                   </div>
-                  <p>{product?.productName}</p>
-                  <p>{product?.productPrice + " DKK"}</p>
+                  <div className="checkout-basket-product-info">
+                    <p>{product?.productName}</p>
+                    <p>{product?.productPrice + " DKK"}</p>
+                  </div>
                 </div>
               );
             })}
