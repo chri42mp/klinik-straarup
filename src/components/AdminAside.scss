@@ -1,0 +1,46 @@
+@import "../styles/global";
+
+.admin-aside {
+  width: 60px;
+  height: 100%;
+  transition: width 0.3s ease;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    width: 284px;
+  }
+
+  .icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing8;
+    transition: padding 0.3s ease;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: $spacing24;
+    padding-block: $spacing72;
+    align-content: center;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  &.open {
+    width: 284px;
+    background-color: $dark100;
+    .icon {
+      padding: $spacing16;
+    }
+    nav {
+      max-height: 500px;
+      visibility: visible;
+      transition: max-height 0.3s ease;
+    }
+  }
+}

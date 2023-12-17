@@ -1,0 +1,59 @@
+@import "../styles/global.scss";
+
+.all-products-container {
+  display: flex;
+
+  .all-products-content {
+    margin: 0 auto;
+    padding-block: $spacing72;
+
+    h1 {
+      padding-bottom: $spacing16;
+      @media (min-width: $ipadScreenSize) {
+        padding-bottom: $spacing32;
+      }
+    }
+
+    .all-products-heading-and-btn {
+      @media (min-width: $ipadScreenSize) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    @media (min-width: $ipadScreenSize) {
+      width: 1036px;
+    }
+
+    .table-headers {
+      @media (max-width: $mobileScreenSize) {
+        display: none;
+      }
+    }
+
+    th {
+      background-color: $light200;
+      @include josefin18;
+      padding-block: $spacing16;
+      @include borderRadius;
+    }
+
+    tr {
+      @media (max-width: $mobileScreenSize) {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+      }
+      border-bottom: 1px solid $dark500;
+    }
+
+    td {
+      padding: $spacing8;
+      @include roboto18;
+    }
+  }
+}

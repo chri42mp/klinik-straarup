@@ -1,0 +1,49 @@
+@import "../styles/global";
+
+.admin-header {
+  background-color: $green300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing8;
+
+  p {
+    background-color: $green500;
+    color: $light100;
+    padding-inline: $spacing24;
+    padding-block: $spacing8;
+    @include borderRadius;
+  }
+
+  .btn-tertiary-icon {
+    color: white;
+  }
+
+  .admin-header-logo {
+    width: 76.03px;
+    height: 90px;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      width: 105.6px;
+      height: 125px;
+    }
+  }
+
+  .mobile-view,
+  p {
+    display: block;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      display: none;
+    }
+  }
+
+  .desktop-view,
+  p {
+    display: none;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      display: block;
+    }
+  }
+}

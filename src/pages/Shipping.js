@@ -17,7 +17,14 @@ export default function Shipping() {
   const [selectedPayment, setSelectedPayment] = useState(null);
   const navigate = useNavigate();
 
-  const userFields = ["firstname", "lastname", "phone", "adress", "zipcode", "city"];
+  const userFields = [
+    "firstname",
+    "lastname",
+    "phone",
+    "adress",
+    "zipcode",
+    "city",
+  ];
 
   const handleDeliveryOptionChange = (option) => {
     setSelectedDeliveryOption(option);
@@ -74,6 +81,7 @@ export default function Shipping() {
       items: finalBasket.basket.map((item) => ({
         productId: item.product,
         qauntity: item.qauntity,
+        productPrice: item.productPrice,
       })),
       deliveryOption: selectedDeliveryOption,
       paymentMethod: selectedPayment,
@@ -83,6 +91,7 @@ export default function Shipping() {
       adress: formData.adress,
       zipcode: formData.zipcode,
       city: formData.city,
+      date: new Date().toLocaleDateString(),
     };
 
     console.log("orderData:", orderData);
@@ -99,7 +108,10 @@ export default function Shipping() {
     <>
       <Helmet>
         <title>Leveringsmuligheder</title>
-        <meta name="description" content="Denne side bruges til at udfylde leveringsmuligheder" />
+        <meta
+          name="description"
+          content="Denne side bruges til at udfylde leveringsmuligheder"
+        />
       </Helmet>
       <Navigation />
       <div className="breadcrumb">
@@ -120,14 +132,22 @@ export default function Shipping() {
             <h5>Leveringsmuligheder</h5>
             <div className="delivery-options">
               <label>
-                <input type="checkbox" checked={selectedDeliveryOption === "standard"} onChange={() => handleDeliveryOptionChange("standard")} />
+                <input
+                  type="checkbox"
+                  checked={selectedDeliveryOption === "standard"}
+                  onChange={() => handleDeliveryOptionChange("standard")}
+                />
                 Standard
               </label>
               <span>3-5 dage</span>
             </div>
             <div className="delivery-options">
               <label>
-                <input type="checkbox" checked={selectedDeliveryOption === "express"} onChange={() => handleDeliveryOptionChange("express")} />
+                <input
+                  type="checkbox"
+                  checked={selectedDeliveryOption === "express"}
+                  onChange={() => handleDeliveryOptionChange("express")}
+                />
                 Express
               </label>
               <span>1-2 dage</span>
@@ -136,7 +156,14 @@ export default function Shipping() {
           <form>
             <h5>Vælg betalingsmulighed</h5>
             <div className="payment-option">
-              <input type="radio" id="creditCard" name="payment" value="creditCard" checked={selectedPayment === "creditCard"} onChange={() => handlePaymentChange("creditCard")} />
+              <input
+                type="radio"
+                id="creditCard"
+                name="payment"
+                value="creditCard"
+                checked={selectedPayment === "creditCard"}
+                onChange={() => handlePaymentChange("creditCard")}
+              />
               <label htmlFor="creditCard"> Betalingskort</label>
               <div className="image-container">
                 <img src="/site-images/visa.png" alt="Betalingskort" />
@@ -144,7 +171,14 @@ export default function Shipping() {
               </div>
             </div>
             <div className="payment-option">
-              <input type="radio" id="klarna" name="klarna" value="klarna" checked={selectedPayment === "klarna"} onChange={() => handlePaymentChange("klarna")} />
+              <input
+                type="radio"
+                id="klarna"
+                name="klarna"
+                value="klarna"
+                checked={selectedPayment === "klarna"}
+                onChange={() => handlePaymentChange("klarna")}
+              />
               <label htmlFor="klarna">Klarna</label>
               <div className="image-container">
                 <img src="/site-images/klarna.png" alt="klarna" />
@@ -152,7 +186,10 @@ export default function Shipping() {
             </div>
           </form>
           <div className="safe-payment-btn">
-            <PrimaryButton text="Gå til sikker betaling" onClick={handleSecurePayment} />
+            <PrimaryButton
+              text="Gå til sikker betaling"
+              onClick={handleSecurePayment}
+            />
           </div>
           <div className="terms-links">
             <Link to="/tradeconditions">Handelsbetingelser</Link>
@@ -162,7 +199,9 @@ export default function Shipping() {
         <div className="column">
           <div>
             {finalBasket?.basket?.map((item) => {
-              const product = products?.find((e) => e.id === item.product)?.data();
+              const product = products
+                ?.find((e) => e.id === item.product)
+                ?.data();
               console.log(product);
               return (
                 <div className="basket-products">
