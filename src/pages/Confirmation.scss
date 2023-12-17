@@ -9,4 +9,30 @@
   justify-content: center;
   padding: $spacing96;
   gap: $spacing48;
+  align-items: center;
+}
+
+.confirmation-textbox{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: $spacing16;
+padding-inline: $spacing24;
+padding-block: $spacing16;
+@media screen and (min-width: $ipadScreenSize) {
+  &{
+
+    gap: $spacing24;
+    padding-block: $spacing72;
+  }
+}
+.confirmation-btn{
+  align-self: flex-start;
+  @media screen and (min-width: $ipadScreenSize) {
+    &{
+      align-self: center;
+    }
+  }
+}
 }

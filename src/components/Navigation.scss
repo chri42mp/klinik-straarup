@@ -127,9 +127,14 @@
     &.active{
         display: flex;
         flex-direction: column;
-        position: relative;
         top: 11rem;
         height: fit-content;
+        @media screen and (min-width: $desktopScreenSize) {
+          &{
+  
+              position: relative;
+          }
+        }
     }
     &.active .submenu{
     display: flex;
