@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { PrimaryButton } from "./Buttons";
-import "./Hero.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { PrimaryButton } from './Buttons';
+import './Hero.scss';
 
 const Hero = ({
   title,
@@ -12,16 +12,21 @@ const Hero = ({
   buttonText,
   buttonIcon,
   onButtonClick,
+  link,
 }) => {
   return (
-    <div className="hero-banner">
+    <div className='hero-banner'>
       <img src={imageUrl} alt={alt} />
-      <div className="hero-banner-box">
+      <div className='hero-banner-box'>
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
         <p>{text}</p>
         <div>
-          <PrimaryButton text={buttonText} onClick={onButtonClick} />
+          <PrimaryButton
+            text={buttonText}
+            onClick={onButtonClick}
+            link={link}
+          />
         </div>
       </div>
     </div>
@@ -29,14 +34,15 @@ const Hero = ({
 };
 
 Hero.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonIcon: PropTypes.element.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  text: PropTypes.string,
+  imageUrl: PropTypes.string,
+  alt: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonIcon: PropTypes.element,
+  onButtonClick: PropTypes.func,
+  link: PropTypes.func,
 };
 
 export default Hero;
