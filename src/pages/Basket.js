@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
+import { Helmet } from "react-helmet";
 
 export default function Basket() {
   let [localStorageInfo, setLocalStorageInfo] = useState();
@@ -74,14 +75,12 @@ export default function Basket() {
     console.log(e.target.value, id);
     const newValue = parseInt(e.target.value);
 
-
     setBasket((prevBasket) =>
       prevBasket.map((item) => {
         if (item.product === id) {
           return {
             ...item,
-            qauntity:
-              !isNaN(newValue) && newValue >= 1 ? newValue : item.qauntity,
+            qauntity: !isNaN(newValue) && newValue >= 1 ? newValue : item.qauntity,
           };
         }
         return item;
@@ -94,6 +93,10 @@ export default function Basket() {
   console.log(basket);
   return (
     <>
+      <Helmet>
+        <title>Kurv</title>
+        <meta name="description" content="Denne side viser kurven" />
+      </Helmet>
       <Navigation />
       <div className="breadcrumb">
         <Link className="webshop-crumb" to="/webshop">
@@ -108,50 +111,24 @@ export default function Basket() {
           ) : (
             <>
               {basket?.map((product) => {
-                const productFind = products.find(
-                  (e) => e.id === product.product
-                );
-                let pricetot = Math.floor(
-                  parseFloat(product.qauntity) *
-                    parseFloat(productFind?.data().productPrice)
-                );
+                const productFind = products.find((e) => e.id === product.product);
+                let pricetot = Math.floor(parseFloat(product.qauntity) * parseFloat(productFind?.data().productPrice));
                 console.log(pricetot);
                 // setTotalprice((prev) => prev + pricetot);
                 return (
                   <div className="product-container">
                     <div className="image-container">
-                      <img
-                        alt={productFind?.data().productName}
-                        src={productFind?.data().imagePath}
-                        height={"205px"}
-                      />
+                      <img alt={productFind?.data().productName} src={productFind?.data().imagePath} height={"205px"} />
                     </div>
                     <div>
                       <div className="delete-product">
-                        <TrashIcon
-                          onClick={(e) => removeItem(product.product)}
-                          width="40px"
-                          height="40px"
-                          fill="white"
-                        />
+                        <TrashIcon onClick={(e) => removeItem(product.product)} width="40px" height="40px" fill="white" />
                       </div>
                       <h4>{productFind?.data().productName}</h4>
-                      <h5>
-                        {parseFloat(productFind?.data().productPrice)} DKK
-                      </h5>
+                      <h5>{parseFloat(productFind?.data().productPrice)} DKK</h5>
                       <div className="number-of-product">
                         <p>Antal: {product.qauntity}</p>
-                        <input
-                          type="number"
-                          onClick={(e) =>
-                            handleChangeInput(e, product?.product)
-                          }
-                          onChange={(e) =>
-                            handleChangeInput(e, product?.product)
-                          }
-                          defaultValue={product?.qauntity}
-                          min={1}
-                        />
+                        <input type="number" onClick={(e) => handleChangeInput(e, product?.product)} onChange={(e) => handleChangeInput(e, product?.product)} defaultValue={product?.qauntity} min={1} />
                       </div>
                     </div>
                   </div>
@@ -178,7 +155,6 @@ export default function Basket() {
             <div className="add-discount-btn">
               <SecondaryButton text="Tilføj" />
             </div>
-
           </div>
           <div className="delivery">
             <h3>Total eksl. levering</h3>
@@ -186,11 +162,7 @@ export default function Basket() {
           </div>
           <p>Inkl. moms</p>
           <div className="checkout-btn">
-            <PrimaryButton
-              text="Checkout"
-              onClick={handleCheckOut}
-              disabled={empty}
-            />
+            <PrimaryButton text="Checkout" onClick={handleCheckOut} disabled={empty} />
           </div>
         </div>
       </div>

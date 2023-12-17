@@ -8,6 +8,7 @@ import { SecondaryButton } from "../components/Buttons";
 import CheckIcon from "../assets/icons/CheckIcon";
 import ErrorIcon from "../assets/icons/ErrorIcon";
 import CustomFooter from "../components/CustomFooter";
+import { Helmet } from "react-helmet";
 
 export default function Signup() {
   const [isChecked, setIsChecked] = useState(false);
@@ -54,13 +55,14 @@ export default function Signup() {
 
   return (
     <>
+      <Helmet>
+        <title>Opret bruger</title>
+        <meta name="description" content="Denne side bruges til at oprette en bruger" />
+      </Helmet>
       <Navigation />
       <form className="signup-form" onSubmit={handleSubmit}>
         <h1>Opret konto</h1>
-        <p className="signup-info">
-          Ved at oprette en konto hos os kan du blandt andet benytte dig af
-          vores loyalitetsrabat, se dine tider og samle dine favorit produkter.
-        </p>
+        <p className="signup-info">Ved at oprette en konto hos os kan du blandt andet benytte dig af vores loyalitetsrabat, se dine tider og samle dine favorit produkter.</p>
         <div className="user-name-group">
           <div className="form-group">
             <label htmlFor="firstname">Navn</label>
@@ -113,11 +115,7 @@ export default function Signup() {
         </div>
         <div className="form-group">
           <label htmlFor="username">Gentag kodeord:</label>
-          <input
-            type="password"
-            id="password-confirm"
-            ref={passwordConfirmRef}
-          />
+          <input type="password" id="password-confirm" ref={passwordConfirmRef} />
           {error && (
             <div className="error-message">
               <ErrorIcon />
@@ -127,11 +125,7 @@ export default function Signup() {
           <span className="roboto12">*Skal udfyldes</span>
         </div>
         <div className="privacy-policy-group">
-          <div
-            id="privacypolicy"
-            className={`checkbox ${isChecked ? "checked" : ""}`}
-            onClick={handleCheckboxChange}
-          >
+          <div id="privacypolicy" className={`checkbox ${isChecked ? "checked" : ""}`} onClick={handleCheckboxChange}>
             {isChecked && <CheckIcon />}
           </div>
           <label htmlFor="privacypolicy">
@@ -149,6 +143,7 @@ export default function Signup() {
             text="Opret konto"
             className="btn-secondary"
           />
+
         </div>
         <div className="already-an-account">
           <p>Har du allerede en konto?</p>
