@@ -24,6 +24,8 @@ import Shipping from "./pages/Shipping";
 import TradeConditions from "./pages/TradeConditions";
 import Confirmation from "./pages/Confirmation";
 import NotFound from "./pages/NotFound";
+import AdminAllProducts from "./pages/AdminAllProducts";
+import AdminOrders from "./pages/AdminOrders";
 
 function App() {
   return (
@@ -58,6 +60,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <AddProduct />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/allproducts"
+            element={
+              <ProtectedRoute>
+                <AdminAllProducts />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/allorders"
+            element={
+              <ProtectedRoute>
+                <AdminOrders />
               </ProtectedRoute>
             }
           />
