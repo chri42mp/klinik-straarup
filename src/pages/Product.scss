@@ -48,15 +48,6 @@
     }
   }
 
-  .roboto16 {
-    @include roboto16;
-    text-align: center;
-
-    @media screen and (min-width: $ipadScreenSize) {
-      text-align: start;
-    }
-  }
-
   .price {
     text-align: center;
     @include josefin32;

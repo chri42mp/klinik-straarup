@@ -135,3 +135,13 @@
     }
   }
 }
+
+.visit-webshop-banner {
+  text-align: center;
+  padding-block: $spacing32;
+
+  .visit-webshop-btn {
+    display: flex;
+    justify-content: center;
+  }
+}

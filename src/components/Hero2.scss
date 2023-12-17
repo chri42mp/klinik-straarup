@@ -1,70 +1,67 @@
 @import "../styles/global.scss";
 
-
 .hero2-banner {
+  display: flex;
+  flex-direction: column;
+  // padding: $spacing16 $spacing24;
+  padding-inline: $spacing24;
+  padding-block: $spacing16;
+
+  gap: $spacing24;
+  height: fit-content;
+
+  .hero2-banner-box {
     display: flex;
     flex-direction: column;
-    padding: $spacing16 $spacing24;
-    gap: $spacing24;
-    height: fit-content;
-    
+    align-items: center;
+    gap: $spacing32;
+    h1 {
+      text-align: center;
+      @include josefin40;
+    }
+  }
+  .hero2-banner-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-    .hero2-banner-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: $spacing32;
-        h1{
-            text-align: center;
-            @include josefin40
-        }
-
-      }
-      .hero2-banner-image{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img{
-          height: 14.688rem;
-          object-fit: cover;
-          width: 100%;
-        }
-      }
+    img {
+      height: 14.688rem;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
 }
-
 
 @media screen and (min-width: $ipadScreenSize) {
+  .hero2-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // padding: $spacing120 $spacing96;
+    gap: $spacing24;
+    margin: 0 auto;
+    padding-inline: $spacing96;
+    padding-block: $spacing120;
 
-
-.hero2-banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: $spacing120 $spacing96;
-  gap: $spacing24;
-  
-  .hero2-banner-box {
-    gap: $spacing48;
-    align-items: flex-start;
-    h1{
+    .hero2-banner-box {
+      gap: $spacing48;
+      align-items: flex-start;
+      h1 {
         text-align: left;
         @include josefin56;
-    }
-    p{
-      text-align: left;
-      max-width: 65ch;
+      }
+      p {
+        text-align: left;
+        max-width: 65ch;
+      }
     }
 
-  }
-
-  .hero2-banner-image {
-    order: 2;
-    img{
-      width: 38.25rem;
+    .hero2-banner-image {
+      order: 2;
+      img {
+        width: 38.25rem;
         height: 25.313rem;
+      }
     }
   }
-}
-
-
 }

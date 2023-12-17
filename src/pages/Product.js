@@ -68,7 +68,7 @@ export default function Product() {
         <div>
           <h1>{product?.productName}</h1>
           <p className="roboto12">{product.units}</p>
-          <p className="roboto16">{product.productDescription}</p>
+          <p>{product.productDescription}</p>
           <h2 className="price">{product.productPrice} DKK</h2>
           <div className="counter-container">
             <Counter count={count} setCount={setCount} />

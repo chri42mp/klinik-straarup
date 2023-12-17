@@ -1,10 +1,12 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import TextboxBanner from '../components/TextboxBanners';
-import './About.scss';
-import CustomFooter from '../components/CustomFooter';
-import FullBanner from '../components/FullBanner';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import Navigation from "../components/Navigation";
+import TextboxBanner from "../components/TextboxBanners";
+import "./About.scss";
+import CustomFooter from "../components/CustomFooter";
+import FullBanner from "../components/FullBanner";
+import WebshopBanner from "../components/WebshopBanner";
+import { Helmet } from "react-helmet";
+import { SecondaryButton } from "../components/Buttons";
 
 export default function About() {
   return (
@@ -123,8 +125,11 @@ export default function About() {
           />
         </section>
 
-        <section>
-          <h1>Webshop</h1>
+        <section className="visit-webshop-banner">
+          <WebshopBanner headline="Vi har fået en webshop" />
+          <div className="visit-webshop-btn">
+            <SecondaryButton text="Besøg webshop" link="/webshop" />
+          </div>
         </section>
       </div>
       <CustomFooter />

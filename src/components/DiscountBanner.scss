@@ -3,20 +3,28 @@
 .discount-banner {
   background-color: $dark500;
   display: flex;
+  gap: $spacing240;
   flex-direction: column;
   align-items: center;
-  gap: $spacing240;
-  padding: $spacing32 $spacing24;
   margin: 0 auto;
   background-image: url("../../public/site-images/Discount-img.jpg");
   background-size: cover;
   background-position: 100% 60%;
+  padding-inline: $spacing24;
+  padding-block: $spacing32;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    padding-inline: $spacing96;
+  }
 
   .discount-banner-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: $spacing16;
+    @media screen and (min-width: $ipadScreenSize) {
+      max-width: $desktopScreenSize;
+    }
 
     h2,
     p {
@@ -33,7 +41,6 @@
     & {
       flex-direction: row;
       justify-content: space-between;
-      padding: $spacing32 21rem;
       background-image: url("../../public/site-images/eventbanner.jpg");
 
       .discount-banner-text {
