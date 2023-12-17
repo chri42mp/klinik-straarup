@@ -43,11 +43,11 @@ export default function Confirmation() {
             <h5>Vi glæder os til at sende den!</h5>
             <p>
               Vi har sendt dig en bekræftelse på mail og sender ordren afsted
-              hurtigst muligt. Tak fordi du handlede hos os!{' '}
+              hurtigst muligt. Tak fordi du handlede hos os! Har du forresten
+              set at vi også tilbyder skønhedsbehandlinger i vores klinik?
             </p>
-            <p>Har du set at vi også tilbyder skønhedsbehandlinger?</p>
             <div className='confirmation-btn'>
-              <SecondaryButton text='Besøg klinikken' />
+              <SecondaryButton text='Besøg klinikken' link='/' />
             </div>
           </div>
           <DiscountBanner />

@@ -2,47 +2,60 @@
 
 // navbar.css
 .navigation {
-    height: 106px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0.5rem 0rem;
-    background-color: $light100;
+  display: flex;
+  background-color: $light100;
+  padding-inline: $spacing8;
+  padding-block: $spacing16;
+    
+    @media screen and (min-width: $desktopScreenSize) {
+      padding-inline: $spacing96;
+      padding-block: $spacing48 $spacing16;
+  }
+
     a{
     line-height: 0;
     color: $dark500;
+    @include josefin18;
+    
     &:hover{
         text-decoration: underline;
     }
     }
     &-menu {
         margin-left: auto;
+        display: flex;
+        align-items: center;
         ul {
             display: none;
             position: absolute;
             top: 106px;
             left: 0;
+            margin: 0;
             flex-direction: column;
-            width: 100%;   
+            width: 100%;
+              
 
             @media screen and (min-width: $desktopScreenSize) {
                 display: flex;
                 padding: 0;
                 flex-direction: row;
-                align-items: center;
+                // align-items: center;
                 position: static;
+                gap: $spacing16;
             }
             
             li {
                 // removes default disc bullet for li tags and applies margin to left & right side
                 margin: 0;
                 list-style-type: none;
+                @include josefin18;
                 @media screen and (min-width: $desktopScreenSize) {
-                    &{
-                        margin: 0 1rem;
-                    }
-                }  
+                  &{
+                     padding-inline: $spacing16;
+                     padding-block: $spacing12;
+                     align-self: baseline;
+                  }
+              }  
               
               a {
                 // increases the surface area of the anchor tag to span more than just the anchor text
@@ -60,6 +73,9 @@
             display: block;
             background-color: $light100;
             z-index: 1;
+            margin: 0; 
+            padding-inline: $spacing16;
+            padding-block: $spacing8;
           }
       }
   }
@@ -103,12 +119,13 @@
         }
       }
   }
-
   .nav-icons{
     display: flex;
-    align-items: center;
     justify-content: flex-end;
     width: 100%;
+    a{
+      align-self: center;
+    }
     @media screen and (min-width: $desktopScreenSize) {
         & {
           width: fit-content;
@@ -127,27 +144,21 @@
     &.active{
         display: flex;
         flex-direction: column;
-        top: 11rem;
         height: fit-content;
-        @media screen and (min-width: $desktopScreenSize) {
-          &{
+        position: relative;
   
-              position: relative;
-          }
-        }
     }
     &.active .submenu{
     display: flex;
-    gap: 16px;
-    padding: 16px;
+    gap: 0;
     position: static;
     background-color: $light100; 
     z-index: 1;
     @media screen and (min-width: $desktopScreenSize) {
         &{
-
-            flex-direction: column;
-            align-items: flex-start;
+          position: absolute;
+          flex-direction: column;
+          top: 65px;
         }
       }
     

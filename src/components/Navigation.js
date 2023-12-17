@@ -79,7 +79,7 @@ export default function Navigation() {
                   <Link to='/botox'>Botox</Link>
                 </li>
                 <li>
-                  <Link to='/laser'>Permanent hårfjerning</Link>
+                  <Link to='/laser'>Hårfjerning</Link>
                 </li>
                 <li>
                   <Link to='/sclerosis'>Sklerosering</Link>

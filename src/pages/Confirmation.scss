@@ -17,22 +17,25 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-gap: $spacing16;
+gap: $spacing24;
 padding-inline: $spacing24;
-padding-block: $spacing16;
+padding-block: $spacing72;
+p{
+  max-width: 65ch;
+  @media screen and (min-width: $ipadScreenSize) {
+    &{
+      text-align: center;
+    }
+  }
+}
 @media screen and (min-width: $ipadScreenSize) {
   &{
-
     gap: $spacing24;
     padding-block: $spacing72;
   }
 }
 .confirmation-btn{
-  align-self: flex-start;
-  @media screen and (min-width: $ipadScreenSize) {
-    &{
-      align-self: center;
-    }
-  }
+  padding-top: $spacing24;
+
 }
 }
