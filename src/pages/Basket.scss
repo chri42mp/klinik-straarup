@@ -88,6 +88,7 @@
   @include dropShadow;
   @include borderRadius;
   padding: $spacing24;
+  height: fit-content;
 
   h2 {
     @include josefin40;

@@ -94,17 +94,18 @@
 }
 
 .checkout-basket-products {
-  display: flex;
-  background-color: $green300;
+  // display: flex;
   color: $light100;
   align-items: center;
-  margin-bottom: $spacing8;
-  padding: $spacing8;
-  @include borderRadius;
+  // margin-bottom: $spacing8;
 
   .checkout-basket-item {
     display: flex;
     width: 100%;
+    background-color: $green300;
+    padding: $spacing8;
+    @include borderRadius;
+    margin-bottom: $spacing8;
   }
   .checkout-basket-product-info {
     display: flex;
