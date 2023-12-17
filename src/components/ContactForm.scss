@@ -6,7 +6,6 @@
     flex-direction: column;
     background-color: $light200;
     padding: $spacing32 $spacing24;
-    margin: $spacing32 $spacing24;
     gap: $spacing32;
     @include borderRadius;
   
@@ -57,8 +56,6 @@
     }
     @media screen and (min-width: $ipadScreenSize) {
         &{
-            max-width: 1242px;
-            margin: $spacing96 auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
             padding: $spacing24 $spacing96;

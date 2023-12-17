@@ -67,3 +67,8 @@ li {
 a {
   @include robotolink;
 }
+
+.max-content{
+max-width: $desktopScreenSize;
+margin: 0 auto;
+}
