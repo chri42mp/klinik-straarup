@@ -10,6 +10,7 @@ import Counter from "../components/Counter";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
 import DiscountBanner from "../components/DiscountBanner";
 import CustomFooter from "../components/CustomFooter";
+import { Helmet } from "react-helmet";
 
 export default function Product() {
   const { uid } = useParams();
@@ -46,24 +47,20 @@ export default function Product() {
 
   return (
     <>
+      <Helmet>
+        <title>Singleview af produkt</title>
+        <meta name="description" content="Denne side viser produkterne enkeltvis" />
+      </Helmet>
       <Navigation />
       <div className="breadcrumb">
         <Link className="webshop-crumb" to="/webshop">
           Webshop <ArrowLeftIcon width="30px" />
         </Link>
-        <span
-          className="category-crumb"
-          style={{ textTransform: "capitalize" }}
-        ></span>
+        <span className="category-crumb" style={{ textTransform: "capitalize" }}></span>
       </div>
       <div className="singleview">
         <div className="singleview-img-box">
-          <img
-            className="singleview-img"
-            src={product?.imagePath}
-            alt={"billede af et produkt der hedder " + product?.productName}
-            loading="lazy"
-          />
+          <img className="singleview-img" src={product?.imagePath} alt={"billede af et produkt der hedder " + product?.productName} loading="lazy" />
         </div>
         <div>
           <h1>{product?.productName}</h1>
@@ -74,17 +71,11 @@ export default function Product() {
             <Counter count={count} setCount={setCount} />
           </div>
           <div className="buttons">
-            <PrimaryButton
-              onClick={(e) => addToBasket(uid, count, product?.productPrice)}
-              text="Køb nu"
-            />
+            <PrimaryButton onClick={(e) => addToBasket(uid, count, product?.productPrice)} text="Køb nu" />
             <SecondaryButton text="Shop mere" />
           </div>
           <Accordion title="Brug" content={<p>{product.usage}</p>} />
-          <Accordion
-            title="Ingredienser"
-            content={<p>{product.productIngrediens}</p>}
-          />
+          <Accordion title="Ingredienser" content={<p>{product.productIngrediens}</p>} />
         </div>
       </div>
       <DiscountBanner />

@@ -7,6 +7,7 @@ import { SecondaryButton } from "../components/Buttons";
 import "./Login.scss";
 import ErrorIcon from "../assets/icons/ErrorIcon";
 import CustomFooter from "../components/CustomFooter";
+import { Helmet } from "react-helmet";
 
 export default function Login() {
   const emailRef = useRef();
@@ -39,6 +40,10 @@ export default function Login() {
 
   return (
     <>
+      <Helmet>
+        <title>Log ind</title>
+        <meta name="description" content="Denne side bruges til at logge ind" />
+      </Helmet>
       <Navigation />
       <form className="login-form" onSubmit={handleSubmit}>
         <h1>Log ind</h1>
@@ -65,12 +70,7 @@ export default function Login() {
           )}
         </div>
         <div className="btn">
-          <SecondaryButton
-            disabled={loading}
-            type="submit"
-            text="Log ind"
-            className="btn-secondary"
-          />
+          <SecondaryButton disabled={loading} type="submit" text="Log ind" className="btn-secondary" />
         </div>
         <div className="no-account">
           <p>Har du ikke en konto?</p>
