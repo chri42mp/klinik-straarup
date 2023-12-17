@@ -99,10 +99,14 @@ li {
   }
 
   .full-banner.reverse {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     .full-banner-text {
       order: 1;
+      background-color: $light200;
+      h2, h3, p{
+        color: $dark500;
+      }
     }
 
     .full-banner-image {

@@ -13,7 +13,7 @@ const Dropdown = ({ title, content }) => {
   return (
     <div className='dropdown'>
       <div className='dropdown-header' onClick={toggleDropdown}>
-        <p className='josefin18'>{title}</p>
+        <p className='roboto16'>{title}</p>
         {isOpen ? <ArrowUpIcon className='' /> : <ArrowDownIcon className='' />}
       </div>
       {isOpen && (

@@ -14,13 +14,13 @@ export default function About() {
       <Helmet>
         <title>Om klinik Straarup</title>
         <meta
-          name="description"
-          content="Klinik Straarup er en skønhedsklinik, der tilbyder botox, filler etc"
+          name='description'
+          content='Klinik Straarup er en skønhedsklinik, der tilbyder botox, filler etc'
         />
       </Helmet>
-      <div className="about">
+      <div className='about'>
         <Navigation />
-        <section className="about-s1">
+        <section className='about-s1'>
           <h1>Om klinikken</h1>
           <p>
             Klinik straarup er en kosmetisk og medicinsk klinik, beliggende i
@@ -29,8 +29,8 @@ export default function About() {
         </section>
         <section>
           <FullBanner
-            title="Klinik Straarup"
-            subtitle="Passion for æstetik "
+            title='Klinik Straarup'
+            subtitle='Passion for æstetik '
             text={
               <>
                 <br />
@@ -54,12 +54,12 @@ export default function About() {
                 </p>
               </>
             }
-            imageUrl="/site-images/About-s2.webp"
-            alt="toner"
+            imageUrl='/site-images/About-s2.webp'
+            alt='toner'
             reverse={false}
           />
         </section>
-        <section className="about-s3">
+        <section className='about-s3'>
           <h1>Mød vores behandlere</h1>
           <h5>Hos Klinik Straarup er vi professionelle</h5>
           <p>
@@ -68,53 +68,61 @@ export default function About() {
             en bred vifte af behandinger.
           </p>
         </section>
-        <section className="about-s4">
+        <section className='about-s4'>
           <TextboxBanner
-            title="Maria Straarup"
-            text="Maria er ejer af klinikken. Hun er uddannet sygeplejerske og kosmetisk sygeplejerske, og har arbejdet mange år i den kosmetiske branche. Hun er perfektionist til fingerspidserne og går op i at skabe naturlige resultater til hendes kunder."
-            imageUrl="/site-images/About-maria.webp"
-            alt="Billede af Maria"
+            title='Maria Straarup'
+            text='Maria er ejer af klinikken. Hun er uddannet sygeplejerske og kosmetisk sygeplejerske, og har arbejdet mange år i den kosmetiske branche. Hun er perfektionist til fingerspidserne og går op i at skabe naturlige resultater til hendes kunder.'
+            imageUrl='/site-images/About-maria.webp'
+            alt='Billede af Maria'
             reverse={false}
           />
           <TextboxBanner
-            title="Jakob Nielsen"
-            text="Jakob er virksomhedsansvarlig læge og uddannet på Københavns og Aarhus universitet i hh. 2005 og 2007. 
-            Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. "
-            imageUrl="/webshop-images/gbl-complexion-clearing-masque-original.webp"
-            alt="Billede af Jakob"
+            title='Jakob Nielsen'
+            text='Jakob er virksomhedsansvarlig læge og uddannet på Københavns og Aarhus universitet i hh. 2005 og 2007. 
+            Han har 8 års klinisk erfaring og i klinikken vil du møde Jakob til konsultation omkring botox og karklerosering. '
+            imageUrl='/webshop-images/gbl-complexion-clearing-masque-original.webp'
+            alt='Billede af Jakob'
             reverse={true}
           />
         </section>
-        <section className="about-s5">
-          <div className="s5-text">
-            <h2>Patientsikkerhed</h2>
-            <h5>
-              Klinik Straarup er registreret hos styrelsen for patientsikkerhed
-            </h5>
-            <p>
-              Udførelsen af kosmetisk behandling er reguleret i bekendtgørelse
-              nr. 1245 af 24. oktober 2007 om kosmetisk behandling. Ved
-              kosmetisk behandling er der tale om behandling, som udelukkede
-              foregår, fordi patienten ønsker behandling af kosmetiske årsager.
-              På Styrelsen for Patientsikkerheds hjemmeside kan du finde
-              bekendtgørelsen.
-              <br />
-              <br />I bekendtgørelsens regulering indgår, at klinikken og dennes
-              personer der udfører kosmetiske behandlinger, er registeret af
-              Styrelsen for Patientsikkerhed, dvs. at det er personer der
-              lovmæssigt opfylder kriterierne for at udføre kosmetiske
-              behandlinger. Klinik Straarup er registeret jf. reglerne herom.{" "}
-              <br />
-              <br /> Som registeret klinik modtages der med jævne mellemrum
-              anmeldte og uanmeldte besøg fra embedslægerne. Efter hvert besøg
-              udformes en inspektionsrapport, denne er at finde offentligt
-              tilgængeligt på Styrelsen for Patientsikkerheds
-              hjemmeside.www.stps.dk
-            </p>
-          </div>
-          <div className="s5-img">
-            <img src="/site-images/FAQ-2.webp" alt="normalizing skin kit" />
-          </div>
+        <section className='about-s5'>
+          <FullBanner
+            title='Patientsikkerhed'
+            subtitle='Klinik Straarup er registreret hos styrelsen for patientsikkerhed'
+            text={
+              <>
+                <br />
+                <p>
+                  Udførelsen af kosmetisk behandling er reguleret i
+                  bekendtgørelse nr. 1245 af 24. oktober 2007 om kosmetisk
+                  behandling. Ved kosmetisk behandling er der tale om
+                  behandling, som udelukkede foregår, fordi patienten ønsker
+                  behandling af kosmetiske årsager. På Styrelsen for
+                  Patientsikkerheds hjemmeside kan du finde bekendtgørelsen.
+                </p>
+                <br />
+                <p>
+                  I bekendtgørelsens regulering indgår, at klinikken og dennes
+                  personer der udfører kosmetiske behandlinger, er registeret af
+                  Styrelsen for Patientsikkerhed, dvs. at det er personer der
+                  lovmæssigt opfylder kriterierne for at udføre kosmetiske
+                  behandlinger. Klinik Straarup er registeret jf. reglerne
+                  herom.
+                </p>
+                <br />
+                <p>
+                  Som registeret klinik modtages der med jævne mellemrum
+                  anmeldte og uanmeldte besøg fra embedslægerne. Efter hvert
+                  besøg udformes en inspektionsrapport, denne er at finde
+                  offentligt tilgængeligt på Styrelsen for Patientsikkerheds
+                  hjemmeside.www.stps.dk
+                </p>
+              </>
+            }
+            imageUrl='/site-images/FAQ-2.webp'
+            alt='normalizing skin kit'
+            reverse={true}
+          />
         </section>
 
         <section className="visit-webshop-banner">

@@ -1,17 +1,28 @@
-import React from "react";
-import { PrimaryButton } from "../components/Buttons";
+import React from 'react';
+import Hero from '../components/Hero';
+import Navigation from '../components/Navigation';
 
 export default function NotFound() {
   return (
     <>
-      <h1>404 Error</h1>
-      <h4>Page not found</h4>
-      <p>
-        Vi kan desværre ikke finde den side du leder efter! Du kan prøve at gå
-        tilbage eller trykke på knappen for at komme til forsiden Du kan prøve
-        at gå tilbage eller trykke på knappen for at komme til forsiden
-      </p>
-      <PrimaryButton text="Forside" link={"/"} />
+      <Navigation />
+      <Hero
+        title='404 Error'
+        subtitle='Page not found'
+        text={
+          <>
+            <p>
+              Vi kan desværre ikke finde den side du leder efter! <br />
+              Du kan prøve at gå tilbage eller trykke på knappen for at komme
+              til forsiden.
+            </p>
+          </>
+        }
+        imageUrl='/site-images/Filler-s2.webp'
+        alt='Calming toner'
+        buttonText='Forsiden'
+        link={'/'}
+      />
     </>
   );
 }

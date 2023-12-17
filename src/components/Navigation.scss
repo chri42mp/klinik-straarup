@@ -1,196 +1,158 @@
-@import "../styles/global.scss";
+@import "../styles/global";
 
-.logo-mobile {
-  width: 76.03px;
-  height: 90px;
-}
-
-.logo-web{
-  display: none;
-}
-
-nav {
-  display: flex;
-  padding-inline: $spacing16;
-  padding-block: $spacing8;
-  align-items: center;
-
-  li {
-    list-style: none;
-    text-decoration: none;
-  }
-
-  .navigation-elements {
+// navbar.css
+.navigation {
+    height: 106px;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    gap: $spacing24;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    background-color: $light100;
+    a{
+    line-height: 0;
+    color: $dark500;
+    &:hover{
+        text-decoration: underline;
+    }
+    }
+    &-menu {
+        margin-left: auto;
+        ul {
+            display: none;
+            position: absolute;
+            top: 106px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;   
+
+            @media screen and (min-width: $desktopScreenSize) {
+                display: flex;
+                padding: 0;
+                flex-direction: row;
+                align-items: center;
+                position: static;
+            }
+            
+            li {
+                // removes default disc bullet for li tags and applies margin to left & right side
+                margin: 0;
+                list-style-type: none;
+                @media screen and (min-width: $desktopScreenSize) {
+                    &{
+                        margin: 0 1rem;
+                    }
+                }  
+              
+              a {
+                // increases the surface area of the anchor tag to span more than just the anchor text
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                padding: 1.5rem 0;
+                &:hover{
+                    text-decoration: underline;
+                  }  
+            }        
+            }
+          }
+          &.expanded ul{
+            display: block;
+            background-color: $light100;
+            z-index: 1;
+          }
+      }
+  }
+  .logo-web {
+    display: none;
+    @media screen and (min-width: $desktopScreenSize) {
+        &{
+            display: block;
+            width: 328px;
+        }
+    }  
+  }
+  
+  .logo-mobile {
+    width: 76.03px;
+    height: 90px;
+    display: block;
+    @media screen and (min-width: $desktopScreenSize) {
+        &{
+            display: none;
+            width: 328px;
+        }
   }
 }
 
-.visually-hidden {
-  display: none;
-}
+  // navbar.css
+.brand-name {
+    margin-left: 1rem;
+  }
 
-.mobile-menu {
-  position: absolute;
-  top: 12%;
-  left: 0;
-  background-color: $light100;
-  z-index: 1;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  padding-inline: $spacing16;
-  padding-block: $spacing8;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  // navbar.css
+.hamburger {
+    border: 0;
+    background-color: $light100;
+    cursor: pointer;
+  // positions the icon to the right and center aligns it vertically
+    display: block;
+    @media screen and (min-width: $desktopScreenSize) {
+        & {
+          display: none;
+        }
+      }
+  }
+
+  .nav-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    @media screen and (min-width: $desktopScreenSize) {
+        & {
+          width: fit-content;
+          order: 2;
+        }
+      }
+  }
 
   .align-btn{
     display: flex;
     justify-content: center;
   }
-}
 
 .treatments {
-  // position: relative;
-  // display: flex;
-  // align-items: center;
-  cursor: pointer;
-  // width: 100%;
-  // flex-wrap: wrap;
-
-  .align-icon{
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-}
-
-.submenu {
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 1;
-  padding: 0;
-
-  li {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-}
-
-.treatments.active .submenu {
+    cursor: pointer;
+    &.active{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 11rem;
+        height: fit-content;
+    }
+    &.active .submenu{
     display: flex;
     gap: 16px;
     padding: 16px;
-    background-color: $light100; // Show the submenu when the "Behandlinger" list item is active
+    position: static;
+    background-color: $light100; 
+    z-index: 1;
+    @media screen and (min-width: $desktopScreenSize) {
+        &{
+
+            flex-direction: column;
+            align-items: flex-start;
+        }
+      }
+    
+  }
+    .align-icon{
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
 }
-
-@media screen and (min-width: $ipadScreenSize) {
-nav {
-    max-width: 1248px;
-    margin: 0 auto;
-    padding: 48px 96px 16px 96px;
-
-  .mobile-menu{
-    flex-direction: row;
-    position: relative;
-    width: 100%;
-    align-items: center;
-    gap: 1.5rem;
-    top: 0;
-    justify-content: flex-end;
-  }
-
-  .navigation-elements {
-    order:2;
-  }
-
-  .hide-toggle{
+.visually-hidden {
     display: none;
   }
-
-  .treatments.active .submenu {
-    position: absolute;
-    padding:0;
-  }
-
-  .navigation-elements{
-    width:fit-content;
-  }
-//   ul {
-//     list-style: none;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     max-width: 1440px;
-//   }
-
-//   li {
-//     list-style: none;
-//     margin-inline: 16px;
-//     position: relative;
-//     font-size: 18px;
-//     font-family: $fontJosefinSans;
-//     color: $dark500;
-
-//     a {
-//       text-decoration: none;
-//       color: $dark500;
-//     }
-//     a:hover {
-//       text-decoration: underline;
-//     }
-
-//     .submenu {
-//       display: none;
-//       flex-direction: column;
-//       align-items: flex-start;
-//       position: absolute;
-//       top: 100%;
-//       z-index: 1;
-//       padding: 0;
-
-//       li {
-//         display: flex;
-//         align-items: center;
-//         margin: 0;
-//       }
-
-//       a {
-//         padding-block: 8px;
-//       }
-
-//       .subsubmenu {
-//         display: none;
-//         flex-direction: column;
-//       }
-//     }
-
-//     &.active {
-//       .submenu {
-//         display: flex;
-//       }
-//     }
-//   }
-// }
-
-.logo-web {
-  display: block;
-  width: 328px;
-}
-
-.logo-mobile {
-  display: none;
-}
-
-// .arrow-down-icon,
-// .arrow-up-icon {
-//   width: 30px;
-//   height: 30px;
-//   padding-inline: 8px;
-}
-}

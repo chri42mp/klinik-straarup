@@ -19,7 +19,7 @@ export default function Contact() {
       </section>
       <ContactForm />
       <SingleBanner
-        imageUrl='/site-images/Contact-map.png'
+        imageUrl='/site-images/Map.png'
         alt='Kort over lokation'
         title='Find os'
         subtitle='Klinik Straarup, Brøndbyøstervej 23 ST TH, 2600 Glostrup'

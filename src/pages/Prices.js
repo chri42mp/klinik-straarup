@@ -21,6 +21,86 @@ export default function Prices() {
       <DiscountBanner />
       <section>
         <div className='price-category'>
+          <h1>Konsultationer</h1>
+          <div className='price-container'>
+            <div className='price'>
+              <p>Alle konsultationer 0,00DKK</p>
+            </div>
+            <div className='price'>
+              <p>Konsultation filler</p>
+            </div>
+            <div className='price'>
+              <p>Læge kondultation botox</p>
+            </div>
+            <div className='price'>
+              <p>Læge konsultation sklerosering</p>
+            </div>
+            <div className='price'>
+              <p>Konsultation laser</p>
+            </div>
+            <div className='price'>
+              <p>Konsultation skinbooster</p>
+            </div>
+          </div>
+        </div>
+        <div className='price-category'>
+          <h1>Behandling med Botox</h1>
+          <div className='price-container'>
+            <div className='price'>
+              <p>1 område</p>
+              <p>1200 DKK</p>
+            </div>
+            <div className='price'>
+              <p>2 område</p>
+              <p>1900 DKK</p>
+            </div>
+            <div className='price'>
+              <p>3 område</p>
+              <p>2500 DKK</p>
+            </div>
+            <div className='price'>
+              <p>4 område</p>
+              <p>3000 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Masseter/tyggemuskler</p>
+              <p>1800 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Platysma/stramme halsbånd</p>
+              <p>1800 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Gummy smile</p>
+              <p>600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Lip flip/ryge rynker</p>
+              <p>600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Brynløft</p>
+              <p>600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Bunnylines</p>
+              <p>600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Nedadgående mundviger</p>
+              <p>600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Hage</p>
+              <p>600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>14 dages kontrol</p>
+              <p>0,00 DKK</p>
+            </div>
+          </div>
+        </div>
+        <div className='price-category'>
           <h1>Behandling med filler</h1>
           <div className='price-container'>
             <div className='price'>
@@ -46,34 +126,19 @@ export default function Prices() {
           </div>
         </div>
         <div className='price-category'>
-          <h1>Behandling med Botox</h1>
+          <h1>Opløsning af filler</h1>
           <div className='price-container'>
             <div className='price'>
-              <p>1 område</p>
-              <p>1200 DKK</p>
+              <p>Første behandling</p>
+              <p>1500 DKK</p>
             </div>
             <div className='price'>
-              <p>2 område</p>
-              <p>1900 DKK</p>
-            </div>
-            <div className='price'>
-              <p>3 område</p>
-              <p>2500 DKK</p>
-            </div>
-            <div className='price'>
-              <p>4 område</p>
-              <p>3000 DKK</p>
-            </div>
-            <div className='price'>
-              <p>Masseter og stramme halsbånd</p>
-              <p>1800 DKK</p>
-            </div>
-            <div className='price'>
-              <p>Små områder som brynløft, lipflip m.m</p>
-              <p>600 DKK</p>
+              <p>Efterfølgende behandlinger</p>
+              <p>1000 DKK</p>
             </div>
           </div>
         </div>
+
         <div className='price-category'>
           <h1>Behandling med sklerosering</h1>
           <div className='price-container'>
@@ -91,6 +156,37 @@ export default function Prices() {
             </div>
           </div>
         </div>
+
+        <div className='price-category'>
+          <h1>Skinbooster</h1>
+          <div className='price-container'>
+            <div className='price'>
+              <p>Ejal 40 1 område</p>
+              <p>1800 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Ejal 40 2 områder</p>
+              <p>3600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Ejal 40 3 områder</p>
+              <p>4500 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Seventy Hyal 1 område</p>
+              <p>1800 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Seventy Hyal 2 områder</p>
+              <p>3600 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Seventy Hyal 3 områder</p>
+              <p>4500 DKK</p>
+            </div>
+          </div>
+        </div>
+
         <div className='price-category'>
           <div>
             <h1>Laser pakker</h1>
@@ -130,6 +226,7 @@ export default function Prices() {
             </div>
           </div>
         </div>
+
         <div className='price-category'>
           <h1>Laser enkelte områder</h1>
           <div className='price-container'>
@@ -212,6 +309,20 @@ export default function Prices() {
             <div className='price'>
               <p>hele ben</p>
               <p>1600 DKK</p>
+            </div>
+          </div>
+        </div>
+
+        <div className='price-category'>
+          <h1>Zo Skin Health</h1>
+          <div className='price-container'>
+            <div className='price'>
+              <p>Stimulation peel introtilbud</p>
+              <p>700 DKK</p>
+            </div>
+            <div className='price'>
+              <p>Konsultation til hudpleje</p>
+              <p>0,00 DKK</p>
             </div>
           </div>
         </div>
