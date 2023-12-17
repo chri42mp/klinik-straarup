@@ -1,11 +1,11 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Hamburger from '../components/Hamburger';
+import Navigation from '../components/Navigation';
 
 export default function NotFound() {
   return (
     <>
-      <Hamburger />
+      <Navigation />
       <Hero
         title='404 Error'
         subtitle='Page not found'
