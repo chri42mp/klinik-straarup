@@ -89,7 +89,7 @@ export default function Product() {
                 onClick={(e) => addToBasket(uid, count, product?.productPrice)}
                 text='Køb nu'
               />
-              <SecondaryButton text='Shop mere' />
+              <SecondaryButton text='Shop mere' link='/webshop' />
             </div>
             <Accordion title='Brug' content={<p>{product.usage}</p>} />
             <Accordion
