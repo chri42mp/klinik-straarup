@@ -1,8 +1,20 @@
 @import "../styles/global.scss";
-
-@media screen and (min-width: $ipadScreenSize) {
+.grid-1-1{
+  display: grid;
+  gap: $spacing24;
+  max-width: 100%;
+  padding-block: $spacing32;
+}
+.delivery-container-width{
+  order: 2;
+    max-width: 366px;
+    @media screen and (min-width: $ipadScreenSize) {
+      order: 0;
+      max-width: 100%;
+         }
+}
   .delivery-options {
-    width: 612px;
+    width: 338px;
     height: 32px;
     border: 1px solid $dark300;
     display: flex;
@@ -14,6 +26,10 @@
     padding: $spacing8;
     align-items: center;
 
+    @media screen and (min-width: $ipadScreenSize) {
+      width: 612px;
+    }
+  
     label {
       @include josefin18;
       display: flex;
@@ -30,8 +46,9 @@
 
   .delivery-container {
     padding: $spacing8;
-  }
+    order: 2;
 
+  }
   .space-between {
     display: flex;
     justify-content: space-between;
@@ -41,17 +58,10 @@
 
   .payment-option {
     display: flex;
-    width: 612px;
     height: 42.33px;
 
-    .image-container {
-      display: flex;
-      width: 100%;
-      justify-content: flex-end;
-    }
-
-    img {
-      max-height: 42px;
+    @media screen and (min-width: $ipadScreenSize) {
+      width: 612px;
     }
 
     label {
@@ -67,6 +77,62 @@
     }
   }
 
+  .shipping-terms-links{
+    padding-inline: $spacing16;
+    border-top: 1px solid $green500;
+  }
+
+  .image-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    height: 42px;
+  }
+  .shipping-basket-products {
+    // display: flex;
+    color: $light100;
+    align-items: center;
+    // margin-bottom: $spacing8;
+  
+    .shipping-basket-item {
+      display: flex;
+      max-width: 100%;
+      background-color: #809085;
+      border-radius: 0.25rem;
+      padding-inline: 8px;
+      margin-bottom: 0.5rem;
+    }
+    .shipping-basket-product-info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding-right: 1.5rem;
+      height: 58px;
+    }
+    .shipping-basket-image-container{
+      width: 82px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 42px;
+        width: auto;
+      }
+    }
+  }
+
+  .payment-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: 16px;
+  }
+ 
+  // img {
+  //   max-height: 42px;
+  // }
   .safe-payment-btn {
     display: flex;
     justify-content: flex-end;
@@ -82,4 +148,4 @@
       @include josefin18;
     }
   }
-}
+

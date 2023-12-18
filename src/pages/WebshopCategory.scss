@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: $spacing24;
+  flex-wrap: wrap;
   padding-block: $spacing24;
   padding-inline: $spacing24;
   @media screen and (min-width: $desktopScreenSize) {
