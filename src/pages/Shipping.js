@@ -18,14 +18,8 @@ export default function Shipping() {
   const [selectedPayment, setSelectedPayment] = useState(null);
   const navigate = useNavigate();
 
-  const userFields = [
-    'firstname',
-    'lastname',
-    'phone',
-    'adress',
-    'zipcode',
-    'city',
-  ];
+
+  const userFields = ["firstname", "lastname", "phone", "adress", "zipcode", "city"];
 
   const handleDeliveryOptionChange = (option) => {
     setSelectedDeliveryOption(option);

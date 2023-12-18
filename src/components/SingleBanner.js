@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './SingleBanner.scss';
+import "./SingleBanner.scss";
 
 const SingleBanner = ({ title, subtitle, text, imageUrl, alt, reverse }) => {
   return (
@@ -15,6 +15,7 @@ const SingleBanner = ({ title, subtitle, text, imageUrl, alt, reverse }) => {
         <div className='single-banner-image' style={{ order: reverse ? 1 : 2 }}>
           <img src={imageUrl} alt={alt} />
         </div>
+
       </div>
     </div>
   );

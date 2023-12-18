@@ -97,6 +97,9 @@ export default function Product() {
               content={<p>{product.productIngrediens}</p>}
             />
           </div>
+
+         <Accordion title="Brug" content={<p className="roboto16">{product.usage}</p>} />
+          <Accordion title="Ingredienser" content={<p className="roboto16">{product.productIngrediens}</p>} />
         </div>
       </div>
       <DiscountBanner />

@@ -57,6 +57,10 @@
     }
   }
 
+  .roboto16 {
+    @include roboto16;
+  }
+
   .price {
     text-align: center;
     @include josefin32;

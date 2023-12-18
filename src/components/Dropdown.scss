@@ -1,17 +1,20 @@
 @import "../styles/global";
 
 .dropdown {
-  // width: 350px;
   border-bottom: solid 1px $dark500;
 
   @media screen and (min-width: $ipadScreenSize) {
     width: 612px;
   }
 }
+
 .dropdown-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.josefin18 {
+  @include josefin18;
 }
 
 .roboto16 {

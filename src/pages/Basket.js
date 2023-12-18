@@ -99,6 +99,7 @@ export default function Basket() {
         <meta name='description' content='Denne side viser kurven' />
       </Helmet>
       <Navigation />
+
       <div className='max-content'>
         <div className='breadcrumb'>
           <Link className='webshop-crumb' to='/webshop'>

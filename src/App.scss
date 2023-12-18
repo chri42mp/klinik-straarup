@@ -69,7 +69,31 @@ a {
   @include robotolink;
 }
 
-.max-content{
-max-width: $desktopScreenSize;
-margin: 0 auto;
+.max-content {
+  max-width: $desktopScreenSize;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  background-color: #161616;
+  z-index: 9998;
+  pointer-events: auto;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay.manually-toggled {
+  display: none important;
+}
+
+.App.content-enabled {
+  pointer-events: auto;
 }
