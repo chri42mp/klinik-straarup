@@ -1,4 +1,12 @@
 @import "../styles/global.scss";
+
+.container-color{
+  background-color: $green500;
+
+  &.reverse{
+    background-color: $light200;
+  }
+
 li {
   list-style-type: none;
 }
@@ -6,7 +14,7 @@ li {
 .full-banner {
   display: flex;
   flex-direction: column;
-  margin: $spacing16 auto $spacing16 auto;
+  // margin: $spacing16 auto $spacing16 auto;
   background-color: $green500;
   // width: 390px;
 
@@ -77,7 +85,7 @@ li {
     // width: 1440px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: $spacing120;
+    // gap: $spacing120;
     margin: 0 auto;
     // padding-inline: $spacing96;
 
@@ -101,18 +109,25 @@ li {
   .full-banner.reverse {
     grid-template-columns: 1fr 1fr;
     background-color: $light200;
-    padding-inline-start: 7.5rem;
     .full-banner-text {
       order: 1;
       background-color: $light200;
       h2, h3, p{
         color: $dark500;
       }
+
     }
+
+  
+
+
 
     .full-banner-image {
       order: 2;
-      
+      img{
+        object-position: 60% 40%;
+      }
     }
   }
+}
 }

@@ -4,7 +4,7 @@ import './BeforeAndAfter.scss';
 
 const BeforeAndAfter = ({ title, imageUrl1, alt1, imageUrl2, alt2 }) => {
   return (
-    <section className='container-width'>
+    <section className='max-content'>
       <div className='double-banner'>
         <div className='double-banner-title'>
           <h1>{title}</h1>
