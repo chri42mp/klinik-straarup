@@ -20,7 +20,7 @@ export default function Prices() {
       <Hero2
         title='Prisliste'
         text='Prisen på en behandling hos Klinik Straarup afhænger af den type behandling du ønsker. Book en gratis konsultation hvis du er i tvivl, så guider vi dig til en bedste løsning for dig. '
-        imageUrl='/site-images/Skinbooster-s1.webp'
+        imageUrl='/site-images/prisliste.jpg'
         alt='Calming toner'
         buttonText='Book nu'
         onButtonClick={() => console.log('Button clicked!')}

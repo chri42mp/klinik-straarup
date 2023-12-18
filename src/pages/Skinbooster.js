@@ -41,7 +41,14 @@ export default function Skinbooster() {
         reverse={false}
       />
 
-      <BeforeAndAfter title="Før og efter behandling" imageUrl1="/webshop-images/2018-kit-aggressive-anti-aging-program.webp" alt1="førbillede" imageUrl2="/webshop-images/2018-kit-aggressive-anti-aging-program.webp" alt2="efter billede" />
+      <BeforeAndAfter
+        title='Før og efter behandling'
+        imageUrl1='/site-images/skinbooster-før.png'
+        alt1='førbillede'
+        imageUrl2='/site-images/skinbooster-efter.png'
+        alt2='efter billede'
+      />
+
 
       <TextboxBanner title="Værd at vide" text="Du vil opleve let rødme på grund af de mange fine stik i huden og eventuelt blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen." imageUrl="/site-images/Textboxbanner-1.webp" alt="Calming toner" buttonText="Kontakt klinikken" buttonIcon={<LongArrowRightIcon />} onButtonClick={() => console.log("Button clicked!")} reverse={true} />
       <TextboxBanner title="Prisliste" text="Husk at vi tilbyder gratis konsultationer på alle vores behandlinger" imageUrl="/site-images/Textboxbanner-2.webp" alt="Clearing mask" buttonText="Se priser" buttonIcon={<LongArrowRightIcon />} onButtonClick={() => console.log("Button clicked!")} reverse={false} />

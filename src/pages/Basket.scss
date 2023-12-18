@@ -25,6 +25,16 @@
 .number-of-product {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+}
+
+.product-column{
+  padding-inline: $spacing24;
+  padding-block: $spacing24;
+  @media screen and (min-width: $ipadScreenSize) {
+    padding-inline: 0;
+    padding-block: 0;
+  }
 }
 
 .product-container {
@@ -35,8 +45,11 @@
   max-width: $mobileScreenSize;
   margin-bottom: $spacing16;
   padding-block: $spacing8;
+  padding-inline: $spacing8;
   @include borderRadius;
   @include josefin20;
+
+ 
 
   h4 {
     @include josefin20;
@@ -162,10 +175,6 @@
   }
 }
 
-.breadcrumb {
-  padding-inline: $spacing96;
-  @include roboto18;
-}
 .active-crumb {
   color: $dark300;
 }

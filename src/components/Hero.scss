@@ -3,6 +3,9 @@
 .hero-banner {
   position: relative;
   height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .hero-banner-box {
     display: flex;
@@ -10,10 +13,7 @@
     align-items: center;
     position: absolute;
     flex-direction: column;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    max-width: 100%;
     padding: $spacing32 $spacing24;
     gap: $spacing32;
 
@@ -44,6 +44,7 @@
 
   @media screen and (min-width: $ipadScreenSize) {
     .hero-banner-box {
+
       h1 {
         @include josefin64;
       }

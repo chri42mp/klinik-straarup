@@ -1,19 +1,40 @@
 @import "../styles/global.scss";
 
 .product-category-content {
-  padding-inline: $spacing96;
 
+.product-category-content-title{
+  padding-inline: $spacing24;
+  padding-block: $spacing16;
+  @media screen and (min-width: $desktopScreenSize) {
+    padding-inline: $spacing96;
+    padding-block: $spacing48;
+  }
   h1 {
+    @include josefin48;
+    @media screen and (min-width: $desktopScreenSize) {
     padding-block: $spacing48;
     @include josefin56;
+    }
   }
+  p{
+    max-width: none;
+  }
+}
+  
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
   gap: $spacing24;
+  flex-wrap: wrap;
   padding-block: $spacing24;
+  padding-inline: $spacing24;
+  @media screen and (min-width: $desktopScreenSize) {
+    padding-block: $spacing24;
+    padding-inline: $spacing96;
+  }
+
 }
 
 .webshop-crumb {
@@ -30,38 +51,60 @@
 
 .all-category-products {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 310px));
   gap: $spacing24;
-  padding-block: $spacing48;
+  padding-inline: $spacing24;
+  padding-block: $spacing16;
+  justify-content: center;
+  padding-block: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 158px));
+
+  @media screen and (min-width: $desktopScreenSize ) { 
+    grid-template-columns: repeat(4, minmax(0, 310px));
+    padding-inline: $spacing96;
+    padding-block: $spacing48;
+  }
+
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
-  max-height: 470px;
-  width: 294px;
+  max-height: 312px;
+  width: 158px;
   @include dropShadow;
-  padding: $spacing8;
   gap: $spacing8;
+  padding-block: $spacing16;
   text-align: center;
+
+
+
   @include borderRadius;
+  @media screen and (min-width: $desktopScreenSize) {
+   width: 294px;
+    max-height: 470px;
+  }
+
 
   .heart-icons {
     display: flex;
     justify-content: flex-end;
   }
+    img {
+      object-fit: contain;
+      max-height: 106px;
+      @media screen and (min-width: $desktopScreenSize) {
+      max-height: 196px;
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
 
-  img {
-    object-fit: contain;
-    max-height: 196px;
-  }
 
   .josefin18 {
     @include josefin18;
   }
 
-  .btn {
-    display: flex;
-    justify-content: center;
-  }
+
 }

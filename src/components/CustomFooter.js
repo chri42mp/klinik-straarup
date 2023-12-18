@@ -20,6 +20,7 @@ const CustomFooter = () => {
               data-style-width="100%"
             >
               <Link
+
                 to="https://dk.trustpilot.com/review/klinikstraarup.dk"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +89,7 @@ const CustomFooter = () => {
             <div className="bottom-div-links">
               <Link to="/cookiespolice">Cookiepolitik</Link>
               <Link to="/tradeconditions">Handelsbetingelser</Link>
-              <p>Sitemap</p>
+          
             </div>
             <div className="footer-logo">
               <Link to="/">

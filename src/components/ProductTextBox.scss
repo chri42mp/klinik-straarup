@@ -1,0 +1,112 @@
+@import "../styles/global.scss";
+
+@mixin set-position-and-margin($direction, $overlap) {
+  position: relative;
+
+
+  @if $direction == left {
+    margin-left: $overlap;
+  } @else if $direction == right {
+    margin-left: -$overlap;
+  } @else {
+    margin-left: 0;
+  }
+}
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  padding-inline: $spacing24;
+  padding-block: $spacing32;
+
+  .banner-box{
+    order: 2;
+    background-color: #f3efe7;
+    border-radius: 4px;
+    z-index: 1;
+    width: 228px;
+    padding: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    top: -75px;
+  }
+
+  .banner-image{
+    order: 1;
+    align-self: center;
+    img{
+      width: auto;
+      object-fit: cover;
+      height: 235px;
+    }
+  }
+  
+}
+ .banner.reverse {
+    .banner-box {
+      order: 2;
+      align-self: flex-end;
+    }
+  
+    .banner-image {
+      order: 1;
+      align-self: center;
+    }
+  }
+
+  @media screen and (min-width: $ipadScreenSize) {
+  .banner {
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-block: 70px;
+      padding-inline: $spacing96;
+      padding-block: $spacing72;
+     
+
+  .banner-box {
+    background-color: $light300;
+    padding: 24px;
+    width: 530px;
+    top: 22%;
+    height: fit-content;
+    border-radius: 4px;
+    order: 2;
+    // justify-self: center;
+    @include set-position-and-margin(right, 75px);
+  }
+
+  .banner-image {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    @include set-position-and-margin(left, 75px);
+    img{
+      height: 405px;
+      width: auto;
+    
+    }
+  }
+}
+
+.banner.reverse {
+
+  .banner-box {
+    background-color: $light200;
+    order: 1;
+    align-self: auto;
+    // justify-self: center;
+    top: 15%;
+    @include set-position-and-margin(left, 75px);
+  }
+
+  .banner-image {
+    order: 2;
+    // align-self: flex-start;
+    // justify-content: center;
+    @include set-position-and-margin(right, 75px);
+  }
+}
+  
+}

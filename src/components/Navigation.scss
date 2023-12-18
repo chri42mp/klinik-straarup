@@ -48,11 +48,11 @@
                 // removes default disc bullet for li tags and applies margin to left & right side
                 margin: 0;
                 list-style-type: none;
+                padding-block: $spacing12;
                 @include josefin18;
                 @media screen and (min-width: $desktopScreenSize) {
                   &{
                      padding-inline: $spacing16;
-                     padding-block: $spacing12;
                      align-self: baseline;
                   }
               }  
@@ -131,6 +131,9 @@
   .align-btn{
     display: flex;
     justify-content: center;
+    a{
+      color: $light100;
+    }
   }
 
 .treatments {

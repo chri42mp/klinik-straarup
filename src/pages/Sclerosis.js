@@ -52,7 +52,14 @@ export default function Sclerosis() {
         reverse={false}
       />
 
-      <BeforeAndAfter title="Før og efter behandling" imageUrl1="/webshop-images/2018-kit-aggressive-anti-aging-program.webp" alt1="førbillede" imageUrl2="/webshop-images/2018-kit-aggressive-anti-aging-program.webp" alt2="efter billede" />
+      <BeforeAndAfter
+        title='Før og efter behandling'
+        imageUrl1='/site-images/sklerosering-før.jpg'
+        alt1='førbillede'
+        imageUrl2='/site-images/sklerosering-efter.jpg'
+        alt2='efter billede'
+      />
+
 
       <TextboxBanner title="Værd at vide" text="Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. " imageUrl="/site-images/Textboxbanner-1.webp" alt="Calming toner" buttonText="Kontakt klinikken" buttonIcon={<LongArrowRightIcon />} onButtonClick={() => console.log("Button clicked!")} reverse={true} />
       <TextboxBanner title="Prisliste" text="Husk at vi tilbyder gratis konsultationer på alle vores behandlinger" imageUrl="/site-images/Textboxbanner-2.webp" alt="Clearing mask" buttonText="Se priser" buttonIcon={<LongArrowRightIcon />} onButtonClick={() => console.log("Button clicked!")} reverse={false} />
