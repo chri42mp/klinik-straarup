@@ -65,7 +65,9 @@ export default function Webshop() {
           <div className="webshop-book-btn">
             <PrimaryButton
               text="Book gratis konsulation"
-              link="/https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=5c161ba8bb2805e960c007fe75cd49f5&dTpl=1"
+              link="https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1"
+              target="_blank"
+              rel="noreferrer"
             />
           </div>
         </div>
