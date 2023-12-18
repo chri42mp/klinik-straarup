@@ -16,10 +16,6 @@
     }
   }
 
-  .breadcrumb {
-    padding-inline: $spacing96;
-  }
-
   .active-page {
     @include roboto12;
     color: $dark300;
