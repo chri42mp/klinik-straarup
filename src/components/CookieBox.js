@@ -95,7 +95,7 @@ export default function CookieBox({ onAccept }) {
               <TertiaryButtonWithIcon
                 text="Vis detaljer"
                 icon={<LongArrowRightIcon />}
-                link="/tradeconditions"
+                link="/cookiespolice"
               />
             </div>
           </div>
