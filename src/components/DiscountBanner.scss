@@ -1,15 +1,15 @@
 @import "../styles/global";
 
-.discount-banner {
-  background-color: $dark500;
+.discount-banner-background{
+  background-image: url("../../public/site-images/Discount-img.jpg");
+  background-size: cover;
+  background-position: 100% 60%;
+
+  .discount-banner {
   display: flex;
   gap: $spacing240;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  background-image: url("../../public/site-images/Discount-img.jpg");
-  background-size: cover;
-  background-position: 100% 60%;
   padding-inline: $spacing24;
   padding-block: $spacing32;
 
@@ -22,9 +22,6 @@
     flex-direction: column;
     align-items: center;
     gap: $spacing16;
-    @media screen and (min-width: $ipadScreenSize) {
-      max-width: $desktopScreenSize;
-    }
 
     h2,
     p {
@@ -36,20 +33,23 @@
       text-align: center;
     }
   }
-
   @media screen and (min-width: $ipadScreenSize) {
     & {
       flex-direction: row;
       justify-content: space-between;
-      background-image: url("../../public/site-images/eventbanner.jpg");
-
+     
+  
       .discount-banner-text {
         align-items: flex-start;
-
+  
         p {
           text-align: left;
         }
       }
     }
   }
+}
+@media screen and (min-width: $ipadScreenSize) {
+background-image: url("../../public/site-images/eventbanner.jpg");
+}
 }

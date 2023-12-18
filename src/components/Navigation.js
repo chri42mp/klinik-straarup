@@ -17,101 +17,103 @@ export default function Navigation() {
   };
 
   return (
-    <nav className='navigation'>
-      <div className='brand-name '>
-        <Link to='/'>
-          <img
-            className='logo-mobile'
-            src='/KS-logo-element_gold.png'
-            alt='klinik strarup logo'
-          />
-          <img
-            className='logo-web'
-            src='/KS-logo_gold.png'
-            alt='klinik strarup logo'
-          />
-        </Link>
-      </div>
-      <div className='nav-icons'>
-        <Link to='/login'>
-          <span className='visually-hidden'>Gå til login</span>
-          <LoginIcon />
-        </Link>
-        <Link to='/basket'>
-          <span className='visually-hidden'>Gå til kurv</span>
-          <BasketIcon />
-        </Link>
-        <button
-          className='hamburger'
-          onClick={() => {
-            setIsNavExpanded(!isNavExpanded);
-          }}
-        >
-          <MenuIcon />
-          {/* hamburger svg code... */}
-        </button>
-      </div>
-      <div
-        className={
-          isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
-        }
-      >
-        <ul>
-          {/* className='mobile-menu' */}
-          <li
-            className={`treatments ${isSubmenuVisible ? 'active' : ''}`}
-            onClick={handleSubmenuClicked}
+    <div className='max-content'>
+      <nav className='navigation'>
+        <div className='brand-name '>
+          <Link to='/'>
+            <img
+              className='logo-mobile'
+              src='/KS-logo-element_gold.png'
+              alt='klinik strarup logo'
+            />
+            <img
+              className='logo-web'
+              src='/KS-logo_gold.png'
+              alt='klinik strarup logo'
+            />
+          </Link>
+        </div>
+        <div className='nav-icons'>
+          <Link to='/login'>
+            <span className='visually-hidden'>Gå til login</span>
+            <LoginIcon />
+          </Link>
+          <Link to='/basket'>
+            <span className='visually-hidden'>Gå til kurv</span>
+            <BasketIcon />
+          </Link>
+          <button
+            className='hamburger'
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded);
+            }}
           >
-            <div className='align-icon'>
-              Behandlinger
-              {isSubmenuVisible ? (
-                <ArrowUpIcon className='arrow-up-icon' />
-              ) : (
-                <ArrowDownIcon className='arrow-down-icon' />
+            <MenuIcon />
+            {/* hamburger svg code... */}
+          </button>
+        </div>
+        <div
+          className={
+            isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
+          }
+        >
+          <ul>
+            {/* className='mobile-menu' */}
+            <li
+              className={`treatments ${isSubmenuVisible ? 'active' : ''}`}
+              onClick={handleSubmenuClicked}
+            >
+              <div className='align-icon'>
+                Behandlinger
+                {isSubmenuVisible ? (
+                  <ArrowUpIcon className='arrow-up-icon' />
+                ) : (
+                  <ArrowDownIcon className='arrow-down-icon' />
+                )}
+              </div>
+              {isSubmenuVisible && (
+                <ul className='submenu'>
+                  <li>
+                    <Link to='/fillers'>Filler</Link>
+                  </li>
+                  <li>
+                    <Link to='/botox'>Botox</Link>
+                  </li>
+                  <li>
+                    <Link to='/laser'>Hårfjerning</Link>
+                  </li>
+                  <li>
+                    <Link to='/sclerosis'>Sklerosering</Link>
+                  </li>
+                  <li>
+                    <Link to='/skinbooster'>Skinbooster</Link>
+                  </li>
+                </ul>
               )}
-            </div>
-            {isSubmenuVisible && (
-              <ul className='submenu'>
-                <li>
-                  <Link to='/fillers'>Filler</Link>
-                </li>
-                <li>
-                  <Link to='/botox'>Botox</Link>
-                </li>
-                <li>
-                  <Link to='/laser'>Hårfjerning</Link>
-                </li>
-                <li>
-                  <Link to='/sclerosis'>Sklerosering</Link>
-                </li>
-                <li>
-                  <Link to='/skinbooster'>Skinbooster</Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li>
-            <Link to='/prices'>Priser</Link>
-          </li>
-          <li>
-            <Link to='/webshop'>Webshop</Link>
-          </li>
-          <li>
-            <Link to='/about'>Om</Link>
-          </li>
-          <li>
-            <Link to='/contact'>Kontakt</Link>
-          </li>
-          <li>
-            <div className='align-btn'>
-              <PrimaryButton
-                text='Book'
-                onClick={() => console.log('Knap klikket!')}
-              />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            </li>
+            <li>
+              <Link to='/prices'>Priser</Link>
+            </li>
+            <li>
+              <Link to='/webshop'>Webshop</Link>
+            </li>
+            <li>
+              <Link to='/about'>Om</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Kontakt</Link>
+            </li>
+            <li>
+              <div className='align-btn'>
+                <PrimaryButton
+                  text='Book'
+                  onClick={() => console.log('Knap klikket!')}
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }

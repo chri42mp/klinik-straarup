@@ -62,8 +62,14 @@ label {
 p,
 li {
   @include roboto18;
+  max-width: 65ch;
 }
 
 a {
   @include robotolink;
+}
+
+.max-content{
+max-width: $desktopScreenSize;
+margin: 0 auto;
 }

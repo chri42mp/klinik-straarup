@@ -13,7 +13,7 @@ const Hero2 = ({
   onButtonClick,
 }) => {
   return (
-    <section className='container-width'>
+    <section className='max-content'>
       <div className='hero2-banner'>
         <div className='hero2-banner-image'>
           <img src={imageUrl} alt={alt} />

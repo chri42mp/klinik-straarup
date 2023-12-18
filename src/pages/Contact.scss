@@ -1,7 +1,7 @@
 @import "../styles/global";
 
 .contact-s1{
-    max-width: 1440px;
+    max-width: $desktopScreenSize;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,38 @@
         .h1{
             @include josefin56
         }
-    
     }
     }
+    }
+
+    .contact-s2-content{
+        display: flex;
+        flex-direction: column;
+        padding-inline: $spacing24;
+        padding-block: $spacing16 $spacing32;
+        align-items: center;
+        gap: $spacing24;
+        @media screen and (min-width: $ipadScreenSize) {
+            &{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding-inline: $spacing96;
+                padding-block: $spacing72;
+            }
+        }
+        .contact-s2-img{
+            display: flex;
+            img{
+                height: 235px;
+                width: 100%;
+                @media screen and (min-width: $ipadScreenSize) {
+                    height: 405px;
+                }
+            }
+        }
+        .contact-s2-text{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing16;
+        }
     }
