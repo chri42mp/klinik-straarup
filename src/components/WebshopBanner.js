@@ -48,16 +48,8 @@ export default function WebshopBanner({ headline }) {
       <h1 className="webshop-banner-headline">{headline}</h1>
       <div className="random-products-container">
         {randomProducts.map((product) => (
-          <div
-            key={product?.id}
-            className="random-product-card"
-            onClick={() => handleCardClick(product.id)}
-          >
-            <img
-              src={product?.imagePath}
-              alt={"billede af et produkt der hedder " + product?.productName}
-              loading="lazy"
-            />
+          <div key={product?.id} className="random-product-card" onClick={() => handleCardClick(product.id)}>
+            <img src={product?.imagePath} alt={"billede af et produkt der hedder " + product?.productName} loading="lazy" />
             <p className="josefin18">{product?.productName}</p>
             <p>{product?.productPrice} DKK </p>
           </div>

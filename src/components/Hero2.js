@@ -1,24 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { PrimaryButton } from './Buttons';
-import './Hero2.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { PrimaryButton } from "./Buttons";
+import "./Hero2.scss";
 
-const Hero2 = ({
-  title,
-  text,
-  imageUrl,
-  alt,
-  buttonText,
-  buttonIcon,
-  onButtonClick,
-}) => {
+const Hero2 = ({ title, text, imageUrl, alt, buttonText, buttonIcon, onButtonClick }) => {
   return (
-    <section className='max-content'>
-      <div className='hero2-banner'>
-        <div className='hero2-banner-image'>
-          <img src={imageUrl} alt={alt} />
+    <section className="max-content">
+      <div className="hero2-banner">
+        <div className="hero2-banner-image">
+          <img src={imageUrl} alt={alt} loading="lazy" />
         </div>
-        <div className='hero2-banner-box'>
+        <div className="hero2-banner-box">
           <h1>{title}</h1>
           <p>{text}</p>
           <div>

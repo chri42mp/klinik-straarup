@@ -6,11 +6,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      <img
-        src={imagePath}
-        alt={productName}
-        style={{ maxWidth: "100px", maxHeight: "100px" }}
-      />
+      <img src={imagePath} alt={productName} style={{ maxWidth: "100px", maxHeight: "100px" }} loading="lazy" />
       <p>{productName}</p>
       <p>Price: {productPrice}</p>
 
