@@ -40,7 +40,7 @@ export default function CookieBox({ onAccept }) {
       onAccept(cookieTypes, true);
     } else {
       // Display an error message or prevent further action
-      console.log("Error: All toggles must be manually toggled!");
+      alert("Alle typer cookies skal godkendes");
     }
   };
 
@@ -86,11 +86,8 @@ export default function CookieBox({ onAccept }) {
                 text="Tillad valgte"
                 onClick={() => {
                   console.log("SecondaryButton clicked");
-                  <SecondaryButton
-                    text="Tillad valgte"
-                    onClick={handleAccept}
-                  />;
                 }}
+                disabled={true}
               />
               <PrimaryButton text="Tillad alle" onClick={handleAccept} />
             </div>

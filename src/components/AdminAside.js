@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./AdminAside.scss";
 import { Link } from "react-router-dom";
 import LongArrowRightIcon from "../assets/icons/LongArrowRightIcon";
+import MenuIcon from "../assets/icons/MenuIcon";
 
 export default function AdminAside() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function AdminAside() {
     <>
       <aside className={`admin-aside ${isOpen ? "open" : ""}`}>
         <div className="icon" onClick={toggleAside}>
-          {<LongArrowRightIcon />}
+          {<MenuIcon />}
         </div>
         <nav>
           <Link to={"/addproduct"}>Tilføj produkt</Link>

@@ -6,11 +6,11 @@
   position: absolute;
   z-index: 9999;
   background-color: $light100;
-  width: 100%;
 
   @media screen and (min-width: $ipadScreenSize) {
     padding-block: $spacing48;
     padding-inline: $spacing96;
+    width: 100%;
   }
 
   .cookie-text {
