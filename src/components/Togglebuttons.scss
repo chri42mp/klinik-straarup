@@ -2,8 +2,9 @@
 @import "../styles/global.scss";
 
 $transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-$width: 100px;
-$height: 33px;
+$width: 48px;
+$height: 24px;
+$circleSize: 18px;
 
 @mixin toggleControlStyles {
   transition: $transition;
@@ -18,26 +19,28 @@ $height: 33px;
   &:after {
     transition: $transition;
     content: "";
-    width: 27px;
-    height: 27px;
+    width: $circleSize;
+    height: $circleSize;
     display: block;
     background-color: $light100;
     border-radius: 50%;
     @include innerShadow;
     position: absolute;
-    top: 2.8px;
+    top: 50%;
     left: 2.8px;
+    transform: translate(0%, -50%);
   }
 }
 
 .display {
-  position: absolute;
   transform: translate(-50%, -50%);
 }
 
 .toggle {
+  pointer-events: auto;
   .toggle-control {
     @include toggleControlStyles;
+    transform: translateX(0%);
   }
 
   input {
@@ -46,7 +49,7 @@ $height: 33px;
       background-color: $green400;
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
       &:after {
-        left: calc(#{$width} / 1.43);
+        left: calc(#{$width} - #{$circleSize} - 2.8px);
       }
     }
   }

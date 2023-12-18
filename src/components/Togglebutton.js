@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Togglebuttons.scss";
 
-const ToggleButton = () => {
+const ToggleButton = ({ onClick }) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <div className="display">
-      <label className="label toggle">
-        <input type="checkbox" className="toggle-input" />
-        <div className="toggle-control"></div>
-      </label>
-    </div>
+    <label className={`toggle ${isChecked ? "checked" : ""}`}>
+      <input type="checkbox" checked={isChecked} onChange={handleToggle} />
+      <span className="toggle-control"></span>
+    </label>
   );
 };
 

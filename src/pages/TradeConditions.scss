@@ -1,0 +1,14 @@
+@import "../styles/global.scss";
+
+.trade-inner-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing24;
+  align-items: center;
+  padding-inline: $spacing24;
+  padding-block: $spacing48;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    padding-inline: $spacing96;
+  }
+}
