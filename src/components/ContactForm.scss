@@ -58,7 +58,9 @@
         &{
             display: grid;
             grid-template-columns: 2fr 1fr;
-            padding: $spacing24 $spacing96;
+            margin: $spacing24 $spacing96;
+            padding-inline: $spacing96;
+            padding-block: $spacing24;
 
             .contact-input{
                 width: 628px;

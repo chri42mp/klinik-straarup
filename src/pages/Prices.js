@@ -32,7 +32,8 @@ export default function Prices() {
           <h1>Konsultationer</h1>
           <div className='price-container'>
             <div className='price'>
-              <p>Alle konsultationer 0,00 DKK</p>
+              <p>Alle konsultationer</p>
+              <p>0,00 DKK</p>
             </div>
             <div className='price'>
               <p>Konsultation filler</p>
