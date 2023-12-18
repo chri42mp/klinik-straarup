@@ -12,6 +12,7 @@ import CustomFooter from '../components/CustomFooter';
 import DiscountBanner from '../components/DiscountBanner';
 import { useAuth } from '../contexts/AuthContext';
 import { Helmet } from 'react-helmet';
+import WebshopBanner from '../components/WebshopBanner';
 
 export default function WebshopCategory() {
   const { category } = useParams();
@@ -152,6 +153,14 @@ export default function WebshopCategory() {
         </div>
       </div>
       <DiscountBanner />
+      <div className='max-content'>
+        <section className='section-webshop-banner'>
+          <WebshopBanner headline='Webshop' />
+          <div className='webshop-banner-btn'>
+            <SecondaryButton text='Besøg vores webshop' link='/webshop' />
+          </div>
+        </section>
+      </div>
       <CustomFooter />
     </>
   );
