@@ -19,13 +19,13 @@ const CustomFooter = () => {
               data-style-height='52px'
               data-style-width='100%'
             >
-               <Link
-            to="https://dk.trustpilot.com/review/klinikstraarup.dk"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>Trustpilot</h3>
-          </Link>
+              <Link
+                to='https://dk.trustpilot.com/review/klinikstraarup.dk'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <h3>Trustpilot</h3>
+              </Link>
               <div className='trustpilot-star'>
                 <TrustpilotStar />
                 <TrustpilotStar />
@@ -46,41 +46,41 @@ const CustomFooter = () => {
               <Link to='tel:+4540562064'>+4540562064</Link>
               <h5>SoMe</h5>
               <div className='some-icons'>
-                 <Link
-              to="https://www.instagram.com/klinikstraarup/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="display-none">
-                Link til Klinik Straarups Instagram
-              </span>
-              <InstagramIcon fill="#fefcf9" />
-            </Link>
-                  <Link
-              to="https://www.facebook.com/klinikstraarup"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="display-none">
-                {" "}
-                Link til Klinik Straarups Facebook
-              </span>
-              <FacebookIcon fill="#fefcf9" />
-            </Link>
+                <Link
+                  to='https://www.instagram.com/klinikstraarup/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <span className='display-none'>
+                    Link til Klinik Straarups Instagram
+                  </span>
+                  <InstagramIcon fill='#fefcf9' />
+                </Link>
+                <Link
+                  to='https://www.facebook.com/klinikstraarup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <span className='display-none'>
+                    {' '}
+                    Link til Klinik Straarups Facebook
+                  </span>
+                  <FacebookIcon fill='#fefcf9' />
+                </Link>
               </div>
             </div>
             <div className='footer-address'>
               <h4>Adresse</h4>
-                <Link
-            to="https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p>Klinik Straarup</p>
-            <p>Brøndbyvestervej 23 st th</p>
-            <p>2600 Glostrup </p>
-            <p>Denmark</p>
-          </Link>
+              <Link
+                to='https://www.google.com/maps/search/?api=1&query=%22Klinik%20Straarup%2C%20Br%C3%B8ndbyvestervej%2023%20st%20th%20%2C%202600%20Glostrup%2C%20Denmark%22'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <p>Klinik Straarup</p>
+                <p>Brøndbyvestervej 23 st th</p>
+                <p>2600 Glostrup </p>
+                <p>Denmark</p>
+              </Link>
               <p>CVR: 44240793</p>
             </div>
           </div>
@@ -88,7 +88,6 @@ const CustomFooter = () => {
             <div className='bottom-div-links'>
               <p>Cookiepolitik</p>
               <p>Handelsbetingelser</p>
-              <p>Sitemap</p>
             </div>
             <div className='footer-logo'>
               <Link to='/'>

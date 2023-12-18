@@ -76,9 +76,9 @@ export default function Sclerosis() {
 
       <BeforeAndAfter
         title='Før og efter behandling'
-        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        imageUrl1='/site-images/sklerosering-før.jpg'
         alt1='førbillede'
-        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        imageUrl2='/site-images/sklerosering-efter.jpg'
         alt2='efter billede'
       />
 

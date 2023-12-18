@@ -131,6 +131,9 @@
   .align-btn{
     display: flex;
     justify-content: center;
+    a{
+      color: $light100;
+    }
   }
 
 .treatments {

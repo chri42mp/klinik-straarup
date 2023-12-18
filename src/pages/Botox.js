@@ -80,9 +80,10 @@ export default function Botox() {
 
       <BeforeAndAfter
         title='Før og efter behandling'
-        imageUrl1='/site-images/Textboxbanner-1.webp'
+        imageUrl1='/site-images/botox-før.png
+      '
         alt1='førbillede'
-        imageUrl2='/site-images/Textboxbanner-1.webp'
+        imageUrl2='/site-images/botox-efter.png'
         alt2='efter billede'
       />
 

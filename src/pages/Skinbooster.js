@@ -72,9 +72,9 @@ export default function Skinbooster() {
 
       <BeforeAndAfter
         title='Før og efter behandling'
-        imageUrl1='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        imageUrl1='/site-images/skinbooster-før.png'
         alt1='førbillede'
-        imageUrl2='/webshop-images/2018-kit-aggressive-anti-aging-program.webp'
+        imageUrl2='/site-images/skinbooster-efter.png'
         alt2='efter billede'
       />
 

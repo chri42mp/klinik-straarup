@@ -107,7 +107,7 @@ export default function Navigation() {
               <div className='align-btn'>
                 <PrimaryButton
                   text='Book'
-                  onClick={() => console.log('Knap klikket!')}
+                  link='https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=91de8387fb2e35d7bdb8891fa2fba8aa&aDIfH=1&dTpl=1'
                 />
               </div>
             </li>

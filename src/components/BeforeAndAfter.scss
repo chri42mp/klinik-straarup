@@ -20,6 +20,7 @@
         gap: $spacing16;
         img{
             @include imgXsMobile;
+            height: 106px;
         }
     }
     @media screen and (min-width: $ipadScreenSize) {
@@ -36,6 +37,8 @@
                 gap: $spacing24;
                 img{
                     @include imgM;
+                    height: 405px;
+                    object-fit: cover;
                 }
             }
     }
