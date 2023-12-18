@@ -10,6 +10,7 @@ import { SecondaryButton } from "../components/Buttons";
 import "./Frontpage.scss";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
+import CookieBox from "../components/CookieBox";
 
 export default function Frontpage() {
   const navigate = useNavigate();
@@ -28,9 +29,7 @@ export default function Frontpage() {
         <title>Forside</title>
         <meta name="description" content="Dette er klinikkens forside" />
       </Helmet>
-
       <Navigation />
-
       <section>
         <Hero
           title="Velkommen til Klinik Straarup"

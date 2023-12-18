@@ -1,0 +1,91 @@
+@import "../styles/global";
+
+.cookie-container {
+  padding-block: $spacing48;
+  padding-inline: $spacing24;
+  position: absolute;
+  z-index: 9999;
+  background-color: $light100;
+  width: 100%;
+
+  @media screen and (min-width: $ipadScreenSize) {
+    padding-block: $spacing48;
+    padding-inline: $spacing96;
+  }
+
+  .cookie-text {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing16;
+    padding-bottom: $spacing72;
+  }
+
+  h1 {
+    text-align: center;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      text-align: start;
+    }
+  }
+
+  h5 {
+    text-align: center;
+    @include josefin18;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      text-align: start;
+    }
+  }
+
+  .cookie-inner-container {
+    max-width: $desktopScreenSize;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @media screen and (min-width: $ipadScreenSize) {
+      display: flex;
+    }
+  }
+
+  .cookie-types {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 72px;
+  }
+
+  .accept-btns {
+    gap: $spacing32;
+    @media screen and (min-width: $ipadScreenSize) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .prim-sec {
+    display: flex;
+    gap: $spacing32;
+    justify-content: flex-end;
+  }
+  .ter {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .outer-toggle-container {
+    @media screen and (min-width: $ipadScreenSize) {
+      display: flex;
+      gap: $spacing72;
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: $spacing16;
+
+      align-items: center;
+      @media screen and (min-width: $ipadScreenSize) {
+        flex-direction: column;
+      }
+    }
+  }
+}
