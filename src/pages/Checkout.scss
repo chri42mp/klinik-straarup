@@ -1,5 +1,36 @@
 @import "../styles/global.scss";
 
+.grid-1-1{
+  display: flex;
+  flex-direction: column;
+
+  .form-container{
+    order:2;
+    padding-block: 48px;
+    padding-inline: 8px;
+    @media screen and (min-width: $ipadScreenSize) {
+      order:0;
+      padding-block: 0;
+    }
+    
+  }
+}
+
+.checkout-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: $spacing24;
+  margin-right: $spacing8;
+}
+
+.checkout-form{
+display: grid;
+gap: $spacing24;
+}
+
+.terms-links{
+  border-top: 1px solid $green500;
+}
 @media screen and (min-width: $ipadScreenSize) {
   .grid-1-1 {
     display: grid;
@@ -43,6 +74,7 @@
     border-top: 1px solid $dark500;
     padding: $spacing8;
     margin-inline: $spacing8;
+
   }
 
   .fullname {
@@ -73,19 +105,33 @@
   .add-discount {
     padding-block: $spacing48;
   }
-  .discount-group {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing8;
+  // .discount-group {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: $spacing8;
 
-    input {
-      width: 294px;
-      height: 30px;
-      padding: 0;
-      background-color: $light100;
-      @include borderRadius;
-      border: 1px solid $light500;
-    }
+  //   input {
+  //     width: 294px;
+  //     height: 30px;
+  //     padding: 0;
+  //     background-color: $light100;
+  //     @include borderRadius;
+  //     border: 1px solid $light500;
+  //   }
+  // }
+}
+.discount-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing8;
+
+  input {
+    width: 294px;
+    height: 30px;
+    padding: 0;
+    background-color: $light100;
+    @include borderRadius;
+    border: 1px solid $light500;
   }
 }
 
@@ -97,11 +143,11 @@
 
   .checkout-basket-item {
     display: flex;
-    width: 100%;
-    background-color: $green300;
-    padding: $spacing8;
-    @include borderRadius;
-    margin-bottom: $spacing8;
+    max-width: 100%;
+    background-color: #809085;
+    border-radius: 0.25rem;
+    padding-inline: 8px;
+    margin-bottom: 0.5rem;
   }
   .checkout-basket-product-info {
     display: flex;
@@ -109,6 +155,7 @@
     width: 100%;
     justify-content: space-between;
     padding-right: 1.5rem;
+    height: 58px;
   }
 }
 
@@ -117,6 +164,7 @@
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   img {
     height: 42px;
     width: auto;
