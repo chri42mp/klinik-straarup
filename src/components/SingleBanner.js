@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './SingleBanner.scss';
+import "./SingleBanner.scss";
 
 const SingleBanner = ({ title, subtitle, text, imageUrl, alt, reverse }) => {
   return (
-    <div className={`single-banner ${reverse ? 'reverse' : ''}`}>
-      <div className='single-banner-box' style={{ order: reverse ? 2 : 1 }}>
+    <div className={`single-banner ${reverse ? "reverse" : ""}`}>
+      <div className="single-banner-box" style={{ order: reverse ? 2 : 1 }}>
         <h1>{title}</h1>
         <h5>{subtitle}</h5>
         <p>{text}</p>
       </div>
-      <div className='single-banner-image' style={{ order: reverse ? 1 : 2 }}>
-        <img src={imageUrl} alt={alt} />
+      <div className="single-banner-image" style={{ order: reverse ? 1 : 2 }}>
+        <img src={imageUrl} alt={alt} loading="lazy" />
       </div>
     </div>
   );

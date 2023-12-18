@@ -118,7 +118,7 @@ export default function Basket() {
                 return (
                   <div className="product-container">
                     <div className="image-container">
-                      <img alt={productFind?.data().productName} src={productFind?.data().imagePath} height={"205px"} />
+                      <img alt={productFind?.data().productName} src={productFind?.data().imagePath} height={"205px"} loading="lazy" />
                     </div>
                     <div>
                       <div className="delete-product">
