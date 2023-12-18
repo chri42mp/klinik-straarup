@@ -6,6 +6,10 @@
   align-items: center;
 }
 
-.roboto16 {
+.josefin18 {
+  @include josefin18;
+}
+
+.accordion-content {
   @include roboto16;
 }
