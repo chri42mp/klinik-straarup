@@ -28,6 +28,7 @@ import AdminAllProducts from "./pages/AdminAllProducts";
 import AdminOrders from "./pages/AdminOrders";
 import { useEffect, useState } from "react";
 import CookieBox from "./components/CookieBox";
+import CookiesPage from "./pages/CookiesPage";
 
 function App() {
   const [showCookieBox, setShowCookieBox] = useState(false);
@@ -85,6 +86,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/tradeconditions" element={<TradeConditions />} />
+            <Route path="/cookiespolice" element={<CookiesPage />} />
 
             <Route
               path="/addproduct"
