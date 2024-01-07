@@ -1,0 +1,52 @@
+@import "../styles/global";
+
+.compare-slider {
+  margin: $spacing16 auto;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .compare-item.top {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  .compare-item.top img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .handle {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: $light100;
+    z-index: 3;
+    cursor: col-resize;
+    top: 0;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: calc(50% - 15px);
+      right: calc(50% - 20px);
+      height: 30px;
+      width: 30px;
+      border: 3px solid $light100;
+      border-radius: 100%;
+      padding: 2px;
+    }
+  }
+}
