@@ -79,14 +79,14 @@ export default function Fillers() {
         alt="toner"
         reverse={false}
       />
-      <BeforeAndAfter
+      {/* <BeforeAndAfter
         title="Før og efter behandling"
         imageUrl1="/site-images/filler-før.png"
         alt1="førbillede"
         imageUrl2="/site-images/filler-efter.png"
         alt2="efter billede"
-      />
-
+      /> */}
+      <h1 className="before-after-header">Før og efter behandling</h1>
       <CompareSlider
         topImage={{
           src: "/site-images/filler-før.png",

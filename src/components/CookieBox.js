@@ -102,12 +102,16 @@ export default function CookieBox({ onAccept }) {
           </div>
           <div className="accept-btns">
             <div className="prim-sec">
-              <SecondaryButton
-                text="Tillad valgte"
-                onClick={handleAccept}
-                disabled={!atLeastOneToggleSelected}
-              />
-              <PrimaryButton text="Tillad alle" onClick={handleToggleAll} />
+              <div>
+                <SecondaryButton
+                  text="Tillad valgte"
+                  onClick={handleAccept}
+                  disabled={!atLeastOneToggleSelected}
+                />
+              </div>
+              <div>
+                <PrimaryButton text="Tillad alle" onClick={handleToggleAll} />
+              </div>
             </div>
             <div className="ter">
               <TertiaryButtonWithIcon

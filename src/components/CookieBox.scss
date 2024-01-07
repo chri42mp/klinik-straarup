@@ -40,7 +40,7 @@
 
   .cookie-inner-container {
     max-width: $desktopScreenSize;
-    margin: 0 auto;
+    // margin: 0 auto;
     justify-content: space-between;
 
     @media screen and (min-width: $ipadScreenSize) {
