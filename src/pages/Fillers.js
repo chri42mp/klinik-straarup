@@ -28,7 +28,7 @@ export default function Fillers() {
         title='Filler'
         text='Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter.'
         imageUrl='/site-images/Filler-s1.webp'
-        alt=''
+        alt='Kvinde masseres efter behandling med filler'
         buttonText='Book online'
         onButtonClick={() =>
           window.open(
@@ -68,16 +68,16 @@ export default function Fillers() {
           </>
         }
         imageUrl='/site-images/Filler-s2.webp'
-        alt='toner'
+        alt='Kvindehage behandles med filler'
         reverse={false}
       />
 
       <BeforeAndAfter
         title='Før og efter behandling'
         imageUrl1='/site-images/filler-før.png'
-        alt1='førbillede'
+        alt1='førbillede af behandling med filler'
         imageUrl2='/site-images/filler-efter.png'
-        alt2='efter billede'
+        alt2='efter billede af behandling med filler'
       />
 
       <section>
@@ -85,7 +85,7 @@ export default function Fillers() {
           title='Værd at vide'
           text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
           imageUrl='/site-images/Textboxbanner-1.webp'
-          alt='Calming toner'
+          alt='Kvindehage behandles med filler'
           buttonText='Kontakt klinikken'
           buttonIcon={<LongArrowRightIcon />}
           reverse={true}
@@ -94,7 +94,7 @@ export default function Fillers() {
           title='Prisliste'
           text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
           imageUrl='/site-images/Textboxbanner-2.webp'
-          alt='Clearing mask'
+          alt='Væske bliver trukket i sprøjte'
           buttonText='Se priser'
           buttonIcon={<LongArrowRightIcon />}
           onButtonClick={() => console.log('Button clicked!')}
@@ -108,9 +108,10 @@ export default function Fillers() {
         <div className='filler-faq'>
           <FAQimg
             imageUrl1='/site-images/FAQ-1.webp'
-            alt1='førbillede'
+            alt1='Billede af sprøjte'
             imageUrl2='/site-images/FAQ-2.webp'
-            alt2='efter billede'
+            alt2='Kvinde i behandling'
+            loading='lazy'
           />
           <div className='filler-faq-text'>
             <h1>FAQ</h1>

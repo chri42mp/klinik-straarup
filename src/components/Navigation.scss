@@ -1,4 +1,4 @@
-@import "../styles/global";
+@import '../styles/global';
 
 // navbar.css
 .navigation {
@@ -6,166 +6,165 @@
   background-color: $light100;
   padding-inline: $spacing8;
   padding-block: $spacing16;
-    
-    @media screen and (min-width: $desktopScreenSize) {
-      padding-inline: $spacing96;
-      padding-block: $spacing48 $spacing16;
+
+  @media screen and (min-width: $desktopScreenSize) {
+    padding-inline: $spacing96;
+    padding-block: $spacing48 $spacing16;
   }
 
-    a{
+  a {
     line-height: 0;
     color: $dark500;
     @include josefin18;
-    
-    &:hover{
-        text-decoration: underline;
-    }
-    }
-    &-menu {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        ul {
-            display: none;
-            position: absolute;
-            top: 106px;
-            left: 0;
-            margin: 0;
-            flex-direction: column;
-            width: 100%;
-              
 
-            @media screen and (min-width: $desktopScreenSize) {
-                display: flex;
-                padding: 0;
-                flex-direction: row;
-                // align-items: center;
-                position: static;
-                gap: $spacing16;
-            }
-            
-            li {
-                // removes default disc bullet for li tags and applies margin to left & right side
-                margin: 0;
-                list-style-type: none;
-                padding-block: $spacing12;
-                @include josefin18;
-                @media screen and (min-width: $desktopScreenSize) {
-                  &{
-                     padding-inline: $spacing16;
-                     align-self: baseline;
-                  }
-              }  
-              
-              a {
-                // increases the surface area of the anchor tag to span more than just the anchor text
-                text-decoration: none;
-                display: block;
-                width: 100%;
-                &:hover{
-                    text-decoration: underline;
-                  }  
-            }        
-            }
-          }
-          &.expanded ul{
-            display: block;
-            background-color: $light100;
-            z-index: 1;
-            margin: 0; 
-            padding-inline: $spacing16;
-            padding-block: $spacing8;
-          }
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  &-menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    ul {
+      display: none;
+      position: absolute;
+      top: 106px;
+      left: 0;
+      margin: 0;
+      flex-direction: column;
+      width: 100%;
+
+      @media screen and (min-width: $desktopScreenSize) {
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        // align-items: center;
+        position: static;
+        gap: $spacing16;
       }
-  }
-  .logo-web {
-    display: none;
-    @media screen and (min-width: $desktopScreenSize) {
-        &{
-            display: block;
-            width: 328px;
+
+      li {
+        // removes default disc bullet for li tags and applies margin to left & right side
+        margin: 0;
+        list-style-type: none;
+        padding-block: $spacing12;
+        @include josefin18;
+        @media screen and (min-width: $desktopScreenSize) {
+          & {
+            padding-inline: $spacing16;
+            align-self: baseline;
+          }
         }
-    }  
-  }
-  
-  .logo-mobile {
-    width: 76.03px;
-    height: 90px;
-    display: block;
-    @media screen and (min-width: $desktopScreenSize) {
-        &{
-            display: none;
-            width: 328px;
+
+        a {
+          // increases the surface area of the anchor tag to span more than just the anchor text
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
         }
+      }
+    }
+    &.expanded ul {
+      display: block;
+      background-color: $light100;
+      z-index: 1;
+      margin: 0;
+      padding-inline: $spacing16;
+      padding-block: $spacing8;
+    }
+  }
+}
+.logo-web {
+  display: none;
+  @media screen and (min-width: $desktopScreenSize) {
+    & {
+      display: block;
+      width: 328px;
+    }
   }
 }
 
-  // navbar.css
-.hamburger {
-    border: 0;
-    background-color: $light100;
-    cursor: pointer;
-  // positions the icon to the right and center aligns it vertically
-    display: block;
-    @media screen and (min-width: $desktopScreenSize) {
-        & {
-          display: none;
-        }
-      }
-  }
-  .nav-icons{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    a{
-      align-self: center;
+.logo-mobile {
+  width: 76.03px;
+  height: 90px;
+  display: block;
+  @media screen and (min-width: $desktopScreenSize) {
+    & {
+      display: none;
+      width: 328px;
     }
-    @media screen and (min-width: $desktopScreenSize) {
-        & {
-          width: fit-content;
-          order: 2;
-        }
-      }
   }
+}
 
-  .align-btn{
-    display: flex;
-    justify-content: center;
-    a{
-      color: $light100;
+// navbar.css
+.hamburger {
+  border: 0;
+  background-color: $light100;
+  cursor: pointer;
+  // positions the icon to the right and center aligns it vertically
+  display: block;
+  @media screen and (min-width: $desktopScreenSize) {
+    & {
+      display: none;
     }
   }
+}
+.nav-icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  a {
+    align-self: center;
+  }
+  @media screen and (min-width: $desktopScreenSize) {
+    & {
+      width: fit-content;
+      order: 2;
+    }
+  }
+}
+
+.align-btn {
+  display: flex;
+  justify-content: center;
+  a {
+    color: $light100;
+  }
+}
 
 .treatments {
-    cursor: pointer;
-    &.active{
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
-        position: relative;
-  
-    }
-    &.active .submenu{
+  cursor: pointer;
+  &.active {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: relative;
+  }
+  &.active .submenu {
     display: flex;
     gap: 0;
     position: static;
-    background-color: $light100; 
+    background-color: $light100;
     z-index: 1;
     @media screen and (min-width: $desktopScreenSize) {
-        &{
-          position: absolute;
-          flex-direction: column;
-          top: 65px;
-        }
+      & {
+        position: absolute;
+        flex-direction: column;
+        top: 65px;
       }
-    
-  }
-    .align-icon{
-      display: flex;
-      align-items: center;
-      width: 100%;
     }
+  }
+  .align-icon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
 }
 .visually-hidden {
-    display: none;
-  }
+  display: none;
+}

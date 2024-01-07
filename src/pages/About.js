@@ -57,7 +57,7 @@ export default function About() {
             </>
           }
           imageUrl='/site-images/About-s2.webp'
-          alt='toner'
+          alt='Billede af klinik Straarup'
           reverse={false}
         />
 
@@ -124,7 +124,7 @@ export default function About() {
               </>
             }
             imageUrl='/site-images/FAQ-2.webp'
-            alt='normalizing skin kit'
+            alt='Kvinde til konsultation'
             reverse={true}
           />
         </div>

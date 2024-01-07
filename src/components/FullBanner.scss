@@ -1,133 +1,131 @@
-@import "../styles/global.scss";
+@import '../styles/global.scss';
 
-.container-color{
+.container-color {
   background-color: $green500;
 
-  &.reverse{
+  &.reverse {
     background-color: $light200;
   }
 
-li {
-  list-style-type: none;
-}
-
-.full-banner {
-  display: flex;
-  flex-direction: column;
-  // margin: $spacing16 auto $spacing16 auto;
-  background-color: $green500;
-  // width: 390px;
-
-  h3,
-  h5,
-  p {
-    margin: 0;
+  li {
+    list-style-type: none;
   }
 
-  p {
-    max-width: 65ch;
-    @include roboto18;
-  }
-
-  ul {
-    // margin: 0;
-    padding: 0;
-  }
-
-  .full-banner-image {
-    order: 1;
-    order: 1;
-    display: flex;
-    justify-content: center;
-    height: 235px;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-      object-position: 0% 44%;
-    }
-  }
-
-  .full-banner-text {
-    order: 2;
+  .full-banner {
     display: flex;
     flex-direction: column;
+    // margin: $spacing16 auto $spacing16 auto;
     background-color: $green500;
-    padding: $spacing32 $spacing24;
-    max-width: 100%;
-    h2 {
-      @include josefin40;
-      color: $light100;
-      margin-bottom: $spacing16;
-    }
-    h3 {
-      @include josefin20;
-      color: $light100;
-    }
-    li,
+    // width: 390px;
+
+    h3,
+    h5,
     p {
-      color: $light100;
+      margin: 0;
     }
-  }
-}
-.full-banner.reverse {
-  .full-banner-image {
-    order: 2;
-  }
-  .full-banner-text {
-    order: 1;
-  }
-}
 
-@media screen and (min-width: $ipadScreenSize) {
-  .full-banner {
-    // width: 1440px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    // gap: $spacing120;
-    margin: 0 auto;
-    // padding-inline: $spacing96;
+    p {
+      max-width: 65ch;
+      @include roboto18;
+    }
+
+    ul {
+      // margin: 0;
+      padding: 0;
+    }
 
     .full-banner-image {
       order: 1;
-      height: 100%;
+      order: 1;
+      display: flex;
+      justify-content: center;
+      height: 235px;
+
       img {
-        // @include imgM;
+        width: 100%;
+        object-fit: cover;
         height: 100%;
-        object-position: 100% 44%;
+        object-position: 0% 44%;
+        max-height: 858px;
       }
     }
 
     .full-banner-text {
       order: 2;
-      padding: $spacing120 $spacing96;
+      display: flex;
+      flex-direction: column;
+      background-color: $green500;
+      padding: $spacing32 $spacing24;
       max-width: 100%;
+      h2 {
+        @include josefin40;
+        color: $light100;
+        margin-bottom: $spacing16;
+      }
+      h3 {
+        @include josefin20;
+        color: $light100;
+      }
+      li,
+      p {
+        color: $light100;
+      }
     }
   }
-
   .full-banner.reverse {
-    grid-template-columns: 1fr 1fr;
-    background-color: $light200;
-    .full-banner-text {
-      order: 1;
-      background-color: $light200;
-      h2, h3, p{
-        color: $dark500;
-      }
-
-    }
-
-  
-
-
-
     .full-banner-image {
       order: 2;
-      img{
-        object-position: 60% 40%;
+    }
+    .full-banner-text {
+      order: 1;
+    }
+  }
+
+  @media screen and (min-width: $ipadScreenSize) {
+    .full-banner {
+      // width: 1440px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // gap: $spacing120;
+      margin: 0 auto;
+      // padding-inline: $spacing96;
+
+      .full-banner-image {
+        order: 1;
+        height: 100%;
+        img {
+          // @include imgM;
+          height: 100%;
+          object-position: 100% 44%;
+        }
+      }
+
+      .full-banner-text {
+        order: 2;
+        padding: $spacing120 $spacing96;
+        max-width: 100%;
+      }
+    }
+
+    .full-banner.reverse {
+      grid-template-columns: 1fr 1fr;
+      background-color: $light200;
+      .full-banner-text {
+        order: 1;
+        background-color: $light200;
+        h2,
+        h3,
+        p {
+          color: $dark500;
+        }
+      }
+
+      .full-banner-image {
+        order: 2;
+        img {
+          object-position: 60% 40%;
+        }
       }
     }
   }
-}
 }
