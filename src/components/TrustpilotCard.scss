@@ -1,0 +1,57 @@
+@import '../styles/global.scss';
+
+.trustpilot-card-link {
+  max-width: 294px;
+}
+
+.trustpilot-card-box {
+  max-width: 294px;
+  height: 354px;
+
+  .trustpilot-card {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing8;
+    padding-inline: $spacing48;
+    padding-block: $spacing24;
+    background-color: $light200;
+    @include borderRadius;
+    height: 354px;
+    justify-content: space-between;
+
+    .card-top-div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .trustpilot-star {
+      display: flex;
+      gap: $spacing4;
+      color: $light100;
+      align-self: center;
+      svg {
+        background-color: #00b57a;
+        &:last-of-type {
+          background-color: $dark100;
+        }
+      }
+    }
+    .trustpilot-card-title {
+      @include josefin18;
+      text-align: center;
+    }
+    .trustpilot-card-text {
+      @include roboto14;
+    }
+  }
+  .card-bottom-div {
+    .trustpilot-card-name {
+      @include roboto14;
+      text-align: center;
+    }
+    .trustpilot-card-date {
+      @include roboto12;
+      text-align: center;
+    }
+  }
+}
