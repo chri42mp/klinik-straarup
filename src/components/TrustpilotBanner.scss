@@ -1,4 +1,4 @@
-@import '../styles/global.scss';
+@import "../styles/global.scss";
 
 .trustpilot-bottom {
   display: flex;
@@ -64,7 +64,7 @@
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: $opacity30;
   }
   to {
     opacity: 1;
