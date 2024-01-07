@@ -16,13 +16,10 @@ export default function CookieBox({ onAccept }) {
     marketing: false,
   });
 
-  const [allTogglesManuallyToggled, setAllTogglesManuallyToggled] =
-    useState(false);
-
-  const allTogglesSelected =
-    cookieTypes.necessary &&
-    cookieTypes.statistics &&
-    cookieTypes.personal &&
+  const atLeastOneToggleSelected =
+    cookieTypes.necessary ||
+    cookieTypes.statistics ||
+    cookieTypes.personal ||
     cookieTypes.marketing;
 
   const handleToggle = (type) => {
@@ -30,24 +27,35 @@ export default function CookieBox({ onAccept }) {
       ...prevTypes,
       [type]: !prevTypes[type],
     }));
-    setAllTogglesManuallyToggled(true);
+  };
+
+  const handleToggleAll = () => {
+    const allToggled = !atLeastOneToggleSelected;
+    const newCookieTypes = {
+      necessary: allToggled,
+      statistics: allToggled,
+      personal: allToggled,
+      marketing: allToggled,
+    };
+
+    setCookieTypes(newCookieTypes);
+    onAccept(newCookieTypes, true);
   };
 
   const handleAccept = () => {
     console.log("Accepting", cookieTypes);
 
-    if (allTogglesSelected && allTogglesManuallyToggled) {
+    if (atLeastOneToggleSelected) {
       onAccept(cookieTypes, true);
     } else {
-      // Display an error message or prevent further action
-      alert("Alle typer cookies skal godkendes");
+      alert("Mindst én type cookies skal vælges");
     }
   };
 
   return (
     <div
-      className={`cookie-container ${allTogglesSelected ? "hidden" : ""} ${
-        allTogglesManuallyToggled ? "manually-toggled" : ""
+      className={`cookie-container ${
+        atLeastOneToggleSelected ? "manually-toggled" : ""
       }`}
     >
       <div className="cookie-inner-container">
@@ -65,31 +73,45 @@ export default function CookieBox({ onAccept }) {
           <div className="outer-toggle-container">
             <div className="toggle-container">
               <p>Nødvendige</p>
-              <ToggleButton onClick={() => handleToggle("necessary")} />{" "}
+              <ToggleButton
+                onClick={() => handleToggle("necessary")}
+                toggled={cookieTypes.necessary}
+              />
             </div>
             <div className="toggle-container">
               <p>Statiske</p>
-              <ToggleButton onClick={() => handleToggle("statistics")} />{" "}
+              <ToggleButton
+                onClick={() => handleToggle("statistics")}
+                toggled={cookieTypes.statistics}
+              />
             </div>
             <div className="toggle-container">
               <p>Personlige</p>
-              <ToggleButton onClick={() => handleToggle("personal")} />{" "}
+              <ToggleButton
+                onClick={() => handleToggle("personal")}
+                toggled={cookieTypes.personal}
+              />
             </div>
             <div className="toggle-container">
               <p>Markedsføring</p>
-              <ToggleButton onClick={() => handleToggle("marketing")} />{" "}
+              <ToggleButton
+                onClick={() => handleToggle("marketing")}
+                toggled={cookieTypes.marketing}
+              />
             </div>
           </div>
           <div className="accept-btns">
             <div className="prim-sec">
-              <SecondaryButton
-                text="Tillad valgte"
-                onClick={() => {
-                  console.log("SecondaryButton clicked");
-                }}
-                disabled={true}
-              />
-              <PrimaryButton text="Tillad alle" onClick={handleAccept} />
+              <div>
+                <SecondaryButton
+                  text="Tillad valgte"
+                  onClick={handleAccept}
+                  disabled={!atLeastOneToggleSelected}
+                />
+              </div>
+              <div>
+                <PrimaryButton text="Tillad alle" onClick={handleToggleAll} />
+              </div>
             </div>
             <div className="ter">
               <TertiaryButtonWithIcon
