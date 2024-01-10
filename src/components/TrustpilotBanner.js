@@ -50,7 +50,9 @@ const TrustpilotBanner = () => {
           <div className='mySlides fade'>
             <TrustpilotCard
               headline='Altid i trygge hænder hos Maria!'
-              text='Vanvittig flot og renlig klinik! Ejer Maria er virkelig sød, imødekommende og meget snaksaglig! Jeg føler mig tryg og i gode hænder, når jeg kommer hos hende! Kan varmt anbefales!'
+              text='Vanvittig flot og renlig klinik! Ejer Maria er virkelig sød, 
+              imødekommende og meget snaksaglig! Jeg føler mig tryg og i gode hænder, 
+              når jeg kommer hos hende! Kan varmt anbefales!'
               name='Stine'
               date='19.09.2023'
             />
@@ -59,7 +61,8 @@ const TrustpilotBanner = () => {
           <div className='mySlides fade'>
             <TrustpilotCard
               headline='Maria er enormt dygtig'
-              text='Maria er enormt dygtig, professionel og tillidsvækkende. Jeg føler mig altid tryg, når jeg er i hendes hænder'
+              text='Maria er enormt dygtig, professionel og tillidsvækkende. 
+              Jeg føler mig altid tryg, når jeg er i hendes hænder'
               name='Therese'
               date='22.09.2023'
             />
@@ -69,7 +72,7 @@ const TrustpilotBanner = () => {
             <TrustpilotCard
               headline='Virkelig dygtig til sit arbejde'
               text='Virkelig dygtig til sit arbejde.
-Hyggeligt sted og sød og professionel behandling.'
+              Hyggeligt sted og sød og professionel behandling.'
               name='Cindy'
               date='01.09.2023'
             />

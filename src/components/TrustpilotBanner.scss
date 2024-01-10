@@ -1,102 +1,55 @@
-@import "../styles/global.scss";
-
-.trustpilot-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  p {
-    @include josefin18;
-  }
-}
+@import '../styles/global.scss';
 
 .Trustpilot-banner {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding-block: 32px;
-}
-
-.Trustpilot-banner-title {
-  padding-inline: 1.5rem;
-}
-.slideshow-container {
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  height: 30px;
-  margin-top: -22px;
-  user-select: none;
-}
-
-.prev {
-  rotate: 180deg;
-  left: 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: $opacity30;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media screen and (min-width: $ipadScreenSize) {
-  .Trustpilot-banner {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing48;
-    padding-inline: $spacing160;
-    padding-block: $spacing72;
-  }
 
   .Trustpilot-banner-title {
+    padding-inline: 1.5rem;
+  }
+  .slideshow-container {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: auto;
     display: flex;
     justify-content: center;
-    text-align: center;
-    h1 {
-      max-width: 20ch;
-    }
+    align-items: center;
   }
 
-  .slideshow-container {
-    display: flex;
-    flex-direction: row;
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
 
-    justify-content: space-between;
-    .mySlides {
-      display: block !important;
-    }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    height: 30px;
+    margin-top: -22px;
+    user-select: none;
+  }
+
+  .prev {
+    rotate: 180deg;
+    left: 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
   }
 
   .trustpilot-bottom {
@@ -108,8 +61,63 @@
     }
   }
 
-  .prev,
-  .next {
-    display: none;
+  @keyframes fade {
+    from {
+      opacity: $opacity30;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .trustpilot-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      @include josefin18;
+    }
+  }
+
+  @media screen and (min-width: $ipadScreenSize) {
+    & {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing48;
+      padding-inline: $spacing160;
+      padding-block: $spacing72;
+    }
+
+    .Trustpilot-banner-title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      h1 {
+        max-width: 20ch;
+      }
+    }
+
+    .slideshow-container {
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-between;
+      .mySlides {
+        display: block !important;
+      }
+    }
+
+    .trustpilot-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        @include josefin18;
+      }
+    }
+
+    .prev,
+    .next {
+      display: none;
+    }
   }
 }
