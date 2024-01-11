@@ -134,9 +134,9 @@ $fontJosefinSans: "Josefin Sans", sans-serif;
   line-height: 1.5rem;
 }
 
-%roboto14 {
+@mixin roboto14 {
   font-family: $fontRoboto;
-  font-size: 0.875;
+  font-size: 0.875rem;
   line-height: 1.375rem;
 }
 

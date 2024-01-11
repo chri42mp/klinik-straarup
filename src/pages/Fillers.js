@@ -34,11 +34,13 @@ export default function Fillers() {
       </Helmet>
       <Navigation />
       <Hero2
-        title="Filler"
-        text="Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter."
-        imageUrl="/site-images/Filler-s1.webp"
-        alt=""
-        buttonText="Book online"
+
+        title='Filler'
+        text='Filler bidrager til yngre udseende med mere karakter og hjælper med at genoprette ansigtsvolumen uden et kirurigsk indgreb. Ved at tilføje hage og kind mere fylde og former, fremhæver en filler behandling ansigtskonturer. Resultatet er et yngre udseende med mere karakter.'
+        imageUrl='/site-images/Filler-s1.webp'
+        alt='Kvinde masseres efter behandling med filler'
+        buttonText='Book online'
+
         onButtonClick={() =>
           window.open(
             "https://klinikstraarup.app4.geckobooking.dk/site/booking.php?show=new_booking&icCode=0aad36965f0f2ec512837c390542ebc2b8929&bId=8929&PHPSESSID=3d232c3793cd5f580a36db375318b752&dTpl=1",
@@ -75,45 +77,44 @@ export default function Fillers() {
             </p>
           </>
         }
+
         imageUrl="/site-images/Filler-s2.webp"
         alt="toner"
         reverse={false}
       />
-      {/* <BeforeAndAfter
-        title="Før og efter behandling"
-        imageUrl1="/site-images/filler-før.png"
-        alt1="førbillede"
-        imageUrl2="/site-images/filler-efter.png"
-        alt2="efter billede"
-      /> */}
+
       <h1 className="before-after-header">Før og efter behandling</h1>
       <CompareSlider
         topImage={{
           src: "/site-images/filler-før.png",
-          alt: "Før billede",
+          alt: "førbillede af behandling med filler",
         }}
         bottomImage={{
           src: "/site-images/filler-efter.png",
-          alt: "Efter billede",
+          alt: "efter billede af behandling med filler",
         }}
+
       />
 
       <section>
         <TextboxBanner
-          title="Værd at vide"
-          text="Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. "
-          imageUrl="/site-images/Textboxbanner-1.webp"
-          alt="Calming toner"
-          buttonText="Kontakt klinikken"
+          title='Værd at vide'
+          text='Du kan opleve rødme, hævelse, ømhed og blå mærker i forbindelse med din behandling, dette er ufarligt! Ved mistake om komplikationer kan klinikken altid kontaktes på telefonen. '
+          imageUrl='/site-images/Textboxbanner-1.webp'
+          alt='Kvindehage behandles med filler'
+          buttonText='Kontakt klinikken'
+
           buttonIcon={<LongArrowRightIcon />}
           reverse={true}
         />
         <TextboxBanner
-          title="Prisliste"
-          text="Husk at vi tilbyder gratis konsultationer på alle vores behandlinger"
-          imageUrl="/site-images/Textboxbanner-2.webp"
-          alt="Clearing mask"
-          buttonText="Se priser"
+
+          title='Prisliste'
+          text='Husk at vi tilbyder gratis konsultationer på alle vores behandlinger'
+          imageUrl='/site-images/Textboxbanner-2.webp'
+          alt='Væske bliver trukket i sprøjte'
+          buttonText='Se priser'
+
           buttonIcon={<LongArrowRightIcon />}
           onButtonClick={() => console.log("Button clicked!")}
           reverse={false}
@@ -123,10 +124,13 @@ export default function Fillers() {
       <section className="max-content">
         <div className="filler-faq">
           <FAQimg
-            imageUrl1="/site-images/FAQ-1.webp"
-            alt1="førbillede"
-            imageUrl2="/site-images/FAQ-2.webp"
-            alt2="efter billede"
+
+            imageUrl1='/site-images/FAQ-1.webp'
+            alt1='Billede af sprøjte'
+            imageUrl2='/site-images/FAQ-2.webp'
+            alt2='Kvinde i behandling'
+            loading='lazy'
+
           />
           <div className="filler-faq-text">
             <h1>FAQ</h1>

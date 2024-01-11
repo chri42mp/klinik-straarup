@@ -1,4 +1,4 @@
-@import "../styles/global";
+@import '../styles/global';
 
 .compare-slider {
   margin: $spacing16 auto;
@@ -41,7 +41,7 @@
       display: block;
       position: absolute;
       top: calc(50% - 15px);
-      right: calc(50% - 20px);
+      right: calc(50% - 15px);
       height: 30px;
       width: 30px;
       border: 3px solid $light100;
